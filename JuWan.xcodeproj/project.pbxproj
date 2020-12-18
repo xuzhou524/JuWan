@@ -10,7 +10,6 @@
 		87E624CE1A12435BF319238A /* libPods-JuWan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0FDB650050D0AD0ECC30E5 /* libPods-JuWan.a */; };
 		C5251FDD258C36AC00793392 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5251FDC258C36AC00793392 /* AppDelegate.swift */; };
 		C5251FDF258C36AC00793392 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5251FDE258C36AC00793392 /* SceneDelegate.swift */; };
-		C5251FE4258C36AC00793392 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5251FE2258C36AC00793392 /* Main.storyboard */; };
 		C5251FE6258C36B000793392 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5251FE5258C36B000793392 /* Assets.xcassets */; };
 		C5251FE9258C36B000793392 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5251FE7258C36B000793392 /* LaunchScreen.storyboard */; };
 		C5252013258C3E7E00793392 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5252012258C3E7E00793392 /* HomeViewController.swift */; };
@@ -35,7 +34,6 @@
 		C5251FD9258C36AC00793392 /* JuWan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuWan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5251FDC258C36AC00793392 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5251FDE258C36AC00793392 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C5251FE3258C36AC00793392 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C5251FE5258C36B000793392 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5251FE8258C36B000793392 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5251FEA258C36B000793392 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -114,7 +112,6 @@
 				C5251FDC258C36AC00793392 /* AppDelegate.swift */,
 				C5251FDE258C36AC00793392 /* SceneDelegate.swift */,
 				C5252018258C3F0F00793392 /* JuWan-Bridging-Header.h */,
-				C5251FE2258C36AC00793392 /* Main.storyboard */,
 				C5251FE5258C36B000793392 /* Assets.xcassets */,
 				C5251FE7258C36B000793392 /* LaunchScreen.storyboard */,
 				C5251FEA258C36B000793392 /* Info.plist */,
@@ -235,7 +232,6 @@
 			files = (
 				C5251FE9258C36B000793392 /* LaunchScreen.storyboard in Resources */,
 				C5251FE6258C36B000793392 /* Assets.xcassets in Resources */,
-				C5251FE4258C36AC00793392 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,14 +305,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C5251FE2258C36AC00793392 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C5251FE3258C36AC00793392 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C5251FE7258C36B000793392 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
