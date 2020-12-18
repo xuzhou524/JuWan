@@ -43,7 +43,7 @@ class HomeViewController: UIViewController {
     }
     
     @objc func startGameButtonTapped() {
-        let v = Play2048ViewController()
+        let v = Play2048ViewController(dimension: 4, threshold: 2048)
         self.navigationController?.pushViewController(v, animated: true)
         
 //        let game = NumberTileGameViewController(dimension: 4, threshold: 2048)
