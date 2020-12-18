@@ -53,3 +53,37 @@ class XZNavigationController: UINavigationController {
     }
 
 }
+
+
+class FZTipHeandView: UIView {
+    
+    let iconImageView:FZImageView = {
+        let imageView = FZImageView()
+        imageView.image = UIImage(named: "guanbi")?.withRenderingMode(.alwaysTemplate)
+        imageView.tintColor = UIColor(named: "color_title_black")
+        imageView.isUserInteractionEnabled = true
+        imageView.hitTestSlop = UIEdgeInsets(top: -10, left: -15, bottom: -10, right: -15)
+        return imageView
+    }()
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        sebViews()
+    }
+    
+    func sebViews() {
+        
+        self.addSubview(iconImageView)
+        
+        iconImageView.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(20)
+            make.bottom.equalToSuperview().offset(-10)
+            make.width.equalTo(22)
+            make.height.equalTo(22)
+        }
+     }
+}

@@ -33,6 +33,7 @@
 		C52520DB258C827400793392 /* AccessoryViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520D8258C827400793392 /* AccessoryViews.swift */; };
 		C52520DE258C829D00793392 /* AppearanceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520DD258C829D00793392 /* AppearanceProvider.swift */; };
 		C52520E1258C82B100793392 /* NumberTileGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520E0258C82B100793392 /* NumberTileGame.swift */; };
+		C52520E4258C853B00793392 /* Play2048ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520E3258C853B00793392 /* Play2048ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		C52520D8258C827400793392 /* AccessoryViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessoryViews.swift; sourceTree = "<group>"; };
 		C52520DD258C829D00793392 /* AppearanceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceProvider.swift; sourceTree = "<group>"; };
 		C52520E0258C82B100793392 /* NumberTileGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberTileGame.swift; sourceTree = "<group>"; };
+		C52520E3258C853B00793392 /* Play2048ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Play2048ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				C5252012258C3E7E00793392 /* HomeViewController.swift */,
+				C52520E3258C853B00793392 /* Play2048ViewController.swift */,
 				C52520E0258C82B100793392 /* NumberTileGame.swift */,
 				C5252015258C3EC200793392 /* XZNavigationController.swift */,
 			);
@@ -342,6 +345,7 @@
 				C5252016258C3EC200793392 /* XZNavigationController.swift in Sources */,
 				C525207D258C3F1500793392 /* LDTipAlertView.m in Sources */,
 				C5251FDF258C36AC00793392 /* SceneDelegate.swift in Sources */,
+				C52520E4258C853B00793392 /* Play2048ViewController.swift in Sources */,
 				C5252013258C3E7E00793392 /* HomeViewController.swift in Sources */,
 				C5252087258C3F1500793392 /* UITableView+Extension.swift in Sources */,
 				C52520DA258C827400793392 /* TileView.swift in Sources */,
