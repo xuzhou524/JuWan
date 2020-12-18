@@ -90,7 +90,7 @@ class Play2048ViewController: UIViewController,GameModelProtocol {
                                       foregroundColor: UIColor(red: 220/255.0, green: 220/255.0, blue: 220/255.0, alpha: 1.0))
 
         var f = board?.frame
-        f?.origin.x = xPositionToCenterView(v: board!)
+        f?.origin.x = 30
         f?.origin.y = 30
         board?.frame = f!
         
@@ -105,13 +105,6 @@ class Play2048ViewController: UIViewController,GameModelProtocol {
     
     @objc func backClick() {
         self.navigationController?.popToRootViewController(animated: true)
-    }
-    
-    // 横向的距离
-    func xPositionToCenterView(v: UIView) -> CGFloat {
-        let viewWidth = v.frame.size.width
-        let tentativeX = 0.5*(kScreenWidth - viewWidth)
-        return tentativeX >= 0 ? tentativeX : 0
     }
 
     func setupGame() {
