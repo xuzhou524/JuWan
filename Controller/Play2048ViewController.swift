@@ -25,7 +25,7 @@ class Play2048ViewController: UIViewController,GameModelProtocol {
     let titleLabel:UILabel = {
         let label = UILabel()
         label.font = blodFontWithSize(35)
-        label.textColor = UIColor(named: "color_white")
+        label.textColor = UIColor(named: "color_title_black")
         label.text = "2048"
         return label
     }()
