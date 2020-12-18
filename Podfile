@@ -6,7 +6,6 @@ source 'https://github.com/CocoaPods/Specs.git'
 def pods
     pod 'SnapKit'
     pod 'SDWebImage'
-    pod 'ESTabBarController-swift'
     
     pod 'MJRefresh'
     pod 'KVOController'
