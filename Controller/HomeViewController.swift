@@ -9,6 +9,11 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.delegate = self
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(named: "color_theme")
@@ -33,5 +38,12 @@ class HomeViewController: UIViewController {
             make.top.equalTo(titleLabel.snp.bottom).offset(30)
             make.height.equalTo((kScreenWidth - 50) * 0.52)
         }
+        
+        view2048.tipButton.addTarget(self, action: #selector(startGameButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func startGameButtonTapped() {
+        let game = NumberTileGameViewController(dimension: 4, threshold: 2048)
+        self.navigationController?.pushViewController(game, animated: true)
     }
 }

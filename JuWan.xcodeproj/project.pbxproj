@@ -26,6 +26,13 @@
 		C52520A0258C3F1500793392 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5252061258C3F1500793392 /* UIViewController+Extension.swift */; };
 		C52520A1258C3F1500793392 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5252063258C3F1500793392 /* Defaults.swift */; };
 		C52520CC258C7A0B00793392 /* Home2048View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520CB258C7A0B00793392 /* Home2048View.swift */; };
+		C52520D2258C825500793392 /* AuxiliaryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520D0258C825500793392 /* AuxiliaryModels.swift */; };
+		C52520D3258C825500793392 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520D1258C825500793392 /* GameModel.swift */; };
+		C52520D9258C827400793392 /* GameboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520D6258C827300793392 /* GameboardView.swift */; };
+		C52520DA258C827400793392 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520D7258C827300793392 /* TileView.swift */; };
+		C52520DB258C827400793392 /* AccessoryViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520D8258C827400793392 /* AccessoryViews.swift */; };
+		C52520DE258C829D00793392 /* AppearanceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520DD258C829D00793392 /* AppearanceProvider.swift */; };
+		C52520E1258C82B100793392 /* NumberTileGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520E0258C82B100793392 /* NumberTileGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +62,13 @@
 		C5252062258C3F1500793392 /* MBProgressHUD+ITTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+ITTAdditions.h"; sourceTree = "<group>"; };
 		C5252063258C3F1500793392 /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		C52520CB258C7A0B00793392 /* Home2048View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home2048View.swift; sourceTree = "<group>"; };
+		C52520D0258C825500793392 /* AuxiliaryModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuxiliaryModels.swift; sourceTree = "<group>"; };
+		C52520D1258C825500793392 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		C52520D6258C827300793392 /* GameboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameboardView.swift; sourceTree = "<group>"; };
+		C52520D7258C827300793392 /* TileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
+		C52520D8258C827400793392 /* AccessoryViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessoryViews.swift; sourceTree = "<group>"; };
+		C52520DD258C829D00793392 /* AppearanceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceProvider.swift; sourceTree = "<group>"; };
+		C52520E0258C82B100793392 /* NumberTileGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberTileGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				C5252012258C3E7E00793392 /* HomeViewController.swift */,
+				C52520E0258C82B100793392 /* NumberTileGame.swift */,
 				C5252015258C3EC200793392 /* XZNavigationController.swift */,
 			);
 			path = Controller;
@@ -133,6 +148,7 @@
 		C5252004258C3B6500793392 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C52520D5258C826300793392 /* 2048 */,
 				C52520CB258C7A0B00793392 /* Home2048View.swift */,
 			);
 			path = View;
@@ -141,6 +157,7 @@
 		C5252005258C3B7100793392 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C52520CF258C824900793392 /* 2048 */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,6 +188,26 @@
 				C525203B258C3F1100793392 /* UIColor+Create.swift */,
 			);
 			path = UIColor;
+			sourceTree = "<group>";
+		};
+		C52520CF258C824900793392 /* 2048 */ = {
+			isa = PBXGroup;
+			children = (
+				C52520D0258C825500793392 /* AuxiliaryModels.swift */,
+				C52520D1258C825500793392 /* GameModel.swift */,
+			);
+			path = 2048;
+			sourceTree = "<group>";
+		};
+		C52520D5258C826300793392 /* 2048 */ = {
+			isa = PBXGroup;
+			children = (
+				C52520DD258C829D00793392 /* AppearanceProvider.swift */,
+				C52520D8258C827400793392 /* AccessoryViews.swift */,
+				C52520D6258C827300793392 /* GameboardView.swift */,
+				C52520D7258C827300793392 /* TileView.swift */,
+			);
+			path = 2048;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,7 +324,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C52520DE258C829D00793392 /* AppearanceProvider.swift in Sources */,
 				C5252088258C3F1500793392 /* UIColor+Create.swift in Sources */,
+				C52520D2258C825500793392 /* AuxiliaryModels.swift in Sources */,
 				C5252090258C3F1500793392 /* Defines.swift in Sources */,
 				C5252083258C3F1500793392 /* Date+Extension.swift in Sources */,
 				C52520A1258C3F1500793392 /* Defaults.swift in Sources */,
@@ -295,13 +334,18 @@
 				C5252084258C3F1500793392 /* Client.swift in Sources */,
 				C5252082258C3F1500793392 /* HistTestSlop.swift in Sources */,
 				C52520A0258C3F1500793392 /* UIViewController+Extension.swift in Sources */,
+				C52520E1258C82B100793392 /* NumberTileGame.swift in Sources */,
 				C5252081258C3F1500793392 /* MBProgressHUD+ITTAdditions.m in Sources */,
+				C52520D9258C827400793392 /* GameboardView.swift in Sources */,
 				C5251FDD258C36AC00793392 /* AppDelegate.swift in Sources */,
+				C52520D3258C825500793392 /* GameModel.swift in Sources */,
 				C5252016258C3EC200793392 /* XZNavigationController.swift in Sources */,
 				C525207D258C3F1500793392 /* LDTipAlertView.m in Sources */,
 				C5251FDF258C36AC00793392 /* SceneDelegate.swift in Sources */,
 				C5252013258C3E7E00793392 /* HomeViewController.swift in Sources */,
 				C5252087258C3F1500793392 /* UITableView+Extension.swift in Sources */,
+				C52520DA258C827400793392 /* TileView.swift in Sources */,
+				C52520DB258C827400793392 /* AccessoryViews.swift in Sources */,
 				C52520CC258C7A0B00793392 /* Home2048View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
