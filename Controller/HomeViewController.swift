@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
         self.view.backgroundColor = UIColor(named: "color_theme")
         
         let titleLabel = UILabel()
-        titleLabel.font = fontWithSize(30)
+        titleLabel.font = blodFontWithSize(25)
         titleLabel.textColor = UIColor(named: "color_title_black")
         titleLabel.text = "聚玩"
         self.view.addSubview(titleLabel)
@@ -31,7 +31,7 @@ class HomeViewController: UIViewController {
             make.left.equalToSuperview().offset(25)
             make.right.equalToSuperview().offset(-25)
             make.top.equalTo(titleLabel.snp.bottom).offset(30)
-            make.height.equalTo((kScreenWidth - 50) * 0.56)
+            make.height.equalTo((kScreenWidth - 50) * 0.52)
         }
     }
 }
