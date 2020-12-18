@@ -86,8 +86,8 @@ class Play2048ViewController: UIViewController,GameModelProtocol {
                                       tileWidth: width,
                                       tilePadding: padding,
                                       cornerRadius: 6,
-                                      backgroundColor: UIColor(red: 245.0/255.0, green: 245.0/255.0, blue: 245.0/255.0, alpha: 1.0),
-                                      foregroundColor: UIColor(red: 220/255.0, green: 220/255.0, blue: 220/255.0, alpha: 1.0))
+                                      backgroundColor: UIColor(named: "color_title_black")!,
+                                      foregroundColor: UIColor(named: "color_themeBackground")!)
 
         var f = board?.frame
         f?.origin.x = 30
