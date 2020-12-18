@@ -100,9 +100,7 @@ class Play2048ViewController: UIViewController,GameModelProtocol {
         m.insertTileAtRandomLocation(value: 2)
         m.insertTileAtRandomLocation(value: 2)
         
-        
         setupGame()
-        
     }
     
     @objc func backClick() {
