@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import GameKit
+import GameplayKit
 
 class HomeViewController: UIViewController {
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.delegate = self
@@ -40,10 +42,29 @@ class HomeViewController: UIViewController {
         }
         
         view2048.tipButton.addTarget(self, action: #selector(startGameButtonTapped), for: .touchUpInside)
+        
+        authenticateLocalPlayer()
     }
     
     @objc func startGameButtonTapped() {
         let v = Play2048ViewController(dimension: 4, threshold: 2048)
         self.navigationController?.pushViewController(v, animated: true)
+    }
+}
+
+extension HomeViewController {
+    func authenticateLocalPlayer(){
+        
+        let localPlayer = GKLocalPlayer.local
+        
+        localPlayer.authenticateHandler = {(viewController, error) -> Void in
+            if (viewController != nil) {
+                let vc: UIViewController = self.view!.window!.rootViewController!
+                vc.present(viewController!, animated: true, completion: nil)
+            }else {
+                print((GKLocalPlayer.local.isAuthenticated))
+            }
+        }
+        
     }
 }

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import GameKit
+import GameplayKit
 
 class Play2048ViewController: UIViewController,GameModelProtocol {
     var model: GameModel?
@@ -56,6 +58,8 @@ class Play2048ViewController: UIViewController,GameModelProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(named: "color_theme")
+        
+        downLoadGameCenter()
         
         let navTipView = FZTipHeandView()
         self.view.addSubview(navTipView)
@@ -150,6 +154,10 @@ extension Play2048ViewController {
         assert(model != nil)
         let m = model!
         let (userWon, _) = m.userHasWon()
+        
+        //保存分数
+        saveHighScore(s: m.score)
+
         if userWon {
             let tip = LDTipAlertView.init(message: "你赢了！", buttonTitles: ["我知道了"])
             tip?.show()
@@ -235,4 +243,66 @@ extension Play2048ViewController {
         b.insertTile(pos: location, value: value)
     }
     
+}
+
+
+extension Play2048ViewController {
+    func saveHighScore(s:NSInteger){
+        if GKLocalPlayer.local.isAuthenticated {
+            let scoreReporter = GKScore(leaderboardIdentifier: "juWan_2048")
+            scoreReporter.value = Int64(s)
+            GKScore.report([scoreReporter], withCompletionHandler: nil)
+        }
+    }
+    
+    func downLoadGameCenter() {
+        
+        if !GKLocalPlayer.local.isAuthenticated {
+            print("没有授权，无法获取更多信息")
+            return
+        }
+        
+        let leaderboadRequest = GKLeaderboard()
+        //设置好友的范围
+        leaderboadRequest.playerScope = .global
+        
+        let type = "today"
+        if type == type {
+            leaderboadRequest.timeScope = .today
+        }else if type == "week" {
+            leaderboadRequest.timeScope = .week
+        }else if type == "all" {
+            leaderboadRequest.timeScope = .allTime
+        }
+        
+        //哪一个排行榜
+        let identifier = "juWan_2048"
+        leaderboadRequest.identifier = identifier
+        //从那个排名到那个排名
+        let location = 1
+        let length = 10
+        leaderboadRequest.range = NSRange(location: location, length: length)
+        
+        //请求数据
+        leaderboadRequest.loadScores { (scores, error) in
+            if (error != nil) {
+                print("请求分数失败")
+                print("error = \(error)")
+            }else{
+                print("请求分数成功")
+                if let sss = scores as [GKScore]?  {
+                    for score in sss {
+                        print(score)
+                        
+                        let gamecenterID = score.leaderboardIdentifier
+                        let playerName = score.player.displayName
+                        let scroeNumb = score.value
+                        let rank = score.rank
+                        
+                        print("排行榜 = \(gamecenterID)，玩家名字 = \(playerName)，玩家分数 = \(scroeNumb)，玩家排名 = \(rank)")
+                    }
+                }
+            }
+        }
+    }
 }
