@@ -41,7 +41,7 @@ class HomeViewController: UIViewController {
             make.left.equalToSuperview().offset(25)
             make.right.equalToSuperview().offset(-25)
             make.top.equalTo(titleLabel.snp.bottom).offset(30)
-            make.height.equalTo((kScreenWidth - 50) * 0.52)
+            make.height.equalTo((kScreenWidth - 50) * 1.12)
         }
         
         view2048.tipButton.addTarget(self, action: #selector(startGameButtonTapped), for: .touchUpInside)
