@@ -51,9 +51,7 @@ class XZNavigationController: UINavigationController {
         }
         super.setViewControllers(viewControllers, animated: animated)
     }
-
 }
-
 
 class FZTipHeandView: UIView {
     
