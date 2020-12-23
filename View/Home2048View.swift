@@ -8,7 +8,7 @@
 import UIKit
 
 class Home2048View: UIView {
-
+    
     let bgImageView:UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "2048bg")
@@ -82,6 +82,5 @@ class Home2048View: UIView {
             make.height.equalTo(38)
             make.width.equalTo(110)
         }
-     }
-
+    }
 }
