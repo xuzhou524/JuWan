@@ -9,7 +9,7 @@ import UIKit
 import GameKit
 import GameplayKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.delegate = self
@@ -45,11 +45,22 @@ class HomeViewController: UIViewController {
         }
         
         view2048.tipButton.addTarget(self, action: #selector(startGameButtonTapped), for: .touchUpInside)
+        view2048.globalButton.addTarget(self, action: #selector(globalButtonTapped), for: .touchUpInside)
     }
     
     @objc func startGameButtonTapped() {
         let v = Play2048ViewController(dimension: 4, threshold: 2048)
         self.navigationController?.pushViewController(v, animated: true)
+    }
+    
+    @objc func globalButtonTapped() {
+        let gameCenterVC = GKGameCenterViewController()
+        gameCenterVC.gameCenterDelegate = self
+        self.present(gameCenterVC, animated: true, completion: nil)
+    }
+    
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
     }
 }
 

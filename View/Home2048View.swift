@@ -23,6 +23,15 @@ class Home2048View: UIView {
         return label
     }()
     
+    let globalButton:UIButton = {
+        let button = UIButton()
+        button.setTitle("全球排行榜", for: .normal)
+        button.setTitleColor(UIColor(named: "color_white"), for: .normal)
+        button.titleLabel?.font = blodFontWithSize(18)
+        button.setBackgroundImage(UIColor.clear.image, for: .normal)
+        return button
+    }()
+    
     let tipButton:UIButton = {
         let button = UIButton()
         button.setTitle("PLAY", for: .normal)
@@ -49,6 +58,7 @@ class Home2048View: UIView {
         self.addSubview(bgImageView)
         self.addSubview(titleLabel)
         self.addSubview(tipButton)
+        self.addSubview(globalButton)
         
         bgImageView.snp.makeConstraints { (make) in
             make.left.right.bottom.top.equalToSuperview()
@@ -62,6 +72,13 @@ class Home2048View: UIView {
         tipButton.snp.makeConstraints { (make) in
             make.right.equalToSuperview().offset(-25)
             make.bottom.equalToSuperview().offset(-25)
+            make.height.equalTo(38)
+            make.width.equalTo(110)
+        }
+        
+        globalButton.snp.makeConstraints { (make) in
+            make.right.equalToSuperview().offset(-15)
+            make.top.equalToSuperview().offset(25)
             make.height.equalTo(38)
             make.width.equalTo(110)
         }
