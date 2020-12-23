@@ -12,7 +12,6 @@ enum BPYSettingKey:String {
     case accessToken = "account.accessToken"
     /// 存放phone
     case phone = "account.phone"
-    
 }
 
 let Settings = BPYSettings.shared
