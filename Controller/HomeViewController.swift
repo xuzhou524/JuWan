@@ -10,7 +10,6 @@ import GameKit
 import GameplayKit
 
 class HomeViewController: UIViewController {
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.delegate = self
@@ -20,6 +19,10 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(named: "color_theme")
         
+        authenticateLocalPlayer()
+    }
+    
+    func sebViews() {
         let titleLabel = UILabel()
         titleLabel.font = blodFontWithSize(25)
         titleLabel.textColor = UIColor(named: "color_title_black")
@@ -42,8 +45,6 @@ class HomeViewController: UIViewController {
         }
         
         view2048.tipButton.addTarget(self, action: #selector(startGameButtonTapped), for: .touchUpInside)
-        
-        authenticateLocalPlayer()
     }
     
     @objc func startGameButtonTapped() {
@@ -54,17 +55,16 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController {
     func authenticateLocalPlayer(){
-        
         let localPlayer = GKLocalPlayer.local
-        
         localPlayer.authenticateHandler = {(viewController, error) -> Void in
             if (viewController != nil) {
                 let vc: UIViewController = self.view!.window!.rootViewController!
-                vc.present(viewController!, animated: true, completion: nil)
+                vc.present(viewController!, animated: true) {
+                    self.sebViews()
+                }
             }else {
-                print((GKLocalPlayer.local.isAuthenticated))
+                self.sebViews()
             }
         }
-        
     }
 }
