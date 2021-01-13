@@ -266,8 +266,8 @@ extension Play2048ViewController {
         //设置好友的范围
         leaderboadRequest.playerScope = .global
         
-        let type = "today"
-        if type == type {
+        let type = "all"
+        if type == "today" {
             leaderboadRequest.timeScope = .today
         }else if type == "week" {
             leaderboadRequest.timeScope = .week

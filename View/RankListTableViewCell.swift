@@ -77,6 +77,12 @@ class RankHeadView: UIView {
         return label
     }()
     
+    let tipView:UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.orange
+        return view
+    }()
+    
     let bgView:UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(named: "color_title_black")
@@ -123,7 +129,7 @@ class RankHeadView: UIView {
     func sebViews() {
         
         self.addSubview(titleLabel)
-        
+        self.addSubview(tipView)
         self.addSubview(bgView)
         
         self.addSubview(rankLabel)
@@ -133,6 +139,13 @@ class RankHeadView: UIView {
         titleLabel.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(15)
             make.top.equalToSuperview().offset(10)
+        }
+        
+        tipView.snp.makeConstraints { (make) in
+            make.right.equalToSuperview()
+            make.centerY.equalTo(titleLabel)
+            make.width.equalTo(200)
+            make.height.equalTo(30)
         }
         
         bgView.snp.makeConstraints { (make) in
