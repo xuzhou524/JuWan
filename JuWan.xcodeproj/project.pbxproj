@@ -35,6 +35,7 @@
 		C52520E1258C82B100793392 /* NumberTileGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520E0258C82B100793392 /* NumberTileGame.swift */; };
 		C52520E4258C853B00793392 /* Play2048ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520E3258C853B00793392 /* Play2048ViewController.swift */; };
 		C525212C2592F63D00793392 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C525212B2592F63D00793392 /* GameKit.framework */; };
+		C5BFF92A25AE8AF800C66424 /* RankListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFF92925AE8AF800C66424 /* RankListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		C52520E0258C82B100793392 /* NumberTileGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberTileGame.swift; sourceTree = "<group>"; };
 		C52520E3258C853B00793392 /* Play2048ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Play2048ViewController.swift; sourceTree = "<group>"; };
 		C525212B2592F63D00793392 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		C5BFF92925AE8AF800C66424 /* RankListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 			children = (
 				C52520D5258C826300793392 /* 2048 */,
 				C52520CB258C7A0B00793392 /* Home2048View.swift */,
+				C5BFF92925AE8AF800C66424 /* RankListTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				C5252081258C3F1500793392 /* MBProgressHUD+ITTAdditions.m in Sources */,
 				C52520D9258C827400793392 /* GameboardView.swift in Sources */,
 				C5251FDD258C36AC00793392 /* AppDelegate.swift in Sources */,
+				C5BFF92A25AE8AF800C66424 /* RankListTableViewCell.swift in Sources */,
 				C52520D3258C825500793392 /* GameModel.swift in Sources */,
 				C5252016258C3EC200793392 /* XZNavigationController.swift in Sources */,
 				C525207D258C3F1500793392 /* LDTipAlertView.m in Sources */,

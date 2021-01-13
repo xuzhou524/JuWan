@@ -42,11 +42,12 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
         view2048.layer.cornerRadius = 10
         view2048.layer.masksToBounds = true
         view2048.tipButton.addTarget(self, action: #selector(startGameButtonTapped), for: .touchUpInside)
-        view2048.globalButton.addTarget(self, action: #selector(globalButtonTapped), for: .touchUpInside)
         
-        view2048.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 350)
+        view2048.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 150)
         
         tableView.tableHeaderView = view2048
+        
+        regClass(tableView, cell: RankListTableViewCell.self)
     }
     
     @objc func startGameButtonTapped() {
@@ -89,15 +90,17 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 10
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 115
+        return 62
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = getCell(tableView, cell: RankListTableViewCell.self, indexPath: indexPath)
+        
+        return cell
     }
 
 }

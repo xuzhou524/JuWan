@@ -12,7 +12,7 @@ class XZNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationBar.setBackgroundImage(UIColor(named: "color_white")?.image, for: .default)
+        self.navigationBar.setBackgroundImage(UIColor(named: "color_theme")?.image, for: .default)
         self.navigationBar.shadowImage = UIImage()
         
         self.navigationBar.titleTextAttributes = [
