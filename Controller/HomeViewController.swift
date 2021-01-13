@@ -10,49 +10,50 @@ import GameKit
 import GameplayKit
 
 class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.delegate = self
-    }
+    
+    let tableView:UITableView = {
+        let tableView = UITableView()
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = UIColor(named: "color_theme")
+        return tableView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(named: "color_theme")
-        
-        authenticateLocalPlayer()
-    }
-    
-    func sebViews() {
         let titleLabel = UILabel()
         titleLabel.font = blodFontWithSize(25)
         titleLabel.textColor = UIColor(named: "color_title_black")
         titleLabel.text = "聚玩"
-        self.view.addSubview(titleLabel)
-        titleLabel.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(44 + 10)
-            make.left.equalToSuperview().offset(25)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: titleLabel)
+
+        authenticateLocalPlayer()
+
+    }
+    
+    func sebViews() {
+        self.view.addSubview(tableView)
+        tableView.snp.makeConstraints { (make) in
+            make.top.left.right.bottom.equalTo(self.view)
         }
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         
         let view2048 = Home2048View()
         view2048.layer.cornerRadius = 10
         view2048.layer.masksToBounds = true
-        self.view.addSubview(view2048)
-        view2048.snp.makeConstraints { (make) in
-            make.left.equalToSuperview().offset(25)
-            make.right.equalToSuperview().offset(-25)
-            make.top.equalTo(titleLabel.snp.bottom).offset(30)
-            make.height.equalTo((kScreenWidth - 50) * 1.12)
-        }
-        
         view2048.tipButton.addTarget(self, action: #selector(startGameButtonTapped), for: .touchUpInside)
         view2048.globalButton.addTarget(self, action: #selector(globalButtonTapped), for: .touchUpInside)
+        
+        view2048.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 350)
+        
+        tableView.tableHeaderView = view2048
     }
     
     @objc func startGameButtonTapped() {
         let v = Play2048ViewController(dimension: 4, threshold: 2048)
         self.navigationController?.pushViewController(v, animated: true)
     }
-    
+
     @objc func globalButtonTapped() {
         let gameCenterVC = GKGameCenterViewController()
         gameCenterVC.gameCenterDelegate = self
@@ -62,6 +63,7 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
         gameCenterViewController.dismiss(animated: true, completion: nil)
     }
+    
 }
 
 extension HomeViewController {
@@ -78,4 +80,24 @@ extension HomeViewController {
             }
         }
     }
+}
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+        
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 115
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+
 }

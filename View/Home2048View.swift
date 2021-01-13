@@ -115,7 +115,7 @@ class Home2048View: UIView {
         
         globalButton.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
-            make.top.equalTo(tipButton.snp.bottom).offset(50)
+            make.top.equalTo(tipButton.snp.bottom).offset(40)
             make.height.equalTo(38)
             make.width.equalTo(110)
         }
