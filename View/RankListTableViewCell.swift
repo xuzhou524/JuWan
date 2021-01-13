@@ -11,14 +11,14 @@ class RankListTableViewCell: UITableViewCell {
     
     let iconImageView:UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = UIColor.white
+        imageView.backgroundColor = UIColor.orange
         return imageView
     }()
 
     let titleLabel:UILabel = {
         let label = UILabel()
         label.font = fontWithSize(16)
-        label.textColor = UIColor(named: "color_title_white")
+        label.textColor = UIColor(named: "color_title_black")
         label.text = "哈哈"
         return label
     }()
@@ -26,7 +26,7 @@ class RankListTableViewCell: UITableViewCell {
     let scoreLabel:UILabel = {
         let label = UILabel()
         label.font = fontWithSize(15)
-        label.textColor = UIColor(named: "color_title_white")
+        label.textColor = UIColor(named: "color_title_black")
         label.text = "23,521"
         return label
     }()
@@ -39,7 +39,7 @@ class RankListTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.clipsToBounds = true
         self.selectionStyle = .none;
-        self.contentView.backgroundColor = UIColor(named: "color_title_black")
+        self.contentView.backgroundColor = UIColor(named: "color_theme")
         sebViews()
     }
     

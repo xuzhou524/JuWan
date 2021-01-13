@@ -53,22 +53,20 @@ class Home2048View: UIView {
         self.addSubview(tipButton)
         
         bgImageView.snp.makeConstraints { (make) in
-            make.bottom.top.equalToSuperview()
-            make.left.equalToSuperview().offset(15)
-            make.right.equalToSuperview().offset(-15)
+            make.top.left.equalToSuperview().offset(15)
+            make.bottom.right.equalToSuperview().offset(-15)
         }
         
         titleLabel.snp.makeConstraints { (make) in
-            make.left.equalToSuperview().offset(25)
-            make.top.equalToSuperview().offset(25)
+            make.left.equalToSuperview().offset(35)
+            make.top.equalToSuperview().offset(35)
         }
         
         tipButton.snp.makeConstraints { (make) in
-            make.right.equalToSuperview().offset(-25)
-            make.bottom.equalToSuperview().offset(-25)
+            make.right.equalToSuperview().offset(-35)
+            make.bottom.equalToSuperview().offset(-35)
             make.height.equalTo(38)
             make.width.equalTo(110)
         }
-
     }
 }

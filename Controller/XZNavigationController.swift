@@ -8,17 +8,19 @@
 import UIKit
 
 class XZNavigationController: UINavigationController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
         self.navigationBar.setBackgroundImage(UIColor(named: "color_theme")?.image, for: .default)
         self.navigationBar.shadowImage = UIImage()
         
         self.navigationBar.titleTextAttributes = [
             .font: weightFontWithSize(18, weight: .medium),
             .foregroundColor: UIColor(named: "color_title_black")!]
-        
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
         let bar = UINavigationBar.appearance(whenContainedInInstancesOf: [XZNavigationController.self])
         bar.backIndicatorImage = UIImage(named: "ic_back")
         bar.backIndicatorTransitionMaskImage = UIImage(named: "ic_back")
