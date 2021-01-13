@@ -43,7 +43,7 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
         view2048.layer.masksToBounds = true
         view2048.tipButton.addTarget(self, action: #selector(startGameButtonTapped), for: .touchUpInside)
         
-        view2048.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 150)
+        view2048.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 200)
         
         tableView.tableHeaderView = view2048
         

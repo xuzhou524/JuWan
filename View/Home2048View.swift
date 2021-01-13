@@ -25,11 +25,19 @@ class Home2048View: UIView {
         return label
     }()
     
+    let summeryLabel:UILabel = {
+        let label = UILabel()
+        label.font = blodFontWithSize(15)
+        label.textColor = UIColor(named: "color_white")
+        label.text = "回顾经典2048，挑战全球排行"
+        return label
+    }()
+    
     let tipButton:UIButton = {
         let button = UIButton()
-        button.setTitle("PLAY", for: .normal)
+        button.setTitle("开始挑战", for: .normal)
         button.setTitleColor(UIColor(named: "color_black"), for: .normal)
-        button.titleLabel?.font = blodFontWithSize(20)
+        button.titleLabel?.font = blodFontWithSize(18)
         button.setBackgroundImage(UIColor(named: "color_white")?.image, for: .normal)
         button.layer.cornerRadius = 19
         button.layer.masksToBounds = true
@@ -50,6 +58,7 @@ class Home2048View: UIView {
         
         self.addSubview(bgImageView)
         self.addSubview(titleLabel)
+        self.addSubview(summeryLabel)
         self.addSubview(tipButton)
         
         bgImageView.snp.makeConstraints { (make) in
@@ -60,6 +69,11 @@ class Home2048View: UIView {
         titleLabel.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(35)
             make.top.equalToSuperview().offset(35)
+        }
+        
+        summeryLabel.snp.makeConstraints { (make) in
+            make.left.equalTo(titleLabel)
+            make.top.equalTo(titleLabel.snp.bottom).offset(10)
         }
         
         tipButton.snp.makeConstraints { (make) in
