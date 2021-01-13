@@ -79,8 +79,15 @@ class RankHeadView: UIView {
     
     let tipView:UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor.orange
+        view.backgroundColor = UIColor.clear
         return view
+    }()
+    
+    let iconImageView:UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "circleright")?.withRenderingMode(.alwaysTemplate)
+        imageView.tintColor = UIColor(named: "color_title_black")
+        return imageView
     }()
     
     let bgView:UIView = {
@@ -130,6 +137,7 @@ class RankHeadView: UIView {
         
         self.addSubview(titleLabel)
         self.addSubview(tipView)
+        self.addSubview(iconImageView)
         self.addSubview(bgView)
         
         self.addSubview(rankLabel)
@@ -148,6 +156,13 @@ class RankHeadView: UIView {
             make.height.equalTo(30)
         }
         
+        iconImageView.snp.makeConstraints { (make) in
+            make.right.equalToSuperview().offset(-15)
+            make.centerY.equalTo(titleLabel)
+            make.width.equalTo(8)
+            make.height.equalTo(12)
+        }
+
         bgView.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(15)
             make.right.equalToSuperview().offset(-15)
