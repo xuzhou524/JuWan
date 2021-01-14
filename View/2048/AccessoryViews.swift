@@ -12,40 +12,58 @@ protocol ScoreViewProtocol {
     func scoreChanged(newScore s: Int)
 }
 
-/// A simple view that displays the player's score.
-class ScoreView : UIView, ScoreViewProtocol {
+class Score2048View: UIView,ScoreViewProtocol {
     var score : Int = 0 {
         didSet {
-            label.text = "得分\n\(score)"
+            scoreLabel.text = "\(score)"
         }
     }
     
-    let defaultFrame = CGRect(x: 0, y: 0, width: 100, height: 100)
-    var label: UILabel
+    let nameLabel:UILabel = {
+        let label = UILabel()
+        label.font = blodFontWithSize(13)
+        label.textColor = UIColor(named: "color_title_white")
+        label.text = "得分"
+        return label
+    }()
+
+    let scoreLabel:UILabel = {
+        let label = UILabel()
+        label.font = blodFontWithSize(28)
+        label.textColor = UIColor(named: "color_title_white")
+        label.text = "0"
+        return label
+    }()
     
-    init(backgroundColor bgcolor: UIColor, textColor tcolor: UIColor, font: UIFont, radius r: CGFloat) {
-        label = UILabel(frame: defaultFrame)
-        label.textAlignment = NSTextAlignment.center
-        label.numberOfLines = 2
-        super.init(frame: defaultFrame)
-        backgroundColor = bgcolor
-        label.textColor = tcolor
-        label.font = font
-        layer.cornerRadius = r
-        self.addSubview(label)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
-    required init(coder aDecoder: NSCoder) {
-        fatalError("NSCoding not supported")
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.backgroundColor = UIColor(named: "color_title_black")
+        self.layer.cornerRadius = 10
+        sebViews()
+    }
+    
+    func sebViews() {
+
+        self.addSubview(nameLabel)
+        self.addSubview(scoreLabel)
+        
+        nameLabel.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.bottom.equalTo(self.snp.centerY).offset(-8)
+        }
+
+        scoreLabel.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(self.snp.centerY).offset(-8)
+        }
+
     }
     
     func scoreChanged(newScore s: Int)  {
         score = s
     }
-}
-
-// A simple view that displays several buttons for controlling the app
-class ControlView {
-    let defaultFrame = CGRect(x: 0, y: 0, width: 100, height: 100)
-    // TODO: Implement me
 }

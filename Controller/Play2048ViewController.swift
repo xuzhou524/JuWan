@@ -21,9 +21,7 @@ class Play2048ViewController: UIViewController,GameModelProtocol {
     
     var dimension: Int
     var threshold: Int
-    
-    var scoreView: ScoreViewProtocol?
-    
+        
     let titleLabel:UILabel = {
         let label = UILabel()
         label.font = blodFontWithSize(35)
@@ -35,6 +33,19 @@ class Play2048ViewController: UIViewController,GameModelProtocol {
     let mobileAreaView:UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.clear
+        return view
+    }()
+    
+    let scoreView:Score2048View = {
+        let view = Score2048View()
+        view.score = 0
+        return view
+    }()
+    
+    let highScoreView:Score2048View = {
+        let view = Score2048View()
+        view.nameLabel.text = "最高分"
+        view.score = 2048
         return view
     }()
 
@@ -69,10 +80,26 @@ class Play2048ViewController: UIViewController,GameModelProtocol {
         }
         navTipView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(backClick)))
         
+        self.view.addSubview(scoreView)
+        scoreView.snp.makeConstraints { (make) in
+            make.right.equalToSuperview().offset(-25)
+            make.top.equalTo(navTipView.snp.bottom).offset(20)
+            make.width.equalTo(90)
+            make.height.equalTo(70)
+        }
+        
+        self.view.addSubview(highScoreView)
+        highScoreView.snp.makeConstraints { (make) in
+            make.right.equalTo(scoreView.snp.left).offset(-20)
+            make.top.equalTo(navTipView.snp.bottom).offset(20)
+            make.width.equalTo(90)
+            make.height.equalTo(70)
+        }
+        
         self.view.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(25)
-            make.top.equalTo(navTipView.snp.bottom).offset(20)
+            make.centerY.equalTo(scoreView)
         }
         
         self.view.addSubview(mobileAreaView)
@@ -80,7 +107,6 @@ class Play2048ViewController: UIViewController,GameModelProtocol {
             make.left.right.equalToSuperview()
             make.centerY.equalToSuperview().offset(50)
             make.height.equalTo(kScreenWidth)
-
         }
         
         let padding: CGFloat = dimension > 5 ? thinPadding : thickPadding
@@ -104,25 +130,12 @@ class Play2048ViewController: UIViewController,GameModelProtocol {
         m.insertTileAtRandomLocation(value: 2)
         m.insertTileAtRandomLocation(value: 2)
         
-        setupGame()
     }
     
     @objc func backClick() {
         self.navigationController?.popToRootViewController(animated: true)
     }
 
-    func setupGame() {
-        let scoreView = ScoreView(backgroundColor:UIColor(red: 237.0/255.0, green: 224.0/255.0, blue: 200.0/255.0, alpha: 1.0),
-                                  textColor: UIColor.white,
-                                  font: UIFont(name: "HelveticaNeue-Bold", size: 20.0) ?? UIFont.systemFont(ofSize: 20.0),
-                                  radius: 6)
-        scoreView.score = 0
-        view.addSubview(scoreView)
-        self.scoreView = scoreView
-
-        scoreView.frame = CGRect(x: kScreenWidth - 100 - 20, y: 100, width: 100, height: 80)
-
-    }
 }
 
 
@@ -218,11 +231,7 @@ extension Play2048ViewController {
     
     // Protocol
     func scoreChanged(score: Int) {
-        if scoreView == nil {
-            return
-        }
-        let s = scoreView!
-        s.scoreChanged(newScore: score)
+        scoreView.scoreChanged(newScore: score)
     }
 
     func moveOneTile(from: (Int, Int), to: (Int, Int), value: Int) {
