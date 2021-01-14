@@ -93,7 +93,7 @@ class RankHeadView: UIView {
     let bgView:UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(named: "color_title_black")
-        view.alpha = 0.3
+        view.alpha = 0.2
         view.layer.cornerRadius = 15
         view.layer.masksToBounds = true
         return view
