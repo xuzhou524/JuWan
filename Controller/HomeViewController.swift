@@ -11,6 +11,8 @@ import GameplayKit
 
 class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
     
+    var scores:[GKScore]?
+    
     let tableView:UITableView = {
         let tableView = UITableView()
         tableView.separatorStyle = .none
@@ -77,9 +79,66 @@ extension HomeViewController {
                 let vc: UIViewController = self.view!.window!.rootViewController!
                 vc.present(viewController!, animated: true) {
                     self.sebViews()
+                    self.downLoadGameCenter()
                 }
             }else {
                 self.sebViews()
+                self.downLoadGameCenter()
+            }
+        }
+    }
+    
+    func downLoadGameCenter() {
+        
+        if !GKLocalPlayer.local.isAuthenticated {
+            print("没有授权，无法获取更多信息")
+            return
+        }
+        
+        let leaderboadRequest = GKLeaderboard()
+        //设置好友的范围
+        leaderboadRequest.playerScope = .global
+        
+        let type = "all"
+        if type == "today" {
+            leaderboadRequest.timeScope = .today
+        }else if type == "week" {
+            leaderboadRequest.timeScope = .week
+        }else if type == "all" {
+            leaderboadRequest.timeScope = .allTime
+        }
+        
+        //哪一个排行榜
+        let identifier = "juWan_2048"
+        leaderboadRequest.identifier = identifier
+        //从那个排名到那个排名
+        let location = 1
+        let length = 10
+        leaderboadRequest.range = NSRange(location: location, length: length)
+        
+        //请求数据
+        leaderboadRequest.loadScores { (scores, error) in
+            if (error != nil) {
+                print("请求分数失败")
+                print("error = \(error)")
+            }else{
+                print("请求分数成功")
+                
+                self.scores = scores
+                self.tableView.reloadData()
+                
+                if let sss = scores as [GKScore]?  {
+                    for score in sss {
+                        print(score)
+                        
+                        let gamecenterID = score.leaderboardIdentifier
+                        let playerName = score.player.displayName
+                        let scroeNumb = score.value
+                        let rank = score.rank
+                        
+                        print("排行榜 = \(gamecenterID)，玩家名字 = \(playerName)，玩家分数 = \(scroeNumb)，玩家排名 = \(rank)")
+                    }
+                }
             }
         }
     }
@@ -92,7 +151,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return scores?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -106,13 +165,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 56
+        return 52
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = getCell(tableView, cell: RankListTableViewCell.self, indexPath: indexPath)
-        
+        let score = scores?[indexPath.row]
+        cell.titleLabel.text = score?.player.displayName
+        cell.scoreLabel.text = "\(score?.value ?? 0)"
         return cell
     }
-
 }

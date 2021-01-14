@@ -17,7 +17,7 @@ class RankListTableViewCell: UITableViewCell {
 
     let titleLabel:UILabel = {
         let label = UILabel()
-        label.font = fontWithSize(16)
+        label.font = fontWithSize(15)
         label.textColor = UIColor(named: "color_title_black")
         label.text = "哈哈"
         return label
@@ -52,7 +52,7 @@ class RankListTableViewCell: UITableViewCell {
         iconImageView.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(25)
             make.centerY.equalToSuperview()
-            make.width.height.equalTo(33)
+            make.width.height.equalTo(30)
         }
         
         titleLabel.snp.makeConstraints { (make) in
@@ -61,7 +61,7 @@ class RankListTableViewCell: UITableViewCell {
         }
 
         scoreLabel.snp.makeConstraints { (make) in
-            make.right.equalToSuperview().offset(-25)
+            make.right.equalToSuperview().offset(-28)
             make.centerY.equalToSuperview()
         }
     }
