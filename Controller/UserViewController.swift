@@ -80,4 +80,13 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            #if DEBUG
+            #else
+                SKStoreReviewController.requestReview()
+            #endif
+        }
+    }
+    
 }
