@@ -37,28 +37,33 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 55
     }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
             return 0
         }
         return 10
     }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let bgView = UIView()
         bgView.backgroundColor = UIColor.red
         return bgView
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = getCell(tableView, cell: LeftTitleTableViewCell.self, indexPath: indexPath)
-        cell.nodeNameLabel.text = ["给个赞","设置","版本号"][indexPath.row]
+        cell.nodeNameLabel.text = ["给个赞","选择主题","版本号"][indexPath.row]
         let names = ["ic_givePraise","ic_setting","ic_settings_input_svideo"]
-        cell.nodeImageView.image = UIImage(named: names[indexPath.row])
+        cell.nodeImageView.image = UIImage(named: names[indexPath.row])?.withRenderingMode(.alwaysTemplate)
         if indexPath.row == 2 {
             cell.isHiddenRightImage(hidden: true)
             let infoDict = Bundle.main.infoDictionary

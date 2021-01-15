@@ -14,11 +14,13 @@ class LeftTitleTableViewCell: UITableViewCell {
     var nodeNameLabel: UILabel = {
         let label =  UILabel()
         label.font = fontWithSize(15)
+        label.textColor = UIColor(named: "color_black")
         return label
     }()
     var summeryLabel: UILabel = {
         let label =  UILabel()
         label.font = fontWithSize(15)
+        label.textColor = UIColor(named: "color_black")
         return label
     }()
     var panel = UIView()
@@ -45,16 +47,19 @@ class LeftTitleTableViewCell: UITableViewCell {
             make.left.top.right.equalTo(self.contentView)
             make.height.equalTo(55)
         }
+        self.nodeImageView.tintColor = UIColor(named: "color_black")
         self.nodeImageView.snp.makeConstraints{ (make) -> Void in
             make.centerY.equalTo(panel)
             make.left.equalTo(panel).offset(15)
             make.width.height.equalTo(22)
         }
+        
         self.nodeNameLabel.snp.makeConstraints{ (make) -> Void in
             make.left.equalTo(self.nodeImageView.snp.right).offset(15)
             make.centerY.equalTo(self.nodeImageView)
         }
         self.rightImageView.image = UIImage(named: "circleright")
+        self.rightImageView.tintColor = UIColor(named: "color_black")
         self.rightImageView.snp.makeConstraints{ (make) -> Void in
             make.centerY.equalTo(panel)
             make.right.equalTo(panel).offset(-15)
@@ -68,13 +73,6 @@ class LeftTitleTableViewCell: UITableViewCell {
         
         self.summeryLabel.isHidden = true
         
-        self.configureColor()
-    }
-    func configureColor(){
-//        self.panel.backgroundColor = XZSwiftColor.white
-//        self.nodeImageView.tintColor =  XZSwiftColor.leftNodeTintColor
-//        self.nodeNameLabel.textColor = XZSwiftColor.leftNodeTintColor
-//        self.summeryLabel.textColor = XZSwiftColor.leftNodeTintColor
     }
     
     func isHiddenRightImage(hidden:Bool){
