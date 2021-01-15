@@ -26,7 +26,7 @@ class Score2048View: UIView,ScoreViewProtocol {
         label.text = "得分"
         return label
     }()
-
+    
     let scoreLabel:UILabel = {
         let label = UILabel()
         label.font = blodFontWithSize(28)
@@ -47,7 +47,7 @@ class Score2048View: UIView,ScoreViewProtocol {
     }
     
     func sebViews() {
-
+        
         self.addSubview(nameLabel)
         self.addSubview(scoreLabel)
         
@@ -55,12 +55,12 @@ class Score2048View: UIView,ScoreViewProtocol {
             make.centerX.equalToSuperview()
             make.bottom.equalTo(self.snp.centerY).offset(-8)
         }
-
+        
         scoreLabel.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
             make.top.equalTo(self.snp.centerY).offset(-8)
         }
-
+        
     }
     
     func scoreChanged(newScore s: Int)  {
