@@ -29,6 +29,12 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
         titleLabel.textColor = UIColor(named: "color_title_black")
         titleLabel.text = "聚玩"
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: titleLabel)
+        
+        let rightBtn = UIButton()
+        rightBtn.setImage(UIImage(named: "user")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        rightBtn.tintColor = UIColor(named: "color_title_black")
+        rightBtn.addTarget(self, action: #selector(rightBtnClick), for: .touchUpInside)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: rightBtn)
 
         authenticateLocalPlayer()
 
@@ -63,6 +69,10 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
         let gameCenterVC = GKGameCenterViewController()
         gameCenterVC.gameCenterDelegate = self
         self.present(gameCenterVC, animated: true, completion: nil)
+    }
+    
+    @objc func rightBtnClick() {
+        self.navigationController?.pushViewController(UserViewController(), animated: true)
     }
     
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
