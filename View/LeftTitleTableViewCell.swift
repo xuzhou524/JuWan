@@ -54,11 +54,12 @@ class LeftTitleTableViewCell: UITableViewCell {
             make.left.equalTo(self.nodeImageView.snp.right).offset(15)
             make.centerY.equalTo(self.nodeImageView)
         }
-        self.rightImageView.image = UIImage(named: "ic_rightArrow")
+        self.rightImageView.image = UIImage(named: "circleright")
         self.rightImageView.snp.makeConstraints{ (make) -> Void in
             make.centerY.equalTo(panel)
             make.right.equalTo(panel).offset(-15)
-            make.width.height.equalTo(15)
+            make.width.equalTo(8)
+            make.height.equalTo(12)
         }
         self.summeryLabel.snp.remakeConstraints { (make) in
             make.right.equalTo(self.rightImageView.snp.left).offset(-5)
