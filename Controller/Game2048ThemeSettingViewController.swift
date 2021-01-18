@@ -20,8 +20,8 @@ class Game2048ThemeSettingViewController: UIViewController {
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 20.0
         layout.sectionInset = UIEdgeInsets(top: 0, left: (kScreenWidth - 40) / 5 + 20, bottom: 0, right: (kScreenWidth - 40) / 5 + 20)
-        layout.itemSize = CGSize(width: (kScreenWidth - 40) * 3 / 5, height: kScreenHeight * 3 / 7)
-        collectionView = UICollectionView(frame: CGRect(x: 0, y: 50, width: kScreenWidth, height: kScreenHeight * 3 / 7), collectionViewLayout: layout)
+        layout.itemSize = CGSize(width: (kScreenWidth - 40) * 3 / 5, height: (kScreenWidth - 40) * 3 / 5 + 100)
+        collectionView = UICollectionView(frame: CGRect(x: 0, y: 50, width: kScreenWidth, height: (kScreenWidth - 40) * 3 / 5 + 100), collectionViewLayout: layout)
         collectionView.backgroundColor = UIColor.clear
         collectionView.collectionViewLayout = layout
         collectionView.showsHorizontalScrollIndicator = false
@@ -42,9 +42,6 @@ extension Game2048ThemeSettingViewController : UICollectionViewDelegate , UIColl
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(CDViewCell.self), for: indexPath) as! CDViewCell
-        cell.goodsImg.backgroundColor = UIColor.orange
-        cell.nameLabel.text = "经典"
-        cell.priceLabel.text = "无门槛"
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

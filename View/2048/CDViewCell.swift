@@ -10,29 +10,58 @@ import UIKit
 
 class CDViewCell: UICollectionViewCell {
     
-    let goodsImg = UIImageView()
-    let nameLabel = UILabel()
-    let priceLabel = UILabel()
-    //cell的高度APPHEIGHT*3/7
+    let goodsImg:UIImageView = {
+        let imageView = UIImageView()
+        imageView.backgroundColor = UIColor.orange
+        return imageView
+    }()
+    
+    let nameLabel:UILabel = {
+        let label = UILabel()
+        label.font = blodFontWithSize(16)
+        label.textColor = UIColor(named: "color_title_black")
+        label.text = "经典"
+        return label
+    }()
+    
+    let priceLabel:UILabel = {
+        let label = UILabel()
+        label.font = blodFontWithSize(15)
+        label.textColor = UIColor(named: "color_title_black")
+        label.text = "无门槛"
+        return label
+    }()
+    
     override  init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1.0)
+        
+        self.contentView.backgroundColor = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1.0)
         self.layer.masksToBounds = true
         self.layer.cornerRadius = 5.0
-        self.goodsImg.frame = CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.width)  //宽高相同
-        let remainHeight =  kScreenHeight * 3 / 7 - self.bounds.width
-        nameLabel.frame = CGRect(x: 10, y: self.bounds.width, width: self.bounds.width-20, height: remainHeight*2/3)
-        //nameLabel.backgroundColor = UIColor.red
-        nameLabel.font = UIFont.systemFont(ofSize: 14)
-        nameLabel.numberOfLines = 2
-        nameLabel.lineBreakMode = .byWordWrapping
-        priceLabel.frame = CGRect(x: 10, y: self.bounds.width+remainHeight*2/3, width: self.bounds.width-20, height: remainHeight/3)
-        //priceLabel.backgroundColor = UIColor.blue
-        priceLabel.font = UIFont.systemFont(ofSize: 14)
-        priceLabel.textColor = UIColor.red
-        self.addSubview(goodsImg)
-        self.addSubview(nameLabel)
-        self.addSubview(priceLabel)
+        
+        sebViews()
+    }
+    
+    func sebViews() {
+        
+        self.contentView.addSubview(goodsImg)
+        self.contentView.addSubview(nameLabel)
+        self.contentView.addSubview(priceLabel)
+        
+        goodsImg.snp.makeConstraints { (make) in
+            make.left.right.top.equalToSuperview()
+            make.height.equalTo((kScreenWidth - 40) * 3 / 5)
+        }
+        
+        nameLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(goodsImg.snp.bottom).offset(20)
+            make.centerX.equalToSuperview()
+        }
+        
+        priceLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(nameLabel.snp.bottom).offset(10)
+            make.centerX.equalToSuperview()
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
