@@ -24,6 +24,8 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(named: "color_theme")
         
+        GameDecorateConfig.shared.game2048ThemeType = 1
+        
         let titleLabel = UILabel()
         titleLabel.font = blodFontWithSize(25)
         titleLabel.textColor = UIColor(named: "color_title_black")

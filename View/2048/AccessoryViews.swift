@@ -21,7 +21,7 @@ class Score2048View: UIView,ScoreViewProtocol {
     
     let nameLabel:UILabel = {
         let label = UILabel()
-        label.font = blodFontWithSize(13)
+        label.font = blodFontWithSize(12)
         label.textColor = UIColor(named: "color_title_white")
         label.text = "得分"
         return label
@@ -29,7 +29,7 @@ class Score2048View: UIView,ScoreViewProtocol {
     
     let scoreLabel:UILabel = {
         let label = UILabel()
-        label.font = blodFontWithSize(28)
+        label.font = blodFontWithSize(26)
         label.textColor = UIColor(named: "color_title_white")
         label.text = "0"
         return label

@@ -37,6 +37,7 @@
 		C554AC4125B13AF3000CB32B /* SwiftHEXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C554AC4025B13AF3000CB32B /* SwiftHEXColors.swift */; };
 		C57F72B825B1494A00FC0198 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F72B725B1494A00FC0198 /* UserViewController.swift */; };
 		C57F72BB25B14AB700FC0198 /* LeftTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F72BA25B14AB700FC0198 /* LeftTitleTableViewCell.swift */; };
+		C59470BA25B5187D009C1F35 /* GameDecorateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59470B925B5187D009C1F35 /* GameDecorateConfig.swift */; };
 		C5BFF92A25AE8AF800C66424 /* RankListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFF92925AE8AF800C66424 /* RankListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		C554AC4025B13AF3000CB32B /* SwiftHEXColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHEXColors.swift; sourceTree = "<group>"; };
 		C57F72B725B1494A00FC0198 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		C57F72BA25B14AB700FC0198 /* LeftTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTitleTableViewCell.swift; sourceTree = "<group>"; };
+		C59470B925B5187D009C1F35 /* GameDecorateConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDecorateConfig.swift; sourceTree = "<group>"; };
 		C5BFF92925AE8AF800C66424 /* RankListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,6 +195,7 @@
 				C525202F258C3F1000793392 /* MBProgressHUD+ITTAdditions.m */,
 				C5252039258C3F1100793392 /* UITableView+Extension.swift */,
 				C5252061258C3F1500793392 /* UIViewController+Extension.swift */,
+				C59470B925B5187D009C1F35 /* GameDecorateConfig.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				C57F72B825B1494A00FC0198 /* UserViewController.swift in Sources */,
 				C52520D3258C825500793392 /* GameModel.swift in Sources */,
 				C5252016258C3EC200793392 /* XZNavigationController.swift in Sources */,
+				C59470BA25B5187D009C1F35 /* GameDecorateConfig.swift in Sources */,
 				C525207D258C3F1500793392 /* LDTipAlertView.m in Sources */,
 				C5251FDF258C36AC00793392 /* SceneDelegate.swift in Sources */,
 				C52520E4258C853B00793392 /* Play2048ViewController.swift in Sources */,
