@@ -38,6 +38,9 @@
 		C57F72B825B1494A00FC0198 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F72B725B1494A00FC0198 /* UserViewController.swift */; };
 		C57F72BB25B14AB700FC0198 /* LeftTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F72BA25B14AB700FC0198 /* LeftTitleTableViewCell.swift */; };
 		C59470BA25B5187D009C1F35 /* GameDecorateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59470B925B5187D009C1F35 /* GameDecorateConfig.swift */; };
+		C59470C725B52229009C1F35 /* CDFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59470C525B52228009C1F35 /* CDFlowLayout.swift */; };
+		C59470C825B52229009C1F35 /* CDViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59470C625B52229009C1F35 /* CDViewCell.swift */; };
+		C59470CB25B52308009C1F35 /* Game2048ThemeSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59470CA25B52308009C1F35 /* Game2048ThemeSettingViewController.swift */; };
 		C5BFF92A25AE8AF800C66424 /* RankListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFF92925AE8AF800C66424 /* RankListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +83,9 @@
 		C57F72B725B1494A00FC0198 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		C57F72BA25B14AB700FC0198 /* LeftTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTitleTableViewCell.swift; sourceTree = "<group>"; };
 		C59470B925B5187D009C1F35 /* GameDecorateConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDecorateConfig.swift; sourceTree = "<group>"; };
+		C59470C525B52228009C1F35 /* CDFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDFlowLayout.swift; sourceTree = "<group>"; };
+		C59470C625B52229009C1F35 /* CDViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDViewCell.swift; sourceTree = "<group>"; };
+		C59470CA25B52308009C1F35 /* Game2048ThemeSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game2048ThemeSettingViewController.swift; sourceTree = "<group>"; };
 		C5BFF92925AE8AF800C66424 /* RankListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +162,7 @@
 				C52520E3258C853B00793392 /* Play2048ViewController.swift */,
 				C5252015258C3EC200793392 /* XZNavigationController.swift */,
 				C57F72B725B1494A00FC0198 /* UserViewController.swift */,
+				C59470CA25B52308009C1F35 /* Game2048ThemeSettingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -221,6 +228,8 @@
 		C52520D5258C826300793392 /* 2048 */ = {
 			isa = PBXGroup;
 			children = (
+				C59470C525B52228009C1F35 /* CDFlowLayout.swift */,
+				C59470C625B52229009C1F35 /* CDViewCell.swift */,
 				C52520DD258C829D00793392 /* AppearanceProvider.swift */,
 				C52520D8258C827400793392 /* AccessoryViews.swift */,
 				C52520D6258C827300793392 /* GameboardView.swift */,
@@ -346,6 +355,7 @@
 				C52520DE258C829D00793392 /* AppearanceProvider.swift in Sources */,
 				C5252088258C3F1500793392 /* UIColor+Create.swift in Sources */,
 				C52520D2258C825500793392 /* AuxiliaryModels.swift in Sources */,
+				C59470CB25B52308009C1F35 /* Game2048ThemeSettingViewController.swift in Sources */,
 				C5252090258C3F1500793392 /* Defines.swift in Sources */,
 				C5252083258C3F1500793392 /* Date+Extension.swift in Sources */,
 				C52520A1258C3F1500793392 /* Defaults.swift in Sources */,
@@ -358,6 +368,8 @@
 				C52520D9258C827400793392 /* GameboardView.swift in Sources */,
 				C5251FDD258C36AC00793392 /* AppDelegate.swift in Sources */,
 				C5BFF92A25AE8AF800C66424 /* RankListTableViewCell.swift in Sources */,
+				C59470C825B52229009C1F35 /* CDViewCell.swift in Sources */,
+				C59470C725B52229009C1F35 /* CDFlowLayout.swift in Sources */,
 				C57F72B825B1494A00FC0198 /* UserViewController.swift in Sources */,
 				C52520D3258C825500793392 /* GameModel.swift in Sources */,
 				C5252016258C3EC200793392 /* XZNavigationController.swift in Sources */,

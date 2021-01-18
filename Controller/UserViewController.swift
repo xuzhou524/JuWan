@@ -86,6 +86,8 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
             #else
                 SKStoreReviewController.requestReview()
             #endif
+        }else if indexPath.row == 1 {
+            self.navigationController?.pushViewController(Game2048ThemeSettingViewController(), animated: true)
         }
     }
     
