@@ -201,7 +201,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             cell.rankLabel.text = "\(indexPath.row + 1)"
         }
         cell.titleLabel.text = score?.player.displayName
-        cell.scoreLabel.text = "\(score?.value ?? 0)"
+        
+        let format = NumberFormatter()
+        format.numberStyle = .decimal
+        cell.scoreLabel.text = format.string(from: NSNumber(value: score?.value ?? 0))
         return cell
     }
 }
