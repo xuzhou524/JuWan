@@ -16,7 +16,7 @@ class RankListTableViewCell: UITableViewCell {
     
     let rankLabel:UILabel = {
         let label = UILabel()
-        label.font = fontWithSize(15)
+        label.font = blodFontWithSize(18)
         label.textColor = UIColor(named: "color_title_black")
         label.text = "1"
         return label

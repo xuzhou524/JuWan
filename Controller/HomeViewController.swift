@@ -197,9 +197,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             cell.iconImageView.image = UIImage(named: "three")
         }else{
             cell.rankLabel.isHidden = false
-            cell.rankLabel.text = "\(indexPath.row)"
+            cell.iconImageView.isHidden = true
+            cell.rankLabel.text = "\(indexPath.row + 1)"
         }
-        
         cell.titleLabel.text = score?.player.displayName
         cell.scoreLabel.text = "\(score?.value ?? 0)"
         return cell
