@@ -11,8 +11,15 @@ class RankListTableViewCell: UITableViewCell {
     
     let iconImageView:UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = UIColor.orange
         return imageView
+    }()
+    
+    let rankLabel:UILabel = {
+        let label = UILabel()
+        label.font = fontWithSize(15)
+        label.textColor = UIColor(named: "color_title_black")
+        label.text = "1"
+        return label
     }()
 
     let titleLabel:UILabel = {
@@ -46,6 +53,7 @@ class RankListTableViewCell: UITableViewCell {
     func sebViews() {
 
         self.contentView.addSubview(iconImageView)
+        self.contentView.addSubview(rankLabel)
         self.contentView.addSubview(titleLabel)
         self.contentView.addSubview(scoreLabel)
         
@@ -53,6 +61,10 @@ class RankListTableViewCell: UITableViewCell {
             make.left.equalToSuperview().offset(25)
             make.centerY.equalToSuperview()
             make.width.height.equalTo(30)
+        }
+        
+        rankLabel.snp.makeConstraints { (make) in
+            make.center.equalTo(iconImageView)
         }
         
         titleLabel.snp.makeConstraints { (make) in

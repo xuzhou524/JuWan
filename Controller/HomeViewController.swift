@@ -183,6 +183,23 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = getCell(tableView, cell: RankListTableViewCell.self, indexPath: indexPath)
         let score = scores?[indexPath.row]
+        if indexPath.row == 0 {
+            cell.rankLabel.isHidden = true
+            cell.iconImageView.isHidden = false
+            cell.iconImageView.image = UIImage(named: "one")
+        }else if indexPath.row == 1 {
+            cell.rankLabel.isHidden = true
+            cell.iconImageView.isHidden = false
+            cell.iconImageView.image = UIImage(named: "two")
+        }else if indexPath.row == 2 {
+            cell.rankLabel.isHidden = true
+            cell.iconImageView.isHidden = false
+            cell.iconImageView.image = UIImage(named: "three")
+        }else{
+            cell.rankLabel.isHidden = false
+            cell.rankLabel.text = "\(indexPath.row)"
+        }
+        
         cell.titleLabel.text = score?.player.displayName
         cell.scoreLabel.text = "\(score?.value ?? 0)"
         return cell
