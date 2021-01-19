@@ -131,7 +131,7 @@ class RankHeadView: UIView {
         let label = UILabel()
         label.font = blodFontWithSize(13)
         label.textColor = UIColor(named: "color_title_black")
-        label.text = "积分值"
+        label.text = "最高分"
         return label
     }()
     
