@@ -13,7 +13,7 @@ class Game2048ThemeSettingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "主题设置"
+        self.title = "主题色"
         self.view.backgroundColor = UIColor(named: "color_theme")
         
         let layout = CDFlowLayout()
@@ -42,6 +42,7 @@ extension Game2048ThemeSettingViewController : UICollectionViewDelegate , UIColl
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(CDViewCell.self), for: indexPath) as! CDViewCell
+        cell.goodsImg.image = UIImage(named: "theme_2048_\(indexPath.row + 1)")
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

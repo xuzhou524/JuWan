@@ -39,7 +39,7 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -61,10 +61,10 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = getCell(tableView, cell: LeftTitleTableViewCell.self, indexPath: indexPath)
-        cell.nodeNameLabel.text = ["给个赞","选择主题","版本号"][indexPath.row]
-        let names = ["ic_givePraise","ic_setting","ic_settings_input_svideo"]
+        cell.nodeNameLabel.text = ["给个赞","选择主题色","选择表盘","版本号"][indexPath.row]
+        let names = ["ic_givePraise","ic_setting","ic_setting","ic_settings_input_svideo"]
         cell.nodeImageView.image = UIImage(named: names[indexPath.row])?.withRenderingMode(.alwaysTemplate)
-        if indexPath.row == 2 {
+        if indexPath.row == 3 {
             cell.isHiddenRightImage(hidden: true)
             let infoDict = Bundle.main.infoDictionary
             if let info = infoDict {
