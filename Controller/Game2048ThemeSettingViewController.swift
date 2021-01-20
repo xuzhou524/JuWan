@@ -43,6 +43,8 @@ extension Game2048ThemeSettingViewController : UICollectionViewDelegate , UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(CDViewCell.self), for: indexPath) as! CDViewCell
         cell.goodsImg.image = UIImage(named: "theme_2048_\(indexPath.row + 1)")
+        cell.nameLabel.text = ["经典","玫瑰粉","天空蓝"][indexPath.row]
+        cell.priceLabel.text = ["无门槛","1,024","2,048"][indexPath.row]
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
