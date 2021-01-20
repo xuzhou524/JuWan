@@ -10,9 +10,15 @@ import UIKit
 
 class CDViewCell: UICollectionViewCell {
     
+    let selectView:UIView = {
+        let view = UIView()
+        view.layer.borderWidth = 5
+        view.layer.borderColor = UIColor.orange.cgColor
+        return view
+    }()
+    
     let goodsImg:UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = UIColor.orange
         return imageView
     }()
     
@@ -44,10 +50,15 @@ class CDViewCell: UICollectionViewCell {
     
     func sebViews() {
         
+        self.contentView.addSubview(selectView)
         self.contentView.addSubview(goodsImg)
         self.contentView.addSubview(nameLabel)
         self.contentView.addSubview(priceLabel)
         
+        selectView.snp.makeConstraints { (make) in
+            make.left.top.bottom.right.equalToSuperview()
+        }
+    
         goodsImg.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(10)
             make.right.equalToSuperview().offset(-10)

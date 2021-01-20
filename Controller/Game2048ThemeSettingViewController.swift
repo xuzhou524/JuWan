@@ -13,7 +13,7 @@ class Game2048ThemeSettingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "主题色"
+        self.title = "选择主题"
         self.view.backgroundColor = UIColor(named: "color_theme")
         
         let layout = CDFlowLayout()
@@ -45,10 +45,18 @@ extension Game2048ThemeSettingViewController : UICollectionViewDelegate , UIColl
         cell.goodsImg.image = UIImage(named: "theme_2048_\(indexPath.row + 1)")
         cell.nameLabel.text = ["经典","玫瑰粉","天空蓝"][indexPath.row]
         cell.priceLabel.text = ["无门槛","最高分达 1,024","最高分达 2,048"][indexPath.row]
+        if indexPath.row + 1 == GameDecorateConfig.shared.game2048ThemeType {
+            cell.selectView.isHidden = false
+        }else{
+            cell.selectView.isHidden = true
+        }
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("点击图片\(indexPath.row)")
+        
+        GameDecorateConfig.shared.game2048ThemeType = indexPath.row + 1
+        self.collectionView.reloadData()
+        
     }
     
 }
