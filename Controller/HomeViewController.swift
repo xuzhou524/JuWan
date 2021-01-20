@@ -125,7 +125,7 @@ extension HomeViewController {
         leaderboadRequest.identifier = identifier
         //从那个排名到那个排名
         let location = 1
-        let length = 10
+        let length = 100
         leaderboadRequest.range = NSRange(location: location, length: length)
         
         //请求数据
