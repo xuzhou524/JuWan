@@ -11,6 +11,9 @@ class GameDecorateConfig: NSObject {
     static let shared = GameDecorateConfig()
     
     /// Game配置
-    var game2048ThemeType: Int?
+    //主题色
+    var game2048ThemeType: Int = 1
 
+    //表盘
+    var game2048DialNum: Int = 4
 }

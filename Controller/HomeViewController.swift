@@ -23,9 +23,7 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(named: "color_theme")
-        
-        GameDecorateConfig.shared.game2048ThemeType = 1
-        
+                
         let titleLabel = UILabel()
         titleLabel.font = blodFontWithSize(25)
         titleLabel.textColor = UIColor(named: "color_title_black")
@@ -63,7 +61,7 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
     }
     
     @objc func startGameButtonTapped() {
-        let v = Play2048ViewController(dimension: 4, threshold: 2048)
+        let v = Play2048ViewController(dimension: GameDecorateConfig.shared.game2048DialNum, threshold: 4194304)
         self.navigationController?.pushViewController(v, animated: true)
     }
 
