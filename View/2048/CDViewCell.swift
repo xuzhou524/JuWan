@@ -19,15 +19,15 @@ class CDViewCell: UICollectionViewCell {
     let nameLabel:UILabel = {
         let label = UILabel()
         label.font = blodFontWithSize(16)
-        label.textColor = UIColor(named: "color_title_black")
+        label.textColor = UIColor(named: "color_black")
         label.text = "经典"
         return label
     }()
     
     let priceLabel:UILabel = {
         let label = UILabel()
-        label.font = blodFontWithSize(15)
-        label.textColor = UIColor(named: "color_title_black")
+        label.font = blodFontWithSize(13)
+        label.textColor = UIColor(named: "color_black")
         label.text = "无门槛"
         return label
     }()
@@ -49,8 +49,10 @@ class CDViewCell: UICollectionViewCell {
         self.contentView.addSubview(priceLabel)
         
         goodsImg.snp.makeConstraints { (make) in
-            make.left.right.top.equalToSuperview()
-            make.height.equalTo((kScreenWidth - 40) * 3 / 5)
+            make.left.equalToSuperview().offset(10)
+            make.right.equalToSuperview().offset(-10)
+            make.top.equalToSuperview().offset(10)
+            make.height.equalTo((kScreenWidth - 60) * 3 / 5)
         }
         
         nameLabel.snp.makeConstraints { (make) in
