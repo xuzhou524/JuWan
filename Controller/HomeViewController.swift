@@ -88,23 +88,24 @@ extension HomeViewController {
             if (viewController != nil) {
                 let vc: UIViewController = self.view!.window!.rootViewController!
                 vc.present(viewController!, animated: true) {
-                    self.sebViews()
-                    self.downLoadGameCenter()
+                    self.checkLocalAuthenticated()
                 }
             }else {
-                self.sebViews()
-                self.downLoadGameCenter()
+                self.checkLocalAuthenticated()
             }
         }
     }
     
-    func downLoadGameCenter() {
-        
+    func checkLocalAuthenticated() {
         if !GKLocalPlayer.local.isAuthenticated {
             print("没有授权，无法获取更多信息")
-            return
+        }else{
+            sebViews()
+            downLoadGameCenter()
         }
-        
+    }
+    
+    func downLoadGameCenter() {
         let leaderboadRequest = GKLeaderboard()
         //设置好友的范围
         leaderboadRequest.playerScope = .global
