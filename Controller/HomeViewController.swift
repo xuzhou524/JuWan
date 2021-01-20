@@ -99,6 +99,7 @@ extension HomeViewController {
     func checkLocalAuthenticated() {
         if !GKLocalPlayer.local.isAuthenticated {
             print("没有授权，无法获取更多信息")
+            sebViews()
         }else{
             sebViews()
             downLoadGameCenter()
@@ -166,7 +167,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 95
+        return scores?.count ?? 0 > 1 ? 95 : 0
     }
      
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

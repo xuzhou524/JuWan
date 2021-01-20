@@ -142,6 +142,8 @@ class RankHeadView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = UIColor(named: "color_theme")
+        self.clipsToBounds = true
+        
         sebViews()
     }
     
