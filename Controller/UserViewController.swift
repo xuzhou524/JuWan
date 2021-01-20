@@ -22,7 +22,7 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "我的"
+//        self.title = "我的"
         self.view.backgroundColor = UIColor(named: "color_theme")
         
         self.tableView.delegate = self
@@ -35,11 +35,14 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        if section == 0 {
+            return 2
+        }
+        return 3
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -47,47 +50,61 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if section == 0 {
-            return 0
-        }
+//        if section == 0 {
+//            return 0
+//        }
         return 10
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let bgView = UIView()
-        bgView.backgroundColor = UIColor.red
+        bgView.backgroundColor = UIColor(named: "color_theme")
         return bgView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = getCell(tableView, cell: LeftTitleTableViewCell.self, indexPath: indexPath)
-        cell.nodeNameLabel.text = ["给个赞","选择主题色","选择表盘","版本号"][indexPath.row]
-        let names = ["ic_givePraise","ic_setting","ic_setting","ic_settings_input_svideo"]
-        cell.nodeImageView.image = UIImage(named: names[indexPath.row])?.withRenderingMode(.alwaysTemplate)
-        if indexPath.row == 3 {
-            cell.isHiddenRightImage(hidden: true)
-            let infoDict = Bundle.main.infoDictionary
-            if let info = infoDict {
-               // app版本
-               let appVersion = info["CFBundleShortVersionString"] as! String?
-               cell.summeryLabel.text = "v" + appVersion!
-               cell.summeryLabel.isHidden = false
-            }
-        }else{
+        if indexPath.section == 0 {
+            let cell = getCell(tableView, cell: LeftTitleTableViewCell.self, indexPath: indexPath)
+            cell.nodeNameLabel.text = ["选择主题色","选择表盘"][indexPath.row]
+            let names = ["ic_setting","ic_setting"]
+            cell.nodeImageView.image = UIImage(named: names[indexPath.row])?.withRenderingMode(.alwaysTemplate)
             cell.isHiddenRightImage(hidden: false)
             cell.summeryLabel.isHidden = true
+            return cell
+        }else{
+            let cell = getCell(tableView, cell: LeftTitleTableViewCell.self, indexPath: indexPath)
+            cell.nodeNameLabel.text = ["给个赞","隐私协议","版本号"][indexPath.row]
+            let names = ["ic_givePraise","ic_settings_input_svideo","ic_settings_input_svideo"]
+            cell.nodeImageView.image = UIImage(named: names[indexPath.row])?.withRenderingMode(.alwaysTemplate)
+            if indexPath.row == 2 {
+                cell.isHiddenRightImage(hidden: true)
+                let infoDict = Bundle.main.infoDictionary
+                if let info = infoDict {
+                   // app版本
+                   let appVersion = info["CFBundleShortVersionString"] as! String?
+                   cell.summeryLabel.text = "v" + appVersion!
+                   cell.summeryLabel.isHidden = false
+                }
+            }else{
+                cell.isHiddenRightImage(hidden: false)
+                cell.summeryLabel.isHidden = true
+            }
+            return cell
         }
-        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            #if DEBUG
-            #else
-                SKStoreReviewController.requestReview()
-            #endif
-        }else if indexPath.row == 1 {
-            self.navigationController?.pushViewController(Game2048ThemeSettingViewController(), animated: true)
+        if indexPath.section == 0 {
+            if indexPath.row == 0 {
+                self.navigationController?.pushViewController(Game2048ThemeSettingViewController(), animated: true)
+            }
+        }else{
+            if indexPath.row == 0 {
+                #if DEBUG
+                #else
+                    SKStoreReviewController.requestReview()
+                #endif
+            }
         }
     }
     
