@@ -38,14 +38,13 @@ class Game2048ThemeDialViewController: UIViewController {
 extension Game2048ThemeDialViewController : UICollectionViewDelegate , UICollectionViewDataSource{
     //UICollectionView代理方法
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 2
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(CDViewCell.self), for: indexPath) as! CDViewCell
         cell.goodsImg.image = UIImage(named: "theme_2048_\(indexPath.row + 1)")
-        cell.nameLabel.font = blodFontWithSize(30)
-        cell.nameLabel.text = ["4 × 4","5 × 5","6 × 6","7 × 7","8 × 8"][indexPath.row]
-        cell.priceLabel.isHidden = true
+        cell.nameLabel.text = ["4 × 4","6 × 6"][indexPath.row]
+        cell.priceLabel.text = ["无门槛","CNY 1.00"][indexPath.row]
         if indexPath.row + 1 == GameDecorateConfig.shared.game2048ThemeType {
             cell.selectView.isHidden = false
         }else{

@@ -22,7 +22,7 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.title = "我的"
+        self.title = "我的"
         self.view.backgroundColor = UIColor(named: "color_theme")
         
         self.tableView.delegate = self
@@ -40,7 +40,7 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 2
+            return 3
         }
         return 3
     }
@@ -62,8 +62,8 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = getCell(tableView, cell: LeftTitleTableViewCell.self, indexPath: indexPath)
-            cell.nodeNameLabel.text = ["选择主题色","选择表盘"][indexPath.row]
-            let names = ["ic_setting","ic_setting"]
+            cell.nodeNameLabel.text = ["选择主题色","选择表盘","分享聚玩"][indexPath.row]
+            let names = ["ic_setting","ic_setting","ic_setting"]
             cell.nodeImageView.image = UIImage(named: names[indexPath.row])?.withRenderingMode(.alwaysTemplate)
             cell.isHiddenRightImage(hidden: false)
             cell.summeryLabel.isHidden = true
@@ -96,6 +96,9 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
                 self.navigationController?.pushViewController(Game2048ThemeSettingViewController(), animated: true)
             }else if indexPath.row == 1 {
                 self.navigationController?.pushViewController(Game2048ThemeDialViewController(), animated: true)
+            }else if indexPath.row == 2 {
+                let activityController = UIActivityViewController(activityItems: [ "https://dsdsd.dsd.dsd" + " (分享来自@聚玩) " ], applicationActivities: nil)
+                UIApplication.shared.windows.first?.rootViewController?.present(activityController, animated: true, completion: nil)
             }
         }else{
             if indexPath.row == 0 {
