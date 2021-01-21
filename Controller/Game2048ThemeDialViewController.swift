@@ -106,12 +106,13 @@ extension Game2048ThemeDialViewController : UICollectionViewDelegate , UICollect
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(CDViewCell.self), for: indexPath) as! CDViewCell
-        cell.goodsImg.image = UIImage(named: "theme_2048_\(indexPath.row + 1)")
         cell.nameLabel.text = ["4 × 4","6 × 6"][indexPath.row]
         cell.priceLabel.text = ["无门槛",isHaveBuy ? "已购买" : "CNY 1.00"][indexPath.row]
         if indexPath.row == 0 {
+            cell.goodsImg.image = UIImage(named: "theme_2048_1")
             cell.selectView.isHidden = GameDecorateConfig.shared.game2048DialNum != 4
         }else if indexPath.row == 1{
+            cell.goodsImg.image = UIImage(named: "theme_2048D_6")
             cell.selectView.isHidden = GameDecorateConfig.shared.game2048DialNum != 6
         }else{
             cell.selectView.isHidden = true

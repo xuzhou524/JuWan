@@ -61,7 +61,7 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
     }
     
     @objc func startGameButtonTapped() {
-        let v = Play2048ViewController(dimension: GameDecorateConfig.shared.game2048DialNum, threshold: 4194304)
+        let v = Play2048ViewController(dimension: 6, threshold: 4194304)
         self.navigationController?.pushViewController(v, animated: true)
     }
 

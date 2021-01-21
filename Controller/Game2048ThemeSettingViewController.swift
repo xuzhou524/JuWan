@@ -44,7 +44,7 @@ extension Game2048ThemeSettingViewController : UICollectionViewDelegate , UIColl
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(CDViewCell.self), for: indexPath) as! CDViewCell
         cell.goodsImg.image = UIImage(named: "theme_2048_\(indexPath.row + 1)")
         cell.nameLabel.text = ["经典","玫瑰粉","天空蓝"][indexPath.row]
-        cell.priceLabel.text = ["无门槛","最高分达 1,024","最高分达 2,048"][indexPath.row]
+        cell.priceLabel.text = ["无门槛","最高分 1,024 以上","最高分达 2,048 以上"][indexPath.row]
         if indexPath.row + 1 == GameDecorateConfig.shared.game2048ThemeType {
             cell.selectView.isHidden = false
         }else{
