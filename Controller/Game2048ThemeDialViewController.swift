@@ -57,6 +57,7 @@ extension Game2048ThemeDialViewController{
     
     func buyProduct() {
         SwiftyStoreKit.purchaseProduct("juwan_2048_Dial_6", quantity: 1, atomically: true) { result in
+            MBProgressHUD.hideAllIndicator()
             switch result {
             case .success(let purchase):
                 print("Purchase Success: \(purchase.productId)")
@@ -124,10 +125,12 @@ extension Game2048ThemeDialViewController : UICollectionViewDelegate , UICollect
                 collectionView.reloadData()
             }else{
                 //再次验证
+                MBProgressHUD.showDefaultIndicator(withText: nil)
                 let receipt = AppleReceiptValidator(service: .production)
                 SwiftyStoreKit.verifyReceipt(using: receipt) { (result) in
                     switch result {
                     case .success(let receipt):
+                        MBProgressHUD.hideAllIndicator()
                         print("receipt--->\(receipt)")
                         GameDecorateConfig.shared.game2048DialNum = 6
                         self.collectionView.reloadData()
