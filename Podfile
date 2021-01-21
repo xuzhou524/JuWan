@@ -11,6 +11,8 @@ def pods
     pod 'KVOController'
  
     pod 'MBProgressHUD'
+    
+    pod 'SwiftyStoreKit'
 
 end
 
