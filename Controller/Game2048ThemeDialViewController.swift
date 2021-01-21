@@ -45,8 +45,10 @@ extension Game2048ThemeDialViewController : UICollectionViewDelegate , UICollect
         cell.goodsImg.image = UIImage(named: "theme_2048_\(indexPath.row + 1)")
         cell.nameLabel.text = ["4 × 4","6 × 6"][indexPath.row]
         cell.priceLabel.text = ["无门槛","CNY 1.00"][indexPath.row]
-        if indexPath.row + 1 == GameDecorateConfig.shared.game2048ThemeType {
-            cell.selectView.isHidden = false
+        if indexPath.row == 0 {
+            cell.selectView.isHidden = GameDecorateConfig.shared.game2048DialNum != 4
+        }else if indexPath.row == 1{
+            cell.selectView.isHidden = GameDecorateConfig.shared.game2048DialNum != 6
         }else{
             cell.selectView.isHidden = true
         }
@@ -54,7 +56,7 @@ extension Game2048ThemeDialViewController : UICollectionViewDelegate , UICollect
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        GameDecorateConfig.shared.game2048ThemeType = indexPath.row + 1
+        GameDecorateConfig.shared.game2048DialNum = Int(["4","6"][indexPath.row]) ?? 4
         self.collectionView.reloadData()
         
     }
