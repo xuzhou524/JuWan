@@ -94,6 +94,8 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
         if indexPath.section == 0 {
             if indexPath.row == 0 {
                 self.navigationController?.pushViewController(Game2048ThemeSettingViewController(), animated: true)
+            }else if indexPath.row == 1 {
+                self.navigationController?.pushViewController(Game2048ThemeDialViewController(), animated: true)
             }
         }else{
             if indexPath.row == 0 {
