@@ -33,7 +33,7 @@ class Game2048ThemeDialViewController: UIViewController {
         collectionView.reloadData()
         self.view.addSubview(self.collectionView)
 
-        product()
+        restorePurchases()
         
 //        getList()
     }
@@ -82,18 +82,31 @@ extension Game2048ThemeDialViewController{
     }
     
     //验证
-    func product() {
-        let receipt = AppleReceiptValidator(service: .production)
-        SwiftyStoreKit.verifyReceipt(using: receipt) { (result) in
-            switch result {
-            case .success(let receipt):
-             print("receipt--->\(receipt)")
-                self.isHaveBuy = true
-                self.collectionView.reloadData()
-                break
-            case .error(let error):
-             print("error--->\(error)")
-                break
+//    func product() {
+//        let receipt = AppleReceiptValidator(service: .production)
+//        SwiftyStoreKit.verifyReceipt(using: receipt) { (result) in
+//            switch result {
+//            case .success(let receipt):
+//             print("receipt--->\(receipt)")
+//                self.isHaveBuy = true
+//                self.collectionView.reloadData()
+//                break
+//            case .error(let error):
+//                print("error--->\(error)")
+//                break
+//            }
+//        }
+//    }
+    
+    func restorePurchases() {
+        SwiftyStoreKit.restorePurchases { (result) in
+            if let sss = result.restoredPurchases as [Purchase]?  {
+                for score in sss {
+                    if score.productId == "juwan_2048_Dial_6" {
+                        self.isHaveBuy = true
+                        self.collectionView.reloadData()
+                    }
+                }
             }
         }
     }
