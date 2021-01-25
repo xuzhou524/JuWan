@@ -106,6 +106,9 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
                 #else
                     SKStoreReviewController.requestReview()
                 #endif
+            }else if indexPath.row == 1 {
+                let webViewVC = BPYWebViewController.init(url: "http://res.caidanmao.com/fuckdfs/91a9dd1a2392bbf6ceaf02e83a7da3b2.pdf", titleStr: "隐私协议")
+                self.navigationController?.pushViewController(webViewVC, animated: true)
             }
         }
     }
