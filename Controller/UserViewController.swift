@@ -22,7 +22,7 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "我的"
+        self.title = GameUserInfoConfig.shared.gameName
         self.view.backgroundColor = UIColor(named: "color_theme")
         
         self.tableView.delegate = self
