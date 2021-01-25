@@ -11,6 +11,7 @@ import GameplayKit
 
 class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
     
+    var isNoFirst: Bool = true
     var scores:[GKScore]?
     
     let tableView:UITableView = {
@@ -45,6 +46,7 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
     }
     
     func sebViews() {
+        isNoFirst = false
         self.view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
             make.top.left.right.bottom.equalTo(self.view)
@@ -87,7 +89,9 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
 
 extension HomeViewController {
     func authenticateLocalPlayer(){
-        self.showloading()
+        if isNoFirst {
+            self.showloading()
+        }
         let localPlayer = GKLocalPlayer.local
         localPlayer.authenticateHandler = {(viewController, error) -> Void in
             self.hideLoading()
