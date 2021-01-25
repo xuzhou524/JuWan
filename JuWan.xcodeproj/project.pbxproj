@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		87E624CE1A12435BF319238A /* libPods-JuWan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0FDB650050D0AD0ECC30E5 /* libPods-JuWan.a */; };
+		C50E129C25BEA642008321FC /* GameUserInfoConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50E129B25BEA642008321FC /* GameUserInfoConfig.swift */; };
 		C523503525B91EFA005B637B /* Game2048ThemeDialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523503425B91EFA005B637B /* Game2048ThemeDialViewController.swift */; };
 		C523504025B945D8005B637B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C523503F25B945D8005B637B /* StoreKit.framework */; };
 		C5251FDD258C36AC00793392 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5251FDC258C36AC00793392 /* AppDelegate.swift */; };
@@ -50,6 +51,7 @@
 		7C1EC16AE261FC9A43693EFE /* Pods-JuWan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuWan.release.xcconfig"; path = "Target Support Files/Pods-JuWan/Pods-JuWan.release.xcconfig"; sourceTree = "<group>"; };
 		7E0FDB650050D0AD0ECC30E5 /* libPods-JuWan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JuWan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C27D339610B69BB212B42A /* Pods-JuWan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuWan.debug.xcconfig"; path = "Target Support Files/Pods-JuWan/Pods-JuWan.debug.xcconfig"; sourceTree = "<group>"; };
+		C50E129B25BEA642008321FC /* GameUserInfoConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameUserInfoConfig.swift; sourceTree = "<group>"; };
 		C523503425B91EFA005B637B /* Game2048ThemeDialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game2048ThemeDialViewController.swift; sourceTree = "<group>"; };
 		C523503F25B945D8005B637B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C5251FD9258C36AC00793392 /* JuWan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuWan.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,6 +212,7 @@
 				C5252039258C3F1100793392 /* UITableView+Extension.swift */,
 				C5252061258C3F1500793392 /* UIViewController+Extension.swift */,
 				C59470B925B5187D009C1F35 /* GameDecorateConfig.swift */,
+				C50E129B25BEA642008321FC /* GameUserInfoConfig.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				C5252016258C3EC200793392 /* XZNavigationController.swift in Sources */,
 				C59470BA25B5187D009C1F35 /* GameDecorateConfig.swift in Sources */,
 				C525207D258C3F1500793392 /* LDTipAlertView.m in Sources */,
+				C50E129C25BEA642008321FC /* GameUserInfoConfig.swift in Sources */,
 				C5251FDF258C36AC00793392 /* SceneDelegate.swift in Sources */,
 				C52520E4258C853B00793392 /* Play2048ViewController.swift in Sources */,
 				C5252013258C3E7E00793392 /* HomeViewController.swift in Sources */,

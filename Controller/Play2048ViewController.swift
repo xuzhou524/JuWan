@@ -45,7 +45,7 @@ class Play2048ViewController: UIViewController,GameModelProtocol {
     let highScoreView:Score2048View = {
         let view = Score2048View()
         view.nameLabel.text = "最高分"
-        view.score = 2048
+        view.score = GameUserInfoConfig.shared.game2048HigheScore
         return view
     }()
 

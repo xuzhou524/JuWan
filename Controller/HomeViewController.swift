@@ -61,7 +61,7 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
     }
     
     @objc func startGameButtonTapped() {
-        let v = Play2048ViewController(dimension: 6, threshold: 4194304)
+        let v = Play2048ViewController(dimension: GameDecorateConfig.shared.game2048DialNum, threshold: 4194304)
         self.navigationController?.pushViewController(v, animated: true)
     }
 
@@ -101,6 +101,11 @@ extension HomeViewController {
             print("没有授权，无法获取更多信息")
             sebViews()
         }else{
+            //存储玩家信息 - id - name
+            let localPlayer = GKLocalPlayer.local
+            GameUserInfoConfig.shared.gameId = localPlayer.gamePlayerID
+            GameUserInfoConfig.shared.gameName = localPlayer.displayName
+            
             sebViews()
             downLoadGameCenter()
         }
@@ -135,20 +140,19 @@ extension HomeViewController {
                 print("error = \(error)")
             }else{
                 print("请求分数成功")
-                
                 self.scores = scores
                 self.tableView.reloadData()
-                
                 if let sss = scores as [GKScore]?  {
                     for score in sss {
-                        print(score)
-                        
                         let gamecenterID = score.leaderboardIdentifier
                         let playerName = score.player.displayName
                         let scroeNumb = score.value
                         let rank = score.rank
-                        
-                        print("排行榜 = \(gamecenterID)，玩家名字 = \(playerName)，玩家分数 = \(scroeNumb)，玩家排名 = \(rank)")
+                        let gamePlayerID = score.player.gamePlayerID
+                        if GameUserInfoConfig.shared.gameId == gamePlayerID && GameUserInfoConfig.shared.gameName == playerName {
+                            GameUserInfoConfig.shared.game2048HigheScore = Int(scroeNumb)
+                        }
+                        print("排行榜 = \(gamecenterID),玩家id = \(gamePlayerID),玩家名字 = \(playerName),玩家分数 = \(scroeNumb),玩家排名 = \(rank)")
                     }
                 }
             }

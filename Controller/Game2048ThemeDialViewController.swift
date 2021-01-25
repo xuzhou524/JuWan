@@ -143,7 +143,6 @@ extension Game2048ThemeDialViewController : UICollectionViewDelegate , UICollect
                     }
                 }
             }
-            
         }else{
             GameDecorateConfig.shared.game2048DialNum =  4
             collectionView.reloadData()
