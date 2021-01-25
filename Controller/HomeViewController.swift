@@ -83,8 +83,10 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
 
 extension HomeViewController {
     func authenticateLocalPlayer(){
+        self.showloading()
         let localPlayer = GKLocalPlayer.local
         localPlayer.authenticateHandler = {(viewController, error) -> Void in
+            self.hideLoading()
             if (viewController != nil) {
                 let vc: UIViewController = self.view!.window!.rootViewController!
                 vc.present(viewController!, animated: true) {
