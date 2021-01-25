@@ -12,7 +12,7 @@ class GameDecorateConfig: NSObject {
     
     /// Game配置
     //主题色
-    var game2048ThemeType: Int = 3
+    var game2048ThemeType: Int = 1
 
     //表盘
     var game2048DialNum: Int = 4

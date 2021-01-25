@@ -102,8 +102,8 @@
             [btn.titleLabel setFont:[UIFont systemFontOfSize:16]];
             [btn addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
             float offset = (CGRectGetWidth(_backgroundView.frame)-140*2)/3;
-            btn.frame = CGRectMake(offset*(i+1)+140*i, CGRectGetHeight(_backgroundView.frame)-60, 140, 40);
-            btn.layer.cornerRadius = 20;
+            btn.frame = CGRectMake(offset*(i+1)+140*i, CGRectGetHeight(_backgroundView.frame)-60, 140, 44);
+            btn.layer.cornerRadius = 10;
             btn.layer.masksToBounds  = YES;
             btn.tag = i;
             if (i == 0){//拒绝按钮
@@ -111,7 +111,7 @@
                 btn.layer.borderColor  = [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0].CGColor;
                 [btn setTitleColor:[UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0] forState:UIControlStateNormal];
             }else{//同意按钮
-                [btn setBackgroundColor:[UIColor colorWithRed:236/255.0 green:84/255.0 blue:71/255.0 alpha:1.0]];
+                [btn setBackgroundColor:[UIColor colorWithRed:74/255.0 green:78/255.0 blue:105/255.0 alpha:1.0]];
                 [btn setTitleColor:[UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1.0] forState:UIControlStateNormal];
             }
             [_backgroundView addSubview:btn];
@@ -121,12 +121,12 @@
             [btn.titleLabel setFont:[UIFont systemFontOfSize:16]];
             [btn addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
 
-            btn.frame = CGRectMake(25, CGRectGetHeight(_backgroundView.frame)-60, CGRectGetWidth(_backgroundView.frame) - 50, 40);
+            btn.frame = CGRectMake(25, CGRectGetHeight(_backgroundView.frame)-60, CGRectGetWidth(_backgroundView.frame) - 50, 44);
             btn.tag = i;
       
             btn.layer.masksToBounds  = YES;
-            btn.layer.cornerRadius = 20;
-            [btn setBackgroundColor:[UIColor colorWithRed:236/255.0 green:84/255.0 blue:71/255.0 alpha:1.0]];
+            btn.layer.cornerRadius = 10;
+            [btn setBackgroundColor:[UIColor colorWithRed:74/255.0 green:78/255.0 blue:105/255.0 alpha:1.0]];
             [btn setTitleColor:[UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1.0] forState:UIControlStateNormal];
 
             [_backgroundView addSubview:btn];

@@ -53,7 +53,12 @@ extension Game2048ThemeSettingViewController : UICollectionViewDelegate , UIColl
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        if (indexPath.row == 1 && GameUserInfoConfig.shared.game2048HigheScore < 1024) ||
+            (indexPath.row == 2 && GameUserInfoConfig.shared.game2048HigheScore < 2048) {
+            let tip = LDTipAlertView.init(message: "您的最高分暂未达到当前门槛，快去努力吧!", buttonTitles: ["我知道了"])
+            tip?.show()
+            return
+        }
         GameDecorateConfig.shared.game2048ThemeType = indexPath.row + 1
         self.collectionView.reloadData()
         
