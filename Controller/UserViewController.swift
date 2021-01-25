@@ -97,7 +97,7 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
             }else if indexPath.row == 1 {
                 self.navigationController?.pushViewController(Game2048ThemeDialViewController(), animated: true)
             }else if indexPath.row == 2 {
-                let activityController = UIActivityViewController(activityItems: [ "https://dsdsd.dsd.dsd" + " (分享来自@聚玩) " ], applicationActivities: nil)
+                let activityController = UIActivityViewController(activityItems: [ "https://apps.apple.com/cn/app/id1546172171" + " (分享来自@聚玩) " ], applicationActivities: nil)
                 UIApplication.shared.windows.first?.rootViewController?.present(activityController, animated: true, completion: nil)
             }
         }else{
