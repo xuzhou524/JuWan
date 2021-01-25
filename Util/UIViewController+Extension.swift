@@ -41,4 +41,15 @@ extension UIViewController:UINavigationControllerDelegate {
 
     }
     
+    public func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        if viewController == self {
+            navigationController.setNavigationBarHidden(true, animated: true)
+        }else{
+            if navigationController.isKind(of: UIImagePickerController.classForCoder()) {
+                return
+            }
+            navigationController.setNavigationBarHidden(false, animated: true)
+        }
+    }
+    
 }
