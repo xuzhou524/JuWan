@@ -166,6 +166,10 @@ extension Play2048ViewController {
         
         //保存分数
         saveHighScore(s: m.score)
+        if m.score > GameUserInfoConfig.shared.game2048HigheScore {
+            GameUserInfoConfig.shared.game2048HigheScore = m.score
+            highScoreView.score = GameUserInfoConfig.shared.game2048HigheScore
+        }
 
         if userWon {
             let tip = LDTipAlertView.init(message: "你赢了！", buttonTitles: ["我知道了"])

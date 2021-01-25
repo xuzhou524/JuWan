@@ -20,6 +20,12 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
         return tableView
     }()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        authenticateLocalPlayer()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(named: "color_theme")
@@ -35,8 +41,6 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
         rightBtn.tintColor = UIColor(named: "color_title_black")
         rightBtn.addTarget(self, action: #selector(rightBtnClick), for: .touchUpInside)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: rightBtn)
-
-        authenticateLocalPlayer()
 
     }
     
