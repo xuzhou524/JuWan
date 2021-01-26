@@ -11,7 +11,17 @@ import GoogleMobileAds
 class Game2048ThemeSettingViewController: UIViewController {
     
     var collectionView : UICollectionView!
+    
     var interstitial: GADInterstitial!
+    var bannerView: GADBannerView!
+    
+    var rewarded: GADRewardedAd!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        rewarded = createAndLoad()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,13 +43,24 @@ class Game2048ThemeSettingViewController: UIViewController {
         collectionView.reloadData()
         self.view.addSubview(self.collectionView)
         
+        bannerView = GADBannerView.init(frame: CGRect(x: 0,  y: kScreenHeight - 180, width: kScreenWidth, height: 50))
+        if (kIsFullScreen) {
+            bannerView.frame = CGRect(x: 0,  y: kScreenHeight - 230, width: kScreenWidth, height: 50)
+        }
+        bannerView.adSize = kGADAdSizeBanner
+        bannerView.center.x = self.view.center.x
+        self.view.addSubview(bannerView)
+        self.view.bringSubviewToFront(bannerView)
+        bannerView.adUnitID = "ca-app-pub-9353975206269682/2479518012"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+
     }
     
-    func createAndLoadInterstitial() -> GADInterstitial {
-        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-9353975206269682/9950813920")
-        interstitial.delegate = self
-        interstitial.load(GADRequest())
-        return interstitial
+    func createAndLoad() -> GADRewardedAd {
+        let rewarded = GADRewardedAd(adUnitID: "ca-app-pub-3940256099942544/1712485313")
+        rewarded.load(GADRequest(), completionHandler: nil)
+        return rewarded
     }
     
 }
@@ -63,6 +84,7 @@ extension Game2048ThemeSettingViewController : UICollectionViewDelegate , UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         if (indexPath.row == 1 && GameUserInfoConfig.shared.game2048HigheScore < 1024) ||
             (indexPath.row == 2 && GameUserInfoConfig.shared.game2048HigheScore < 2048) {
             let tip = LDTipAlertView.init(message: "您的最高分暂未达到当前门槛，快去努力吧!", buttonTitles: ["我知道了"])
@@ -71,49 +93,22 @@ extension Game2048ThemeSettingViewController : UICollectionViewDelegate , UIColl
             GameDecorateConfig.shared.game2048ThemeType = indexPath.row + 1
             self.collectionView.reloadData()
 
-            interstitial = createAndLoadInterstitial()
-
-            if interstitial.isReady {
-                interstitial.present(fromRootViewController: self)
-            } else {
-                print("Ad wasn't ready")
-            }
+            rewarded.present(fromRootViewController: self, delegate:self)
         }
     }
     
 }
 
-extension Game2048ThemeSettingViewController : GADInterstitialDelegate{
-    
-    /// Tells the delegate an ad request succeeded.
-    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
-      print("interstitialDidReceiveAd")
+extension Game2048ThemeSettingViewController : GADInterstitialDelegate,GADRewardedAdDelegate{
+    /// Tells the delegate that the user earned a reward.
+    func rewardedAd(_ rewardedAd: GADRewardedAd, userDidEarn reward: GADAdReward) {
+        print("Reward received with currency: \(reward.type), amount \(reward.amount).")
+        self.dismiss(animated: true, completion: nil)
     }
-
-    /// Tells the delegate an ad request failed.
-    func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
-      print("interstitial:didFailToReceiveAdWithError: \(error.localizedDescription)")
-    }
-
-    /// Tells the delegate that an interstitial will be presented.
-    func interstitialWillPresentScreen(_ ad: GADInterstitial) {
-      print("interstitialWillPresentScreen")
-    }
-
-    /// Tells the delegate the interstitial is to be animated off the screen.
-    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
-      print("interstitialWillDismissScreen")
-    }
-
-    /// Tells the delegate the interstitial had been animated off the screen.
-    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
-      print("interstitialDidDismissScreen")
-    }
-
-    /// Tells the delegate that a user click will open another app
-    /// (such as the App Store), backgrounding the current app.
-    func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
-      print("interstitialWillLeaveApplication")
+    /// Tells the delegate that the rewarded ad was dismissed.
+    func rewardedAdDidDismiss(_ rewardedAd: GADRewardedAd) {
+      rewarded = createAndLoad()
+      print("Rewarded ad dismissed.")
     }
     
 }

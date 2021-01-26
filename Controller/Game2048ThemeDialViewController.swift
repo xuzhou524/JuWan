@@ -7,11 +7,14 @@
 
 import UIKit
 import SwiftyStoreKit
+import GoogleMobileAds
 
 class Game2048ThemeDialViewController: UIViewController {
     
     var collectionView : UICollectionView!
     var isHaveBuy = false
+    
+    var bannerView: GADBannerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +35,18 @@ class Game2048ThemeDialViewController: UIViewController {
         collectionView.register(CDViewCell.self, forCellWithReuseIdentifier: NSStringFromClass(CDViewCell.self))
         collectionView.reloadData()
         self.view.addSubview(self.collectionView)
+        
+        bannerView = GADBannerView.init(frame: CGRect(x: 0,  y: kScreenHeight - 180, width: kScreenWidth, height: 50))
+        if (kIsFullScreen) {
+            bannerView.frame = CGRect(x: 0,  y: kScreenHeight - 230, width: kScreenWidth, height: 50)
+        }
+        bannerView.adSize = kGADAdSizeBanner
+        bannerView.center.x = self.view.center.x
+        self.view.addSubview(bannerView)
+        self.view.bringSubviewToFront(bannerView)
+        bannerView.adUnitID = "ca-app-pub-9353975206269682/2479518012"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
 
         restorePurchases()
         

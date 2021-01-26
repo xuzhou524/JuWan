@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         GADMobileAds.sharedInstance().start(completionHandler: nil)
+        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = ["0f8acdbac7f2e2231820c33360664ec3"]
         
         SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
             for purchase in purchases {
