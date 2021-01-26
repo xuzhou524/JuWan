@@ -13,6 +13,8 @@ def pods
     pod 'MBProgressHUD'
     
     pod 'SwiftyStoreKit'
+    
+    pod 'Google-Mobile-Ads-SDK'
 
 end
 
