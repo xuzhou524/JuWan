@@ -36,6 +36,8 @@ class Game2048ThemeDialViewController: UIViewController {
         collectionView.reloadData()
         self.view.addSubview(self.collectionView)
         
+        #if DEBUG
+        #else
         bannerView = GADBannerView.init(frame: CGRect(x: 0,  y: kScreenHeight - 180, width: kScreenWidth, height: 50))
         if (kIsFullScreen) {
             bannerView.frame = CGRect(x: 0,  y: kScreenHeight - 230, width: kScreenWidth, height: 50)
@@ -47,7 +49,8 @@ class Game2048ThemeDialViewController: UIViewController {
         bannerView.adUnitID = "ca-app-pub-9353975206269682/2479518012"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
-
+        #endif
+        
         restorePurchases()
         
 //        getList()
