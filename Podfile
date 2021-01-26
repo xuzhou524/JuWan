@@ -14,7 +14,7 @@ def pods
     
     pod 'SwiftyStoreKit'
     
-    pod 'Google-Mobile-Ads-SDK'
+#    pod 'Google-Mobile-Ads-SDK'
 
 end
 
