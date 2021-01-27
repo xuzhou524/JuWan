@@ -56,6 +56,10 @@ class Game2048ThemeDialViewController: UIViewController {
 //        getList()
     }
     
+    func paymentQueue(_ queue: SKPaymentQueue, shouldAddStorePayment payment: SKPayment, for product: SKProduct) -> Bool {
+        return true
+    }
+    
 }
 
 extension Game2048ThemeDialViewController{
