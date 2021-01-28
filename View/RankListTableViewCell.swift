@@ -204,6 +204,13 @@ class RankHeadView: UIView {
 
 class EmptyCell: UITableViewCell {
     
+    let circlerImageView:UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "ic_helpCircler")?.withRenderingMode(.alwaysTemplate)
+        imageView.tintColor = UIColor(named: "color_title_black")
+        return imageView
+    }()
+    
     let iconImageView:UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "ic_empty")
@@ -232,17 +239,24 @@ class EmptyCell: UITableViewCell {
     
     func sebViews() {
 
+        self.contentView.addSubview(circlerImageView)
         self.contentView.addSubview(iconImageView)
         self.contentView.addSubview(titleLabel)
         
+        circlerImageView.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(5)
+            make.right.equalToSuperview().offset(-25)
+            make.height.width.equalTo(40)
+        }
+        
         iconImageView.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(100)
+            make.top.equalToSuperview().offset(80)
             make.centerX.equalToSuperview()
             make.height.width.equalTo(250)
         }
 
         titleLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(iconImageView.snp.bottom).offset(25)
+            make.top.equalTo(iconImageView.snp.bottom).offset(10)
             make.centerX.equalToSuperview()
         }
 
