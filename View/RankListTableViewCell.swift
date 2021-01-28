@@ -244,7 +244,7 @@ class EmptyCell: UITableViewCell {
         self.contentView.addSubview(titleLabel)
         
         circlerImageView.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(5)
+            make.top.equalToSuperview()
             make.right.equalToSuperview().offset(-25)
             make.height.width.equalTo(40)
         }
