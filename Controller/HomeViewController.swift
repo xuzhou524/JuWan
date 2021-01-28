@@ -46,7 +46,6 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
     }
     
     func sebViews() {
-        isNoFirst = false
         self.view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
             make.top.left.right.bottom.equalTo(self.view)
@@ -90,6 +89,7 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
 extension HomeViewController {
     func authenticateLocalPlayer(){
         if isNoFirst {
+            isNoFirst = false
             self.showloading()
         }
         let localPlayer = GKLocalPlayer.local
@@ -109,7 +109,7 @@ extension HomeViewController {
     func checkLocalAuthenticated() {
         if !GKLocalPlayer.local.isAuthenticated {
             print("没有授权，无法获取更多信息")
-            sebViews()
+//            sebViews()
         }else{
             //存储玩家信息 - id - name
             let localPlayer = GKLocalPlayer.local
