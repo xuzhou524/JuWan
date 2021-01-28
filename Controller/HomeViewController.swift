@@ -90,7 +90,11 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
     }
     
     @objc func rightBtnClick() {
-        self.navigationController?.pushViewController(UserViewController(), animated: true)
+        if GameUserInfoConfig.shared.gameId.count > 0 {
+            self.navigationController?.pushViewController(UserViewController(), animated: true)
+        }else{
+            self.navigationController?.pushViewController(HelpViewController(), animated: true)
+        }
     }
     
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {

@@ -12,7 +12,7 @@ class GameUserInfoConfig: NSObject {
 
     //玩家昵称
     
-    var gameId : String = "1"
+    var gameId : String = ""
     var gameName: String = "聚玩者"
     
     //2048 最高分

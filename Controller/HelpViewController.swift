@@ -16,6 +16,7 @@ class HelpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "帮助中心"
         self.view.backgroundColor = UIColor(named: "color_theme")
 
         self.view.addSubview(withoutView)
