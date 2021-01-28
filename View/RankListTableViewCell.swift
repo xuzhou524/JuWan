@@ -200,3 +200,51 @@ class RankHeadView: UIView {
         }
     }
 }
+
+
+class EmptyCell: UITableViewCell {
+    
+    let iconImageView:UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "ic_empty")
+        return imageView
+    }()
+    
+    let titleLabel:UILabel = {
+        let label = UILabel()
+        label.font = fontWithSize(13)
+        label.textColor = UIColor(named: "color_title_black")
+        label.text = "没有授权，无法获取更多信息"
+        return label
+    }()
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+ 
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.clipsToBounds = true
+        self.selectionStyle = .none;
+        self.contentView.backgroundColor = UIColor(named: "color_theme")
+        sebViews()
+    }
+    
+    func sebViews() {
+
+        self.contentView.addSubview(iconImageView)
+        self.contentView.addSubview(titleLabel)
+        
+        iconImageView.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(100)
+            make.centerX.equalToSuperview()
+            make.height.width.equalTo(250)
+        }
+
+        titleLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(iconImageView.snp.bottom).offset(25)
+            make.centerX.equalToSuperview()
+        }
+
+    }
+}

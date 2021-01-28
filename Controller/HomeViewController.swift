@@ -21,6 +21,11 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
         return tableView
     }()
     
+    let emptyView:EmptyCell = {
+        let view = EmptyCell()
+        return view
+    }()
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -63,10 +68,14 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
         tableView.tableHeaderView = view2048
         
         regClass(tableView, cell: RankListTableViewCell.self)
+        regClass(tableView, cell: EmptyCell.self)
     }
     
     func sebWithoutAuthorizationViews() {
-
+        self.view.addSubview(emptyView)
+        emptyView.snp.makeConstraints { (make) in
+            make.top.left.right.bottom.equalTo(self.view)
+        }
     }
     
     @objc func startGameButtonTapped() {
