@@ -42,7 +42,7 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
         if section == 0 {
             return 3
         }
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -70,10 +70,10 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
             return cell
         }else{
             let cell = getCell(tableView, cell: LeftTitleTableViewCell.self, indexPath: indexPath)
-            cell.nodeNameLabel.text = ["给个赞","隐私协议","版本号"][indexPath.row]
-            let names = ["ic_givePraise","ic_privacy","ic_settings_input_svideo"]
+            cell.nodeNameLabel.text = ["帮助中心","给个赞","隐私协议","版本号"][indexPath.row]
+            let names = ["ic_givePraise","ic_givePraise","ic_privacy","ic_settings_input_svideo"]
             cell.nodeImageView.image = UIImage(named: names[indexPath.row])?.withRenderingMode(.alwaysTemplate)
-            if indexPath.row == 2 {
+            if indexPath.row == 3 {
                 cell.isHiddenRightImage(hidden: true)
                 let infoDict = Bundle.main.infoDictionary
                 if let info = infoDict {
@@ -102,11 +102,13 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
             }
         }else{
             if indexPath.row == 0 {
+                self.navigationController?.pushViewController(HelpViewController(), animated: true)
+            }else if indexPath.row == 1 {
                 #if DEBUG
                 #else
                     SKStoreReviewController.requestReview()
                 #endif
-            }else if indexPath.row == 1 {
+            }else if indexPath.row == 2 {
                 let webViewVC = BPYWebViewController.init(url: "http://res.caidanmao.com/fuckdfs/91a9dd1a2392bbf6ceaf02e83a7da3b2.pdf", titleStr: "隐私协议")
                 self.navigationController?.pushViewController(webViewVC, animated: true)
             }

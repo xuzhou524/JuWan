@@ -39,6 +39,8 @@
 		C52520E4258C853B00793392 /* Play2048ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520E3258C853B00793392 /* Play2048ViewController.swift */; };
 		C525212C2592F63D00793392 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C525212B2592F63D00793392 /* GameKit.framework */; };
 		C554AC4125B13AF3000CB32B /* SwiftHEXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C554AC4025B13AF3000CB32B /* SwiftHEXColors.swift */; };
+		C560179625C25C99004842C6 /* WithoutAuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560179525C25C99004842C6 /* WithoutAuthorizationView.swift */; };
+		C560179925C2629C004842C6 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560179825C2629C004842C6 /* HelpViewController.swift */; };
 		C57F72B825B1494A00FC0198 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F72B725B1494A00FC0198 /* UserViewController.swift */; };
 		C57F72BB25B14AB700FC0198 /* LeftTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F72BA25B14AB700FC0198 /* LeftTitleTableViewCell.swift */; };
 		C59470BA25B5187D009C1F35 /* GameDecorateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59470B925B5187D009C1F35 /* GameDecorateConfig.swift */; };
@@ -88,6 +90,8 @@
 		C52520E3258C853B00793392 /* Play2048ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Play2048ViewController.swift; sourceTree = "<group>"; };
 		C525212B2592F63D00793392 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		C554AC4025B13AF3000CB32B /* SwiftHEXColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHEXColors.swift; sourceTree = "<group>"; };
+		C560179525C25C99004842C6 /* WithoutAuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithoutAuthorizationView.swift; sourceTree = "<group>"; };
+		C560179825C2629C004842C6 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		C57F72B725B1494A00FC0198 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		C57F72BA25B14AB700FC0198 /* LeftTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTitleTableViewCell.swift; sourceTree = "<group>"; };
 		C59470B925B5187D009C1F35 /* GameDecorateConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDecorateConfig.swift; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 				C59470CA25B52308009C1F35 /* Game2048ThemeSettingViewController.swift */,
 				C523503425B91EFA005B637B /* Game2048ThemeDialViewController.swift */,
 				C50E129E25BEB3B8008321FC /* BPYWebViewController.swift */,
+				C560179825C2629C004842C6 /* HelpViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 				C52520CB258C7A0B00793392 /* Home2048View.swift */,
 				C5BFF92925AE8AF800C66424 /* RankListTableViewCell.swift */,
 				C57F72BA25B14AB700FC0198 /* LeftTitleTableViewCell.swift */,
+				C560179525C25C99004842C6 /* WithoutAuthorizationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -388,6 +394,7 @@
 				C52520D3258C825500793392 /* GameModel.swift in Sources */,
 				C523503525B91EFA005B637B /* Game2048ThemeDialViewController.swift in Sources */,
 				C5252016258C3EC200793392 /* XZNavigationController.swift in Sources */,
+				C560179625C25C99004842C6 /* WithoutAuthorizationView.swift in Sources */,
 				C59470BA25B5187D009C1F35 /* GameDecorateConfig.swift in Sources */,
 				C525207D258C3F1500793392 /* LDTipAlertView.m in Sources */,
 				C50E129C25BEA642008321FC /* GameUserInfoConfig.swift in Sources */,
@@ -395,6 +402,7 @@
 				C52520E4258C853B00793392 /* Play2048ViewController.swift in Sources */,
 				C5252013258C3E7E00793392 /* HomeViewController.swift in Sources */,
 				C5252087258C3F1500793392 /* UITableView+Extension.swift in Sources */,
+				C560179925C2629C004842C6 /* HelpViewController.swift in Sources */,
 				C52520DA258C827400793392 /* TileView.swift in Sources */,
 				C52520DB258C827400793392 /* AccessoryViews.swift in Sources */,
 				C57F72BB25B14AB700FC0198 /* LeftTitleTableViewCell.swift in Sources */,

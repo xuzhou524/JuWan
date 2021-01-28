@@ -65,6 +65,10 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
         regClass(tableView, cell: RankListTableViewCell.self)
     }
     
+    func sebWithoutAuthorizationViews() {
+
+    }
+    
     @objc func startGameButtonTapped() {
         let v = Play2048ViewController(dimension: GameDecorateConfig.shared.game2048DialNum, threshold: 4194304)
         self.navigationController?.pushViewController(v, animated: true)
@@ -110,6 +114,7 @@ extension HomeViewController {
         if !GKLocalPlayer.local.isAuthenticated {
             print("没有授权，无法获取更多信息")
 //            sebViews()
+            sebWithoutAuthorizationViews()
         }else{
             //存储玩家信息 - id - name
             let localPlayer = GKLocalPlayer.local
