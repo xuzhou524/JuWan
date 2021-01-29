@@ -80,7 +80,7 @@ class FZTipHeandView: UIView {
         self.addSubview(iconImageView)
         
         iconImageView.snp.makeConstraints { (make) in
-            make.left.equalToSuperview().offset(20)
+            make.right.equalToSuperview().offset(-20)
             make.bottom.equalToSuperview().offset(-10)
             make.width.equalTo(22)
             make.height.equalTo(22)

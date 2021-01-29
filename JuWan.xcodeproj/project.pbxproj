@@ -41,6 +41,36 @@
 		C554AC4125B13AF3000CB32B /* SwiftHEXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C554AC4025B13AF3000CB32B /* SwiftHEXColors.swift */; };
 		C560179625C25C99004842C6 /* WithoutAuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560179525C25C99004842C6 /* WithoutAuthorizationView.swift */; };
 		C560179925C2629C004842C6 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560179825C2629C004842C6 /* HelpViewController.swift */; };
+		C56017A325C3A86A004842C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56017A225C3A86A004842C6 /* ContentView.swift */; };
+		C56017A925C3A892004842C6 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56017A525C3A892004842C6 /* GameScene.swift */; };
+		C56017AA25C3A892004842C6 /* AudioUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56017A625C3A892004842C6 /* AudioUtil.swift */; };
+		C56017AB25C3A892004842C6 /* FruitTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56017A725C3A892004842C6 /* FruitTexture.swift */; };
+		C56017AC25C3A892004842C6 /* FruitSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56017A825C3A892004842C6 /* FruitSlot.swift */; };
+		C56017B325C3A8EE004842C6 /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C56017B025C3A8EE004842C6 /* win.mp3 */; };
+		C56017B425C3A8EE004842C6 /* falldown.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C56017B125C3A8EE004842C6 /* falldown.mp3 */; };
+		C56017B525C3A8EE004842C6 /* bomb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C56017B225C3A8EE004842C6 /* bomb.mp3 */; };
+		C56017D825C3A908004842C6 /* peach.png in Resources */ = {isa = PBXBuildFile; fileRef = C56017B925C3A907004842C6 /* peach.png */; };
+		C56017D925C3A908004842C6 /* pineapple.png in Resources */ = {isa = PBXBuildFile; fileRef = C56017BA25C3A907004842C6 /* pineapple.png */; };
+		C56017DA25C3A908004842C6 /* tomato.png in Resources */ = {isa = PBXBuildFile; fileRef = C56017BB25C3A907004842C6 /* tomato.png */; };
+		C56017DB25C3A908004842C6 /* grape.png in Resources */ = {isa = PBXBuildFile; fileRef = C56017BC25C3A907004842C6 /* grape.png */; };
+		C56017DC25C3A908004842C6 /* watermelon.png in Resources */ = {isa = PBXBuildFile; fileRef = C56017BD25C3A907004842C6 /* watermelon.png */; };
+		C56017DD25C3A908004842C6 /* cherry.png in Resources */ = {isa = PBXBuildFile; fileRef = C56017BE25C3A907004842C6 /* cherry.png */; };
+		C56017DE25C3A908004842C6 /* orange.png in Resources */ = {isa = PBXBuildFile; fileRef = C56017BF25C3A907004842C6 /* orange.png */; };
+		C56017DF25C3A908004842C6 /* cocount.png in Resources */ = {isa = PBXBuildFile; fileRef = C56017C025C3A907004842C6 /* cocount.png */; };
+		C56017E025C3A908004842C6 /* lemon.png in Resources */ = {isa = PBXBuildFile; fileRef = C56017C125C3A907004842C6 /* lemon.png */; };
+		C56017E125C3A908004842C6 /* kiwi.png in Resources */ = {isa = PBXBuildFile; fileRef = C56017C225C3A907004842C6 /* kiwi.png */; };
+		C56017E225C3A908004842C6 /* halfwatermelon.png in Resources */ = {isa = PBXBuildFile; fileRef = C56017C325C3A907004842C6 /* halfwatermelon.png */; };
+		C56017E325C3A908004842C6 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = C56017C525C3A908004842C6 /* 8.png */; };
+		C56017E425C3A908004842C6 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = C56017C625C3A908004842C6 /* 9.png */; };
+		C56017E525C3A908004842C6 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = C56017C725C3A908004842C6 /* 4.png */; };
+		C56017E625C3A908004842C6 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = C56017C825C3A908004842C6 /* 5.png */; };
+		C56017E725C3A908004842C6 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = C56017C925C3A908004842C6 /* 7.png */; };
+		C56017E825C3A908004842C6 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = C56017CA25C3A908004842C6 /* 6.png */; };
+		C56017E925C3A908004842C6 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = C56017CB25C3A908004842C6 /* 2.png */; };
+		C56017EA25C3A908004842C6 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = C56017CC25C3A908004842C6 /* 3.png */; };
+		C56017EB25C3A908004842C6 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = C56017CD25C3A908004842C6 /* 1.png */; };
+		C56017EC25C3A908004842C6 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = C56017CE25C3A908004842C6 /* 0.png */; };
+		C56017F925C3B075004842C6 /* WatermelonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56017F825C3B075004842C6 /* WatermelonViewController.swift */; };
 		C57F72B825B1494A00FC0198 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F72B725B1494A00FC0198 /* UserViewController.swift */; };
 		C57F72BB25B14AB700FC0198 /* LeftTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F72BA25B14AB700FC0198 /* LeftTitleTableViewCell.swift */; };
 		C59470BA25B5187D009C1F35 /* GameDecorateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59470B925B5187D009C1F35 /* GameDecorateConfig.swift */; };
@@ -92,6 +122,36 @@
 		C554AC4025B13AF3000CB32B /* SwiftHEXColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHEXColors.swift; sourceTree = "<group>"; };
 		C560179525C25C99004842C6 /* WithoutAuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithoutAuthorizationView.swift; sourceTree = "<group>"; };
 		C560179825C2629C004842C6 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		C56017A225C3A86A004842C6 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C56017A525C3A892004842C6 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		C56017A625C3A892004842C6 /* AudioUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioUtil.swift; sourceTree = "<group>"; };
+		C56017A725C3A892004842C6 /* FruitTexture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitTexture.swift; sourceTree = "<group>"; };
+		C56017A825C3A892004842C6 /* FruitSlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitSlot.swift; sourceTree = "<group>"; };
+		C56017B025C3A8EE004842C6 /* win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win.mp3; sourceTree = "<group>"; };
+		C56017B125C3A8EE004842C6 /* falldown.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = falldown.mp3; sourceTree = "<group>"; };
+		C56017B225C3A8EE004842C6 /* bomb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bomb.mp3; sourceTree = "<group>"; };
+		C56017B925C3A907004842C6 /* peach.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = peach.png; sourceTree = "<group>"; };
+		C56017BA25C3A907004842C6 /* pineapple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pineapple.png; sourceTree = "<group>"; };
+		C56017BB25C3A907004842C6 /* tomato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tomato.png; sourceTree = "<group>"; };
+		C56017BC25C3A907004842C6 /* grape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grape.png; sourceTree = "<group>"; };
+		C56017BD25C3A907004842C6 /* watermelon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = watermelon.png; sourceTree = "<group>"; };
+		C56017BE25C3A907004842C6 /* cherry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cherry.png; sourceTree = "<group>"; };
+		C56017BF25C3A907004842C6 /* orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange.png; sourceTree = "<group>"; };
+		C56017C025C3A907004842C6 /* cocount.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cocount.png; sourceTree = "<group>"; };
+		C56017C125C3A907004842C6 /* lemon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lemon.png; sourceTree = "<group>"; };
+		C56017C225C3A907004842C6 /* kiwi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kiwi.png; sourceTree = "<group>"; };
+		C56017C325C3A907004842C6 /* halfwatermelon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halfwatermelon.png; sourceTree = "<group>"; };
+		C56017C525C3A908004842C6 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
+		C56017C625C3A908004842C6 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
+		C56017C725C3A908004842C6 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		C56017C825C3A908004842C6 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		C56017C925C3A908004842C6 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
+		C56017CA25C3A908004842C6 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
+		C56017CB25C3A908004842C6 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		C56017CC25C3A908004842C6 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		C56017CD25C3A908004842C6 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		C56017CE25C3A908004842C6 /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
+		C56017F825C3B075004842C6 /* WatermelonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatermelonViewController.swift; sourceTree = "<group>"; };
 		C57F72B725B1494A00FC0198 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		C57F72BA25B14AB700FC0198 /* LeftTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTitleTableViewCell.swift; sourceTree = "<group>"; };
 		C59470B925B5187D009C1F35 /* GameDecorateConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDecorateConfig.swift; sourceTree = "<group>"; };
@@ -138,6 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				C5252006258C3B8A00793392 /* Util */,
+				C56017B725C3A907004842C6 /* Data Assets */,
+				C56017AF25C3A8EE004842C6 /* Sounds */,
 				C5252005258C3B7100793392 /* Model */,
 				C5252004258C3B6500793392 /* View */,
 				C5252003258C3B4500793392 /* Controller */,
@@ -172,6 +234,11 @@
 		C5252003258C3B4500793392 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C56017A225C3A86A004842C6 /* ContentView.swift */,
+				C56017A625C3A892004842C6 /* AudioUtil.swift */,
+				C56017A825C3A892004842C6 /* FruitSlot.swift */,
+				C56017A725C3A892004842C6 /* FruitTexture.swift */,
+				C56017A525C3A892004842C6 /* GameScene.swift */,
 				C5252012258C3E7E00793392 /* HomeViewController.swift */,
 				C52520E3258C853B00793392 /* Play2048ViewController.swift */,
 				C5252015258C3EC200793392 /* XZNavigationController.swift */,
@@ -180,6 +247,7 @@
 				C523503425B91EFA005B637B /* Game2048ThemeDialViewController.swift */,
 				C50E129E25BEB3B8008321FC /* BPYWebViewController.swift */,
 				C560179825C2629C004842C6 /* HelpViewController.swift */,
+				C56017F825C3B075004842C6 /* WatermelonViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -257,6 +325,60 @@
 			path = 2048;
 			sourceTree = "<group>";
 		};
+		C56017AF25C3A8EE004842C6 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				C56017B025C3A8EE004842C6 /* win.mp3 */,
+				C56017B125C3A8EE004842C6 /* falldown.mp3 */,
+				C56017B225C3A8EE004842C6 /* bomb.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		C56017B725C3A907004842C6 /* Data Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C56017B825C3A907004842C6 /* Fruit */,
+				C56017C425C3A907004842C6 /* number */,
+			);
+			path = "Data Assets";
+			sourceTree = "<group>";
+		};
+		C56017B825C3A907004842C6 /* Fruit */ = {
+			isa = PBXGroup;
+			children = (
+				C56017B925C3A907004842C6 /* peach.png */,
+				C56017BA25C3A907004842C6 /* pineapple.png */,
+				C56017BB25C3A907004842C6 /* tomato.png */,
+				C56017BC25C3A907004842C6 /* grape.png */,
+				C56017BD25C3A907004842C6 /* watermelon.png */,
+				C56017BE25C3A907004842C6 /* cherry.png */,
+				C56017BF25C3A907004842C6 /* orange.png */,
+				C56017C025C3A907004842C6 /* cocount.png */,
+				C56017C125C3A907004842C6 /* lemon.png */,
+				C56017C225C3A907004842C6 /* kiwi.png */,
+				C56017C325C3A907004842C6 /* halfwatermelon.png */,
+			);
+			path = Fruit;
+			sourceTree = "<group>";
+		};
+		C56017C425C3A907004842C6 /* number */ = {
+			isa = PBXGroup;
+			children = (
+				C56017C525C3A908004842C6 /* 8.png */,
+				C56017C625C3A908004842C6 /* 9.png */,
+				C56017C725C3A908004842C6 /* 4.png */,
+				C56017C825C3A908004842C6 /* 5.png */,
+				C56017C925C3A908004842C6 /* 7.png */,
+				C56017CA25C3A908004842C6 /* 6.png */,
+				C56017CB25C3A908004842C6 /* 2.png */,
+				C56017CC25C3A908004842C6 /* 3.png */,
+				C56017CD25C3A908004842C6 /* 1.png */,
+				C56017CE25C3A908004842C6 /* 0.png */,
+			);
+			path = number;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -317,8 +439,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C56017E825C3A908004842C6 /* 6.png in Resources */,
+				C56017B325C3A8EE004842C6 /* win.mp3 in Resources */,
+				C56017E625C3A908004842C6 /* 5.png in Resources */,
+				C56017EA25C3A908004842C6 /* 3.png in Resources */,
+				C56017EB25C3A908004842C6 /* 1.png in Resources */,
+				C56017DF25C3A908004842C6 /* cocount.png in Resources */,
+				C56017E925C3A908004842C6 /* 2.png in Resources */,
+				C56017E725C3A908004842C6 /* 7.png in Resources */,
+				C56017DC25C3A908004842C6 /* watermelon.png in Resources */,
+				C56017E425C3A908004842C6 /* 9.png in Resources */,
+				C56017EC25C3A908004842C6 /* 0.png in Resources */,
+				C56017DA25C3A908004842C6 /* tomato.png in Resources */,
+				C56017DD25C3A908004842C6 /* cherry.png in Resources */,
+				C56017B525C3A8EE004842C6 /* bomb.mp3 in Resources */,
+				C56017DE25C3A908004842C6 /* orange.png in Resources */,
+				C56017DB25C3A908004842C6 /* grape.png in Resources */,
+				C56017E325C3A908004842C6 /* 8.png in Resources */,
+				C56017B425C3A8EE004842C6 /* falldown.mp3 in Resources */,
 				C5251FE9258C36B000793392 /* LaunchScreen.storyboard in Resources */,
+				C56017D925C3A908004842C6 /* pineapple.png in Resources */,
+				C56017E525C3A908004842C6 /* 4.png in Resources */,
+				C56017E125C3A908004842C6 /* kiwi.png in Resources */,
+				C56017E025C3A908004842C6 /* lemon.png in Resources */,
 				C5251FE6258C36B000793392 /* Assets.xcassets in Resources */,
+				C56017E225C3A908004842C6 /* halfwatermelon.png in Resources */,
+				C56017D825C3A908004842C6 /* peach.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,9 +517,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C56017AB25C3A892004842C6 /* FruitTexture.swift in Sources */,
 				C52520DE258C829D00793392 /* AppearanceProvider.swift in Sources */,
 				C5252088258C3F1500793392 /* UIColor+Create.swift in Sources */,
 				C52520D2258C825500793392 /* AuxiliaryModels.swift in Sources */,
+				C56017AA25C3A892004842C6 /* AudioUtil.swift in Sources */,
 				C59470CB25B52308009C1F35 /* Game2048ThemeSettingViewController.swift in Sources */,
 				C5252090258C3F1500793392 /* Defines.swift in Sources */,
 				C5252083258C3F1500793392 /* Date+Extension.swift in Sources */,
@@ -382,6 +530,7 @@
 				C554AC4125B13AF3000CB32B /* SwiftHEXColors.swift in Sources */,
 				C5252097258C3F1500793392 /* DatePicker.swift in Sources */,
 				C5252084258C3F1500793392 /* Client.swift in Sources */,
+				C56017A325C3A86A004842C6 /* ContentView.swift in Sources */,
 				C5252082258C3F1500793392 /* HistTestSlop.swift in Sources */,
 				C52520A0258C3F1500793392 /* UIViewController+Extension.swift in Sources */,
 				C5252081258C3F1500793392 /* MBProgressHUD+ITTAdditions.m in Sources */,
@@ -390,6 +539,7 @@
 				C5BFF92A25AE8AF800C66424 /* RankListTableViewCell.swift in Sources */,
 				C59470C825B52229009C1F35 /* CDViewCell.swift in Sources */,
 				C59470C725B52229009C1F35 /* CDFlowLayout.swift in Sources */,
+				C56017A925C3A892004842C6 /* GameScene.swift in Sources */,
 				C57F72B825B1494A00FC0198 /* UserViewController.swift in Sources */,
 				C52520D3258C825500793392 /* GameModel.swift in Sources */,
 				C523503525B91EFA005B637B /* Game2048ThemeDialViewController.swift in Sources */,
@@ -397,8 +547,10 @@
 				C560179625C25C99004842C6 /* WithoutAuthorizationView.swift in Sources */,
 				C59470BA25B5187D009C1F35 /* GameDecorateConfig.swift in Sources */,
 				C525207D258C3F1500793392 /* LDTipAlertView.m in Sources */,
+				C56017F925C3B075004842C6 /* WatermelonViewController.swift in Sources */,
 				C50E129C25BEA642008321FC /* GameUserInfoConfig.swift in Sources */,
 				C5251FDF258C36AC00793392 /* SceneDelegate.swift in Sources */,
+				C56017AC25C3A892004842C6 /* FruitSlot.swift in Sources */,
 				C52520E4258C853B00793392 /* Play2048ViewController.swift in Sources */,
 				C5252013258C3E7E00793392 /* HomeViewController.swift in Sources */,
 				C5252087258C3F1500793392 /* UITableView+Extension.swift in Sources */,
@@ -554,7 +706,7 @@
 					"$(PROJECT_DIR)/Util/ATAuthSDK",
 				);
 				INFOPLIST_FILE = JuWan/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -649,7 +801,7 @@
 					"$(PROJECT_DIR)/Util/ATAuthSDK",
 				);
 				INFOPLIST_FILE = JuWan/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
