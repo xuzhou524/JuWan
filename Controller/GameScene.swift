@@ -115,12 +115,7 @@ extension GameScene {
 // MARK: - LoadUI
 extension GameScene {
     override func didMove(to view: SKView) {
-        view.showsFPS = true
-        view.showsNodeCount = true
-        
-        
         self.physicsWorld.contactDelegate = self
-        
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
         backgroundColor = UIColor(#colorLiteral(red: 0.9999857545, green: 0.9065491557, blue: 0.6149721146, alpha: 1))
             
