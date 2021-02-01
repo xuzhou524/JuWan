@@ -39,7 +39,7 @@ class Home2048View: UIView {
         label.alpha = 0.8
         label.numberOfLines = 0
         label.textColor = UIColor(named: "color_white")
-        label.text = "规则：上下左右滑动两个相同数字方块撞在一起之后合并成为他们的和，直至无法方格无法移动，所有和相加即为本局分数"
+        label.text = "规则：上下左右滑动两个相同数字方块撞在一起之后合并成为他们的和，直到无法移动，所有和相加即为本局分数"
         return label
     }()
     
