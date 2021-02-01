@@ -171,7 +171,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return scores?.count ?? 0 > 1 ? 95 : 0
+        return scores?.count ?? 0 > 0 ? 95 : 0
     }
      
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

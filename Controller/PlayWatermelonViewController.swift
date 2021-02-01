@@ -8,6 +8,8 @@
 import UIKit
 import SwiftUI
 import SpriteKit
+import GameKit
+import GameplayKit
 
 class PlayWatermelonViewController: UIViewController {
 
@@ -36,6 +38,15 @@ class PlayWatermelonViewController: UIViewController {
   
         
     }
+    
+    func saveHighScore(s:NSInteger){
+        if GKLocalPlayer.local.isAuthenticated {
+            let scoreReporter = GKScore(leaderboardIdentifier: "juWan_Watermelon")
+            scoreReporter.value = Int64(s)
+            GKScore.report([scoreReporter], withCompletionHandler: nil)
+        }
+    }
+    
     
     @objc func backClick() {
         self.navigationController?.popViewController(animated: true)

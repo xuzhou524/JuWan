@@ -39,6 +39,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         didSet {
             // update scoreNode
             updateScoreNode()
+            PlayWatermelonViewController().saveHighScore(s: score)
         }
     }
     
