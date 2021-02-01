@@ -159,7 +159,7 @@ class Play2048ViewController: UIViewController,GameModelProtocol {
     }
     
     @objc func backClick() {
-        self.navigationController?.popToRootViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
@@ -284,7 +284,7 @@ extension Play2048ViewController {
 extension Play2048ViewController {
     func saveHighScore(s:NSInteger){
         if GKLocalPlayer.local.isAuthenticated {
-            let scoreReporter = GKScore(leaderboardIdentifier: "juWan_2048")
+            let scoreReporter = GKScore(leaderboardIdentifier: "juWan_shuhe")
             scoreReporter.value = Int64(s)
             GKScore.report([scoreReporter], withCompletionHandler: nil)
         }

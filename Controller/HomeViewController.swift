@@ -126,7 +126,7 @@ extension HomeViewController {
         }
         
         //哪一个排行榜
-        let identifier = "juWan_2048"
+        let identifier = "juWan_shuhe"
         leaderboadRequest.identifier = identifier
         //从那个排名到那个排名
         let location = 1
