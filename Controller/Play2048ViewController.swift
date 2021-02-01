@@ -30,22 +30,31 @@ class Play2048ViewController: UIViewController,GameModelProtocol {
         return label
     }()
     
+    let scoreLabel:UILabel = {
+        let label = UILabel()
+        label.font = blodFontWithSize(35)
+        label.textColor = UIColor(named: "color_title_black")
+        label.text = "0"
+        return label
+    }()
+    
+    let highScoreLabel:UILabel = {
+        let label = UILabel()
+        label.font = blodFontWithSize(20)
+        label.textColor = UIColor(named: "color_title_black")
+        label.text = "\(GameUserInfoConfig.shared.game2048HigheScore)"
+        return label
+    }()
+    
+    let crownImageView:UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "ic_crown")
+        return imageView
+    }()
+    
     let mobileAreaView:UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.clear
-        return view
-    }()
-    
-    let scoreView:Score2048View = {
-        let view = Score2048View()
-        view.score = 0
-        return view
-    }()
-    
-    let highScoreView:Score2048View = {
-        let view = Score2048View()
-        view.nameLabel.text = "最高分"
-        view.score = GameUserInfoConfig.shared.game2048HigheScore
         return view
     }()
 
@@ -78,28 +87,25 @@ class Play2048ViewController: UIViewController,GameModelProtocol {
         }
         navTipView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(backClick)))
         
-        self.view.addSubview(scoreView)
-        scoreView.snp.makeConstraints { (make) in
-            make.right.equalToSuperview().offset(-25)
-            make.top.equalTo(navTipView.snp.bottom).offset(20)
-            make.width.equalTo(90)
-            make.height.equalTo(70)
+        navTipView.addSubview(scoreLabel)
+        scoreLabel.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.bottom.equalToSuperview()
         }
         
-        self.view.addSubview(highScoreView)
-        highScoreView.snp.makeConstraints { (make) in
-            make.right.equalTo(scoreView.snp.left).offset(-20)
-            make.top.equalTo(navTipView.snp.bottom).offset(20)
-            make.width.equalTo(90)
-            make.height.equalTo(70)
+        self.view.addSubview(highScoreLabel)
+        highScoreLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(scoreLabel.snp.bottom)
+            make.centerX.equalToSuperview().offset(10)
         }
         
-        self.view.addSubview(titleLabel)
-        titleLabel.snp.makeConstraints { (make) in
-            make.left.equalToSuperview().offset(25)
-            make.centerY.equalTo(scoreView)
+        self.view.addSubview(crownImageView)
+        crownImageView.snp.makeConstraints { (make) in
+            make.centerY.equalTo(highScoreLabel)
+            make.right.equalTo(highScoreLabel.snp.left).offset(-5)
+            make.width.height.equalTo(18)
         }
-        
+
         self.view.addSubview(mobileAreaView)
         mobileAreaView.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview()
@@ -162,20 +168,20 @@ extension Play2048ViewController {
     func followUp() {
         assert(model != nil)
         let m = model!
-        let (userWon, _) = m.userHasWon()
+//        let (userWon, _) = m.userHasWon()
         
         //保存分数
         saveHighScore(s: m.score)
         if m.score > GameUserInfoConfig.shared.game2048HigheScore {
             GameUserInfoConfig.shared.game2048HigheScore = m.score
-            highScoreView.score = GameUserInfoConfig.shared.game2048HigheScore
+            highScoreLabel.text = "\(GameUserInfoConfig.shared.game2048HigheScore)"
         }
-
-        if userWon {
-            let tip = LDTipAlertView.init(message: "你赢了！", buttonTitles: ["我知道了"])
-            tip?.show()
-            return
-        }
+//
+//        if userWon {
+//            let tip = LDTipAlertView.init(message: "你赢了！", buttonTitles: ["我知道了"])
+//            tip?.show()
+//            return
+//        }
         let randomVal = Int(arc4random_uniform(10))
         m.insertTileAtRandomLocation(value: randomVal == 1 ? 4 : 2)
         if m.userHasLost() {
@@ -231,7 +237,9 @@ extension Play2048ViewController {
     
     // Protocol
     func scoreChanged(score: Int) {
-        scoreView.scoreChanged(newScore: score)
+//        scoreView.scoreChanged(newScore: score)
+        
+        scoreLabel.text = "\(score)"
     }
 
     func moveOneTile(from: (Int, Int), to: (Int, Int), value: Int) {
