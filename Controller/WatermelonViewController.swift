@@ -53,6 +53,7 @@ class WatermelonViewController: UIViewController,GKGameCenterControllerDelegate 
         viewWatermelon.tipButton.addTarget(self, action: #selector(startGameButtonTapped), for: .touchUpInside)
         
         viewWatermelon.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 200)
+        viewWatermelon.bgImageView.image = UIImage(named: "ic_Watermelon")
         viewWatermelon.titleLabel.text = "我要吃瓜"
         viewWatermelon.summeryLabel.text = "休闲吃瓜，挑战全球排行"
         tableView.tableHeaderView = viewWatermelon

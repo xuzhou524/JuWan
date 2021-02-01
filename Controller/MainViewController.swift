@@ -48,7 +48,7 @@ class MainViewController: UIViewController,GKGameCenterControllerDelegate {
         viewShuHe.layer.cornerRadius = 10
         viewShuHe.layer.masksToBounds = true
         viewShuHe.tipButton.addTarget(self, action: #selector(startGameButtonTapped), for: .touchUpInside)
-        viewShuHe.tipButton.setTitle("查看", for: .normal)
+        viewShuHe.tipButton.setTitle("玩一下", for: .normal)
         viewShuHe.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 200)
         
         self.view.addSubview(viewShuHe)
@@ -58,9 +58,10 @@ class MainViewController: UIViewController,GKGameCenterControllerDelegate {
         viewWatermelon.layer.cornerRadius = 10
         viewWatermelon.layer.masksToBounds = true
         viewWatermelon.tipButton.addTarget(self, action: #selector(watermelonTapped), for: .touchUpInside)
-        viewWatermelon.tipButton.setTitle("查看", for: .normal)
+        viewWatermelon.tipButton.setTitle("玩一下", for: .normal)
         viewWatermelon.frame = CGRect(x: 0, y: 200 , width: kScreenWidth, height: 200)
         
+        viewWatermelon.bgImageView.image = UIImage(named: "ic_Watermelon")
         viewWatermelon.titleLabel.text = "我要吃瓜"
         viewWatermelon.summeryLabel.text = "休闲吃瓜，挑战全球排行"
         

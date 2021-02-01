@@ -19,7 +19,7 @@ class Home2048View: UIView {
     
     let titleLabel:UILabel = {
         let label = UILabel()
-        label.font = blodFontWithSize(26)
+        label.font = blodFontWithSize(22)
         label.textColor = UIColor(named: "color_white")
         label.text = "数和"
         return label
@@ -27,7 +27,7 @@ class Home2048View: UIView {
     
     let summeryLabel:UILabel = {
         let label = UILabel()
-        label.font = blodFontWithSize(15)
+        label.font = blodFontWithSize(13)
         label.textColor = UIColor(named: "color_white")
         label.text = "回顾经典玩法，挑战全球排行"
         return label
