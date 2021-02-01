@@ -29,7 +29,7 @@
 		C5252097258C3F1500793392 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5252055258C3F1400793392 /* DatePicker.swift */; };
 		C52520A0258C3F1500793392 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5252061258C3F1500793392 /* UIViewController+Extension.swift */; };
 		C52520A1258C3F1500793392 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5252063258C3F1500793392 /* Defaults.swift */; };
-		C52520CC258C7A0B00793392 /* Home2048View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520CB258C7A0B00793392 /* Home2048View.swift */; };
+		C52520CC258C7A0B00793392 /* HomeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520CB258C7A0B00793392 /* HomeCardView.swift */; };
 		C52520D2258C825500793392 /* AuxiliaryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520D0258C825500793392 /* AuxiliaryModels.swift */; };
 		C52520D3258C825500793392 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520D1258C825500793392 /* GameModel.swift */; };
 		C52520D9258C827400793392 /* GameboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520D6258C827300793392 /* GameboardView.swift */; };
@@ -112,7 +112,7 @@
 		C5252061258C3F1500793392 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		C5252062258C3F1500793392 /* MBProgressHUD+ITTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+ITTAdditions.h"; sourceTree = "<group>"; };
 		C5252063258C3F1500793392 /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
-		C52520CB258C7A0B00793392 /* Home2048View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home2048View.swift; sourceTree = "<group>"; };
+		C52520CB258C7A0B00793392 /* HomeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardView.swift; sourceTree = "<group>"; };
 		C52520D0258C825500793392 /* AuxiliaryModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuxiliaryModels.swift; sourceTree = "<group>"; };
 		C52520D1258C825500793392 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		C52520D6258C827300793392 /* GameboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameboardView.swift; sourceTree = "<group>"; };
@@ -262,7 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				C52520D5258C826300793392 /* 2048 */,
-				C52520CB258C7A0B00793392 /* Home2048View.swift */,
+				C52520CB258C7A0B00793392 /* HomeCardView.swift */,
 				C5BFF92925AE8AF800C66424 /* RankListTableViewCell.swift */,
 				C57F72BA25B14AB700FC0198 /* LeftTitleTableViewCell.swift */,
 				C560179525C25C99004842C6 /* WithoutAuthorizationView.swift */,
@@ -566,7 +566,7 @@
 				C52520DA258C827400793392 /* TileView.swift in Sources */,
 				C52520DB258C827400793392 /* AccessoryViews.swift in Sources */,
 				C57F72BB25B14AB700FC0198 /* LeftTitleTableViewCell.swift in Sources */,
-				C52520CC258C7A0B00793392 /* Home2048View.swift in Sources */,
+				C52520CC258C7A0B00793392 /* HomeCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

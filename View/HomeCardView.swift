@@ -1,5 +1,5 @@
 //
-//  Home2048View.swift
+//  HomeCardView.swift
 //  JuWan
 //
 //  Created by fanzhe on 2020/12/18.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Home2048View: UIView {
+class HomeCardView: UIView {
     
     let bgImageView:UIImageView = {
         let imageView = UIImageView()

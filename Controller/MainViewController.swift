@@ -44,7 +44,7 @@ class MainViewController: UIViewController,GKGameCenterControllerDelegate {
     
     func sebViews() {
         
-        let viewWatermelon = Home2048View()
+        let viewWatermelon = HomeCardView()
         viewWatermelon.layer.cornerRadius = 10
         viewWatermelon.layer.masksToBounds = true
         viewWatermelon.tipButton.addTarget(self, action: #selector(watermelonTapped), for: .touchUpInside)
@@ -59,7 +59,7 @@ class MainViewController: UIViewController,GKGameCenterControllerDelegate {
         
         self.view.addSubview(viewWatermelon)
         
-        let viewShuHe = Home2048View()
+        let viewShuHe = HomeCardView()
         viewShuHe.layer.cornerRadius = 10
         viewShuHe.layer.masksToBounds = true
         viewShuHe.tipButton.addTarget(self, action: #selector(startGameButtonTapped), for: .touchUpInside)
@@ -183,7 +183,7 @@ extension MainViewController {
 //                        let rank = score.rank
 //                        let gamePlayerID = score.player.gamePlayerID
 //                        if GameUserInfoConfig.shared.gameId == gamePlayerID && GameUserInfoConfig.shared.gameName == playerName {
-//                            GameUserInfoConfig.shared.game2048HigheScore = Int(scroeNumb)
+//                            GameUserInfoConfig.shared.gameShuHeHigheScore = Int(scroeNumb)
 //                        }
 //                        print("排行榜 = \(gamecenterID),玩家id = \(gamePlayerID),玩家名字 = \(playerName),玩家分数 = \(scroeNumb),玩家排名 = \(rank)")
 //                    }

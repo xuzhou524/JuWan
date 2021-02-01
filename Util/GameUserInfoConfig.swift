@@ -15,7 +15,10 @@ class GameUserInfoConfig: NSObject {
     var gameId : String = ""
     var gameName: String = "聚玩者"
     
-    //2048 最高分
-    var game2048HigheScore: Int = 0
+    //数和 最高分
+    var gameShuHeHigheScore: Int = 0
+    
+    //我要吃瓜 最高分
+    var gameWatermelonHigheScore: Int = 0
 
 }

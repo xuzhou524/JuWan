@@ -83,7 +83,7 @@ extension Game2048ThemeDialViewController{
             switch result {
             case .success(let purchase):
                 print("Purchase Success: \(purchase.productId)")
-                GameDecorateConfig.shared.game2048DialNum = 6
+                GameDecorateConfig.shared.gameShuHeDialNum = 6
                 self.collectionView.reloadData()
             case .error(let error):
                 switch error.code {
@@ -145,10 +145,10 @@ extension Game2048ThemeDialViewController : UICollectionViewDelegate , UICollect
         cell.priceLabel.text = ["无门槛",isHaveBuy ? "已购买" : "CNY 1.00"][indexPath.row]
         if indexPath.row == 0 {
             cell.goodsImg.image = UIImage(named: "theme_2048_1")
-            cell.selectView.isHidden = GameDecorateConfig.shared.game2048DialNum != 4
+            cell.selectView.isHidden = GameDecorateConfig.shared.gameShuHeDialNum != 4
         }else if indexPath.row == 1{
             cell.goodsImg.image = UIImage(named: "theme_2048D_6")
-            cell.selectView.isHidden = GameDecorateConfig.shared.game2048DialNum != 6
+            cell.selectView.isHidden = GameDecorateConfig.shared.gameShuHeDialNum != 6
         }else{
             cell.selectView.isHidden = true
         }
@@ -157,7 +157,7 @@ extension Game2048ThemeDialViewController : UICollectionViewDelegate , UICollect
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.row == 1 {
             if isHaveBuy {
-                GameDecorateConfig.shared.game2048DialNum = 6
+                GameDecorateConfig.shared.gameShuHeDialNum = 6
                 collectionView.reloadData()
             }else{
                 //再次验证
@@ -168,7 +168,7 @@ extension Game2048ThemeDialViewController : UICollectionViewDelegate , UICollect
                     case .success(let receipt):
                         MBProgressHUD.hideAllIndicator()
                         print("receipt--->\(receipt)")
-                        GameDecorateConfig.shared.game2048DialNum = 6
+                        GameDecorateConfig.shared.gameShuHeDialNum = 6
                         self.collectionView.reloadData()
                         break
                     case .error(let error):
@@ -179,7 +179,7 @@ extension Game2048ThemeDialViewController : UICollectionViewDelegate , UICollect
                 }
             }
         }else{
-            GameDecorateConfig.shared.game2048DialNum =  4
+            GameDecorateConfig.shared.gameShuHeDialNum =  4
             collectionView.reloadData()
         }
         

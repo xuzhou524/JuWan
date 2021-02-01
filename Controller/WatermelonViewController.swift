@@ -47,7 +47,7 @@ class WatermelonViewController: UIViewController,GKGameCenterControllerDelegate 
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        let viewWatermelon = Home2048View()
+        let viewWatermelon = HomeCardView()
         viewWatermelon.layer.cornerRadius = 10
         viewWatermelon.layer.masksToBounds = true
         viewWatermelon.tipButton.addTarget(self, action: #selector(startGameButtonTapped), for: .touchUpInside)
@@ -155,7 +155,7 @@ extension WatermelonViewController {
                         let rank = score.rank
                         let gamePlayerID = score.player.gamePlayerID
                         if GameUserInfoConfig.shared.gameId == gamePlayerID && GameUserInfoConfig.shared.gameName == playerName {
-                            GameUserInfoConfig.shared.game2048HigheScore = Int(scroeNumb)
+                            GameUserInfoConfig.shared.gameWatermelonHigheScore = Int(scroeNumb)
                         }
                         print("排行榜 = \(gamecenterID),玩家id = \(gamePlayerID),玩家名字 = \(playerName),玩家分数 = \(scroeNumb),玩家排名 = \(rank)")
                     }

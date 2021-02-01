@@ -18,7 +18,7 @@ class AppearanceProvider: AppearanceProviderProtocol {
     
     // Provide a tile color for a given value
     func tileColor(value: Int) -> UIColor {
-        switch GameDecorateConfig.shared.game2048ThemeType {
+        switch GameDecorateConfig.shared.gameShuHeThemeType {
         case 1:
             switch value {
             case 2:

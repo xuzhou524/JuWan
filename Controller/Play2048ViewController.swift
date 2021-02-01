@@ -42,7 +42,7 @@ class Play2048ViewController: UIViewController,GameModelProtocol {
         let label = UILabel()
         label.font = blodFontWithSize(18)
         label.textColor = UIColor(named: "color_title_black")
-        label.text = "\(GameUserInfoConfig.shared.game2048HigheScore)"
+        label.text = "\(GameUserInfoConfig.shared.gameShuHeHigheScore)"
         return label
     }()
     
@@ -194,9 +194,9 @@ extension Play2048ViewController {
         
         //保存分数
         saveHighScore(s: m.score)
-        if m.score > GameUserInfoConfig.shared.game2048HigheScore {
-            GameUserInfoConfig.shared.game2048HigheScore = m.score
-            highScoreLabel.text = "\(GameUserInfoConfig.shared.game2048HigheScore)"
+        if m.score > GameUserInfoConfig.shared.gameShuHeHigheScore {
+            GameUserInfoConfig.shared.gameShuHeHigheScore = m.score
+            highScoreLabel.text = "\(GameUserInfoConfig.shared.gameShuHeHigheScore)"
         }
 //
 //        if userWon {

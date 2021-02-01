@@ -47,7 +47,7 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        let viewShuHe = Home2048View()
+        let viewShuHe = HomeCardView()
         viewShuHe.layer.cornerRadius = 10
         viewShuHe.layer.masksToBounds = true
         viewShuHe.tipButton.addTarget(self, action: #selector(startGameButtonTapped), for: .touchUpInside)
@@ -68,7 +68,7 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
     }
     
     @objc func startGameButtonTapped() {
-        let v = Play2048ViewController(dimension: GameDecorateConfig.shared.game2048DialNum, threshold: 4194304)
+        let v = Play2048ViewController(dimension: GameDecorateConfig.shared.gameShuHeDialNum, threshold: 4194304)
         self.navigationController?.pushViewController(v, animated: true)
     }
 
@@ -150,7 +150,7 @@ extension HomeViewController {
                         let rank = score.rank
                         let gamePlayerID = score.player.gamePlayerID
                         if GameUserInfoConfig.shared.gameId == gamePlayerID && GameUserInfoConfig.shared.gameName == playerName {
-                            GameUserInfoConfig.shared.game2048HigheScore = Int(scroeNumb)
+                            GameUserInfoConfig.shared.gameShuHeHigheScore = Int(scroeNumb)
                         }
                         print("排行榜 = \(gamecenterID),玩家id = \(gamePlayerID),玩家名字 = \(playerName),玩家分数 = \(scroeNumb),玩家排名 = \(rank)")
                     }
