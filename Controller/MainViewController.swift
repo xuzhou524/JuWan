@@ -140,55 +140,7 @@ extension MainViewController {
             GameUserInfoConfig.shared.gameName = localPlayer.displayName
             
             sebViews()
-//            downLoadGameCenter()
+
         }
     }
-    
-//    func downLoadGameCenter() {
-//        let leaderboadRequest = GKLeaderboard()
-//        //设置好友的范围
-//        leaderboadRequest.playerScope = .global
-//
-//        let type = "all"
-//        if type == "today" {
-//            leaderboadRequest.timeScope = .today
-//        }else if type == "week" {
-//            leaderboadRequest.timeScope = .week
-//        }else if type == "all" {
-//            leaderboadRequest.timeScope = .allTime
-//        }
-//
-//        //哪一个排行榜
-//        let identifier = "juWan_2048"
-//        leaderboadRequest.identifier = identifier
-//        //从那个排名到那个排名
-//        let location = 1
-//        let length = 100
-//        leaderboadRequest.range = NSRange(location: location, length: length)
-//
-//        //请求数据
-//        leaderboadRequest.loadScores { (scores, error) in
-//            if (error != nil) {
-//                print("请求分数失败")
-//                print("error = \(error)")
-//            }else{
-//                print("请求分数成功")
-//                self.scores = scores
-//                self.tableView.reloadData()
-//                if let sss = scores as [GKScore]?  {
-//                    for score in sss {
-//                        let gamecenterID = score.leaderboardIdentifier
-//                        let playerName = score.player.displayName
-//                        let scroeNumb = score.value
-//                        let rank = score.rank
-//                        let gamePlayerID = score.player.gamePlayerID
-//                        if GameUserInfoConfig.shared.gameId == gamePlayerID && GameUserInfoConfig.shared.gameName == playerName {
-//                            GameUserInfoConfig.shared.gameShuHeHigheScore = Int(scroeNumb)
-//                        }
-//                        print("排行榜 = \(gamecenterID),玩家id = \(gamePlayerID),玩家名字 = \(playerName),玩家分数 = \(scroeNumb),玩家排名 = \(rank)")
-//                    }
-//                }
-//            }
-//        }
-//    }
 }
