@@ -210,8 +210,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         format.numberStyle = .decimal
         cell.scoreLabel.text = format.string(from: NSNumber(value: score?.value ?? 0))
         return cell
-        
-//        cell.titleLabel.text = ["Aaron_周周","玩家_1019597667","YOYO","fdfdgg","老男孩","国宝熊猫","kkjhgyin","小可爱"][indexPath.row]
-//        let s = ["6763456","5654456","428334","59322","53292","41089","5398","2195"][indexPath.row]
+
     }
 }
