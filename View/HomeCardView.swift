@@ -103,7 +103,7 @@ class HomeCardView: UIView {
         
         tipButton.snp.makeConstraints { (make) in
             make.right.equalToSuperview().offset(-35)
-            make.bottom.equalToSuperview().offset(-75)
+            make.bottom.equalTo(rulesLabel.snp.top).offset(-15)
             make.height.equalTo(38)
             make.width.equalTo(110)
         }
