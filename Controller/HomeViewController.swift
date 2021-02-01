@@ -29,18 +29,13 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        authenticateLocalPlayer()
+        checkLocalAuthenticated()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "数和"
         self.view.backgroundColor = UIColor(named: "color_theme")
-                
-        let titleLabel = UILabel()
-        titleLabel.font = blodFontWithSize(25)
-        titleLabel.textColor = UIColor(named: "color_title_black")
-        titleLabel.text = "聚玩"
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: titleLabel)
         
         let rightBtn = UIButton()
         rightBtn.setImage(UIImage(named: "user")?.withRenderingMode(.alwaysTemplate), for: .normal)
@@ -108,25 +103,7 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
 }
 
 extension HomeViewController {
-    func authenticateLocalPlayer(){
-        if isNoFirst {
-            isNoFirst = false
-            self.showloading()
-        }
-        let localPlayer = GKLocalPlayer.local
-        localPlayer.authenticateHandler = {(viewController, error) -> Void in
-            self.hideLoading()
-            if (viewController != nil) {
-                let vc: UIViewController = self.view!.window!.rootViewController!
-                vc.present(viewController!, animated: true) {
-                    self.checkLocalAuthenticated()
-                }
-            }else {
-                self.checkLocalAuthenticated()
-            }
-        }
-    }
-    
+
     func checkLocalAuthenticated() {
         if !GKLocalPlayer.local.isAuthenticated {
             print("没有授权，无法获取更多信息")

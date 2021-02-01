@@ -38,6 +38,7 @@
 		C52520DE258C829D00793392 /* AppearanceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520DD258C829D00793392 /* AppearanceProvider.swift */; };
 		C52520E4258C853B00793392 /* Play2048ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520E3258C853B00793392 /* Play2048ViewController.swift */; };
 		C525212C2592F63D00793392 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C525212B2592F63D00793392 /* GameKit.framework */; };
+		C54A1D7A25C7913D007A23A0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A1D7925C7913D007A23A0 /* MainViewController.swift */; };
 		C554AC4125B13AF3000CB32B /* SwiftHEXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C554AC4025B13AF3000CB32B /* SwiftHEXColors.swift */; };
 		C560179625C25C99004842C6 /* WithoutAuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560179525C25C99004842C6 /* WithoutAuthorizationView.swift */; };
 		C560179925C2629C004842C6 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560179825C2629C004842C6 /* HelpViewController.swift */; };
@@ -119,6 +120,7 @@
 		C52520DD258C829D00793392 /* AppearanceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceProvider.swift; sourceTree = "<group>"; };
 		C52520E3258C853B00793392 /* Play2048ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Play2048ViewController.swift; sourceTree = "<group>"; };
 		C525212B2592F63D00793392 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		C54A1D7925C7913D007A23A0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C554AC4025B13AF3000CB32B /* SwiftHEXColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHEXColors.swift; sourceTree = "<group>"; };
 		C560179525C25C99004842C6 /* WithoutAuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithoutAuthorizationView.swift; sourceTree = "<group>"; };
 		C560179825C2629C004842C6 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				C56017A825C3A892004842C6 /* FruitSlot.swift */,
 				C56017A725C3A892004842C6 /* FruitTexture.swift */,
 				C56017A525C3A892004842C6 /* GameScene.swift */,
+				C54A1D7925C7913D007A23A0 /* MainViewController.swift */,
 				C5252012258C3E7E00793392 /* HomeViewController.swift */,
 				C52520E3258C853B00793392 /* Play2048ViewController.swift */,
 				C5252015258C3EC200793392 /* XZNavigationController.swift */,
@@ -528,6 +531,7 @@
 				C52520A1258C3F1500793392 /* Defaults.swift in Sources */,
 				C50E129F25BEB3B8008321FC /* BPYWebViewController.swift in Sources */,
 				C554AC4125B13AF3000CB32B /* SwiftHEXColors.swift in Sources */,
+				C54A1D7A25C7913D007A23A0 /* MainViewController.swift in Sources */,
 				C5252097258C3F1500793392 /* DatePicker.swift in Sources */,
 				C5252084258C3F1500793392 /* Client.swift in Sources */,
 				C56017A325C3A86A004842C6 /* ContentView.swift in Sources */,

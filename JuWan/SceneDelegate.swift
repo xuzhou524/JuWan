@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window = UIWindow(windowScene: windowScene)
         self.window?.backgroundColor = UIColor(named: "color_white")
-        self.window?.rootViewController = XZNavigationController.init(rootViewController: HomeViewController())
+        self.window?.rootViewController = XZNavigationController.init(rootViewController: MainViewController())
         self.window?.makeKeyAndVisible()
     }
 }
