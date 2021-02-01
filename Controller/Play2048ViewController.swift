@@ -32,7 +32,7 @@ class Play2048ViewController: UIViewController,GameModelProtocol {
     
     let scoreLabel:UILabel = {
         let label = UILabel()
-        label.font = blodFontWithSize(35)
+        label.font = blodFontWithSize(32)
         label.textColor = UIColor(named: "color_title_black")
         label.text = "0"
         return label
@@ -40,7 +40,7 @@ class Play2048ViewController: UIViewController,GameModelProtocol {
     
     let highScoreLabel:UILabel = {
         let label = UILabel()
-        label.font = blodFontWithSize(20)
+        label.font = blodFontWithSize(18)
         label.textColor = UIColor(named: "color_title_black")
         label.text = "\(GameUserInfoConfig.shared.game2048HigheScore)"
         return label
@@ -50,6 +50,15 @@ class Play2048ViewController: UIViewController,GameModelProtocol {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "ic_crown")
         return imageView
+    }()
+    
+    let rulesLabel:UILabel = {
+        let label = UILabel()
+        label.font = blodFontWithSize(15)
+        label.numberOfLines = 0
+        label.textColor = UIColor(named: "color_title_black")
+        label.text = "规则：上下左右滑动两个相同数字方块撞在一起之后合并成为他们的和，直到无法移动，所有和相加即为本局分数"
+        return label
     }()
     
     let mobileAreaView:UIView = {
@@ -109,7 +118,7 @@ class Play2048ViewController: UIViewController,GameModelProtocol {
         self.view.addSubview(mobileAreaView)
         mobileAreaView.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview()
-            make.centerY.equalToSuperview().offset(50)
+            make.centerY.equalToSuperview()
             make.height.equalTo(kScreenWidth)
         }
         
@@ -133,6 +142,19 @@ class Play2048ViewController: UIViewController,GameModelProtocol {
         let m = model!
         m.insertTileAtRandomLocation(value: 2)
         m.insertTileAtRandomLocation(value: 2)
+        
+        self.view.addSubview(titleLabel)
+        titleLabel.snp.makeConstraints { (make) in
+            make.bottom.equalTo(mobileAreaView.snp.top).offset(-20)
+            make.left.equalToSuperview().offset(30)
+        }
+        
+        self.view.addSubview(rulesLabel)
+        rulesLabel.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(30)
+            make.right.equalToSuperview().offset(-30)
+            make.top.equalTo(mobileAreaView.snp.bottom).offset(20)
+        }
         
     }
     
@@ -237,8 +259,6 @@ extension Play2048ViewController {
     
     // Protocol
     func scoreChanged(score: Int) {
-//        scoreView.scoreChanged(newScore: score)
-        
         scoreLabel.text = "\(score)"
     }
 
