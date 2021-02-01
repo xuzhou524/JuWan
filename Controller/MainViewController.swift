@@ -62,7 +62,7 @@ class MainViewController: UIViewController,GKGameCenterControllerDelegate {
         viewWatermelon.frame = CGRect(x: 0, y: 200 , width: kScreenWidth, height: 200)
         
         viewWatermelon.titleLabel.text = "我要吃瓜"
-        viewWatermelon.summeryLabel.text = "挑战全球排行"
+        viewWatermelon.summeryLabel.text = "休闲吃瓜，挑战全球排行"
         
         self.view.addSubview(viewWatermelon)
         

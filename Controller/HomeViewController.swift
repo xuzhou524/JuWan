@@ -36,12 +36,6 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
         super.viewDidLoad()
         self.title = "数和"
         self.view.backgroundColor = UIColor(named: "color_theme")
-        
-        let rightBtn = UIButton()
-        rightBtn.setImage(UIImage(named: "user")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        rightBtn.tintColor = UIColor(named: "color_title_black")
-        rightBtn.addTarget(self, action: #selector(rightBtnClick), for: .touchUpInside)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: rightBtn)
 
     }
     
@@ -53,14 +47,14 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        let view2048 = Home2048View()
-        view2048.layer.cornerRadius = 10
-        view2048.layer.masksToBounds = true
-        view2048.tipButton.addTarget(self, action: #selector(startGameButtonTapped), for: .touchUpInside)
+        let viewShuHe = Home2048View()
+        viewShuHe.layer.cornerRadius = 10
+        viewShuHe.layer.masksToBounds = true
+        viewShuHe.tipButton.addTarget(self, action: #selector(startGameButtonTapped), for: .touchUpInside)
         
-        view2048.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 200)
+        viewShuHe.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 200)
         
-        tableView.tableHeaderView = view2048
+        tableView.tableHeaderView = viewShuHe
         
         regClass(tableView, cell: RankListTableViewCell.self)
         regClass(tableView, cell: EmptyCell.self)
