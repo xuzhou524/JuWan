@@ -52,7 +52,7 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
         viewShuHe.layer.masksToBounds = true
         viewShuHe.tipButton.addTarget(self, action: #selector(startGameButtonTapped), for: .touchUpInside)
         
-        viewShuHe.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 200)
+        viewShuHe.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 230)
         
         tableView.tableHeaderView = viewShuHe
         

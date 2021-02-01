@@ -44,28 +44,29 @@ class MainViewController: UIViewController,GKGameCenterControllerDelegate {
     
     func sebViews() {
         
-        let viewShuHe = Home2048View()
-        viewShuHe.layer.cornerRadius = 10
-        viewShuHe.layer.masksToBounds = true
-        viewShuHe.tipButton.addTarget(self, action: #selector(startGameButtonTapped), for: .touchUpInside)
-        viewShuHe.tipButton.setTitle("玩一下", for: .normal)
-        viewShuHe.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 200)
-        
-        self.view.addSubview(viewShuHe)
-        
-        
         let viewWatermelon = Home2048View()
         viewWatermelon.layer.cornerRadius = 10
         viewWatermelon.layer.masksToBounds = true
         viewWatermelon.tipButton.addTarget(self, action: #selector(watermelonTapped), for: .touchUpInside)
         viewWatermelon.tipButton.setTitle("玩一下", for: .normal)
-        viewWatermelon.frame = CGRect(x: 0, y: 200 , width: kScreenWidth, height: 200)
+        viewWatermelon.frame = CGRect(x: 0, y: 0 , width: kScreenWidth, height: 230)
         
         viewWatermelon.bgImageView.image = UIImage(named: "ic_Watermelon")
         viewWatermelon.titleLabel.text = "我要吃瓜"
         viewWatermelon.summeryLabel.text = "休闲吃瓜，挑战全球排行"
+        viewWatermelon.rulesLabel.text = "规则：两个体型较小的水果相撞即可合成更大的水果，最终得到想吃的瓜"
+        viewWatermelon.starImageView.image = UIImage(named: "ic_starTwo")?.withRenderingMode(.alwaysTemplate)
         
         self.view.addSubview(viewWatermelon)
+        
+        let viewShuHe = Home2048View()
+        viewShuHe.layer.cornerRadius = 10
+        viewShuHe.layer.masksToBounds = true
+        viewShuHe.tipButton.addTarget(self, action: #selector(startGameButtonTapped), for: .touchUpInside)
+        viewShuHe.tipButton.setTitle("玩一下", for: .normal)
+        viewShuHe.frame = CGRect(x: 0, y: 230, width: kScreenWidth, height: 230)
+        
+        self.view.addSubview(viewShuHe)
         
     }
     

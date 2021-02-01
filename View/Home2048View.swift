@@ -33,6 +33,23 @@ class Home2048View: UIView {
         return label
     }()
     
+    let rulesLabel:UILabel = {
+        let label = UILabel()
+        label.font = blodFontWithSize(12)
+        label.alpha = 0.8
+        label.numberOfLines = 0
+        label.textColor = UIColor(named: "color_white")
+        label.text = "规则：两个体型较小的水果相撞即可合成更大的水果，最终得到想吃的瓜"
+        return label
+    }()
+    
+    let starImageView:UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "ic_starThree")?.withRenderingMode(.alwaysTemplate)
+        imageView.tintColor = UIColor(named: "color_white")
+        return imageView
+    }()
+    
     let tipButton:UIButton = {
         let button = UIButton()
         button.setTitle("开始挑战", for: .normal)
@@ -59,7 +76,9 @@ class Home2048View: UIView {
         self.addSubview(bgImageView)
         self.addSubview(titleLabel)
         self.addSubview(summeryLabel)
+        self.addSubview(rulesLabel)
         self.addSubview(tipButton)
+        self.addSubview(starImageView)
         
         bgImageView.snp.makeConstraints { (make) in
             make.top.left.equalToSuperview().offset(15)
@@ -76,11 +95,24 @@ class Home2048View: UIView {
             make.top.equalTo(titleLabel.snp.bottom).offset(10)
         }
         
+        rulesLabel.snp.makeConstraints { (make) in
+            make.left.equalTo(titleLabel)
+            make.right.equalToSuperview().offset(-35)
+            make.bottom.equalToSuperview().offset(-30)
+        }
+        
         tipButton.snp.makeConstraints { (make) in
             make.right.equalToSuperview().offset(-35)
-            make.bottom.equalToSuperview().offset(-35)
+            make.bottom.equalToSuperview().offset(-75)
             make.height.equalTo(38)
             make.width.equalTo(110)
+        }
+        
+        starImageView.snp.makeConstraints { (make) in
+            make.centerY.equalTo(titleLabel)
+            make.right.equalToSuperview().offset(-35)
+            make.width.equalTo(50)
+            make.height.equalTo(15.4)
         }
     }
 }

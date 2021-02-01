@@ -52,10 +52,13 @@ class WatermelonViewController: UIViewController,GKGameCenterControllerDelegate 
         viewWatermelon.layer.masksToBounds = true
         viewWatermelon.tipButton.addTarget(self, action: #selector(startGameButtonTapped), for: .touchUpInside)
         
-        viewWatermelon.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 200)
+        viewWatermelon.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 230)
         viewWatermelon.bgImageView.image = UIImage(named: "ic_Watermelon")
         viewWatermelon.titleLabel.text = "我要吃瓜"
         viewWatermelon.summeryLabel.text = "休闲吃瓜，挑战全球排行"
+        viewWatermelon.rulesLabel.text = "规则：两个体型较小的水果相撞即可合成更大的水果，最终得到想吃的瓜"
+        viewWatermelon.starImageView.image = UIImage(named: "ic_starTwo")?.withRenderingMode(.alwaysTemplate)
+        
         tableView.tableHeaderView = viewWatermelon
         
         regClass(tableView, cell: RankListTableViewCell.self)
