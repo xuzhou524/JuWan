@@ -1,5 +1,5 @@
 //
-//  Game2048ThemeDialViewController.swift
+//  GameShuHeThemeDialViewController.swift
 //  JuWan
 //
 //  Created by fanzhe on 2021/1/21.
@@ -9,7 +9,7 @@ import UIKit
 import SwiftyStoreKit
 import GoogleMobileAds
 
-class Game2048ThemeDialViewController: UIViewController {
+class GameShuHeThemeDialViewController: UIViewController {
     
     var collectionView : UICollectionView!
     var isHaveBuy = false
@@ -62,7 +62,7 @@ class Game2048ThemeDialViewController: UIViewController {
     
 }
 
-extension Game2048ThemeDialViewController{
+extension GameShuHeThemeDialViewController{
 //    //获取商品信息
 //    func getList() {
 //        SwiftyStoreKit.retrieveProductsInfo(["juwan_2048_Dial_6"]) { result in
@@ -134,7 +134,7 @@ extension Game2048ThemeDialViewController{
     }
 }
 
-extension Game2048ThemeDialViewController : UICollectionViewDelegate , UICollectionViewDataSource{
+extension GameShuHeThemeDialViewController : UICollectionViewDelegate , UICollectionViewDataSource{
     //UICollectionView代理方法
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 2

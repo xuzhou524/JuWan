@@ -1,5 +1,5 @@
 //
-//  Game2048ThemeSettingViewController.swift
+//  GameShuHeThemeSettingViewController.swift
 //  JuWan
 //
 //  Created by fanzhe on 2021/1/18.
@@ -8,7 +8,7 @@
 import UIKit
 import GoogleMobileAds
 
-class Game2048ThemeSettingViewController: UIViewController {
+class GameShuHeThemeSettingViewController: UIViewController {
     
     var collectionView : UICollectionView!
     
@@ -71,7 +71,7 @@ class Game2048ThemeSettingViewController: UIViewController {
     
 }
 
-extension Game2048ThemeSettingViewController : UICollectionViewDelegate , UICollectionViewDataSource{
+extension GameShuHeThemeSettingViewController : UICollectionViewDelegate , UICollectionViewDataSource{
     //UICollectionView代理方法
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
@@ -108,7 +108,7 @@ extension Game2048ThemeSettingViewController : UICollectionViewDelegate , UIColl
     
 }
 
-extension Game2048ThemeSettingViewController : GADInterstitialDelegate,GADRewardedAdDelegate{
+extension GameShuHeThemeSettingViewController : GADInterstitialDelegate,GADRewardedAdDelegate{
     /// Tells the delegate that the user earned a reward.
     func rewardedAd(_ rewardedAd: GADRewardedAd, userDidEarn reward: GADAdReward) {
         print("Reward received with currency: \(reward.type), amount \(reward.amount).")

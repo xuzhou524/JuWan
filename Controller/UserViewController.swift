@@ -93,9 +93,9 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
             if indexPath.row == 0 {
-                self.navigationController?.pushViewController(Game2048ThemeSettingViewController(), animated: true)
+                self.navigationController?.pushViewController(GameShuHeThemeSettingViewController(), animated: true)
             }else if indexPath.row == 1 {
-                self.navigationController?.pushViewController(Game2048ThemeDialViewController(), animated: true)
+                self.navigationController?.pushViewController(GameShuHeThemeDialViewController(), animated: true)
             }else if indexPath.row == 2 {
                 let activityController = UIActivityViewController(activityItems: [ "https://apps.apple.com/cn/app/id1546172171" + " (分享来自@聚玩) " ], applicationActivities: nil)
                 UIApplication.shared.windows.first?.rootViewController?.present(activityController, animated: true, completion: nil)

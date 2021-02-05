@@ -10,7 +10,7 @@
 		87E624CE1A12435BF319238A /* libPods-JuWan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0FDB650050D0AD0ECC30E5 /* libPods-JuWan.a */; };
 		C50E129C25BEA642008321FC /* GameUserInfoConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50E129B25BEA642008321FC /* GameUserInfoConfig.swift */; };
 		C50E129F25BEB3B8008321FC /* BPYWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50E129E25BEB3B8008321FC /* BPYWebViewController.swift */; };
-		C523503525B91EFA005B637B /* Game2048ThemeDialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523503425B91EFA005B637B /* Game2048ThemeDialViewController.swift */; };
+		C523503525B91EFA005B637B /* GameShuHeThemeDialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523503425B91EFA005B637B /* GameShuHeThemeDialViewController.swift */; };
 		C523504025B945D8005B637B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C523503F25B945D8005B637B /* StoreKit.framework */; };
 		C5251FDD258C36AC00793392 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5251FDC258C36AC00793392 /* AppDelegate.swift */; };
 		C5251FDF258C36AC00793392 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5251FDE258C36AC00793392 /* SceneDelegate.swift */; };
@@ -77,7 +77,7 @@
 		C59470BA25B5187D009C1F35 /* GameDecorateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59470B925B5187D009C1F35 /* GameDecorateConfig.swift */; };
 		C59470C725B52229009C1F35 /* CDFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59470C525B52228009C1F35 /* CDFlowLayout.swift */; };
 		C59470C825B52229009C1F35 /* CDViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59470C625B52229009C1F35 /* CDViewCell.swift */; };
-		C59470CB25B52308009C1F35 /* Game2048ThemeSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59470CA25B52308009C1F35 /* Game2048ThemeSettingViewController.swift */; };
+		C59470CB25B52308009C1F35 /* GameShuHeThemeSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59470CA25B52308009C1F35 /* GameShuHeThemeSettingViewController.swift */; };
 		C5BFF92A25AE8AF800C66424 /* RankListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFF92925AE8AF800C66424 /* RankListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,7 +87,7 @@
 		A8C27D339610B69BB212B42A /* Pods-JuWan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuWan.debug.xcconfig"; path = "Target Support Files/Pods-JuWan/Pods-JuWan.debug.xcconfig"; sourceTree = "<group>"; };
 		C50E129B25BEA642008321FC /* GameUserInfoConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameUserInfoConfig.swift; sourceTree = "<group>"; };
 		C50E129E25BEB3B8008321FC /* BPYWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPYWebViewController.swift; sourceTree = "<group>"; };
-		C523503425B91EFA005B637B /* Game2048ThemeDialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game2048ThemeDialViewController.swift; sourceTree = "<group>"; };
+		C523503425B91EFA005B637B /* GameShuHeThemeDialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameShuHeThemeDialViewController.swift; sourceTree = "<group>"; };
 		C523503F25B945D8005B637B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C5251FD9258C36AC00793392 /* JuWan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuWan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5251FDC258C36AC00793392 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 		C59470B925B5187D009C1F35 /* GameDecorateConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDecorateConfig.swift; sourceTree = "<group>"; };
 		C59470C525B52228009C1F35 /* CDFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDFlowLayout.swift; sourceTree = "<group>"; };
 		C59470C625B52229009C1F35 /* CDViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDViewCell.swift; sourceTree = "<group>"; };
-		C59470CA25B52308009C1F35 /* Game2048ThemeSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game2048ThemeSettingViewController.swift; sourceTree = "<group>"; };
+		C59470CA25B52308009C1F35 /* GameShuHeThemeSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameShuHeThemeSettingViewController.swift; sourceTree = "<group>"; };
 		C5BFF92925AE8AF800C66424 /* RankListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -248,8 +248,8 @@
 				C52520E3258C853B00793392 /* Play2048ViewController.swift */,
 				C5252015258C3EC200793392 /* XZNavigationController.swift */,
 				C57F72B725B1494A00FC0198 /* UserViewController.swift */,
-				C59470CA25B52308009C1F35 /* Game2048ThemeSettingViewController.swift */,
-				C523503425B91EFA005B637B /* Game2048ThemeDialViewController.swift */,
+				C59470CA25B52308009C1F35 /* GameShuHeThemeSettingViewController.swift */,
+				C523503425B91EFA005B637B /* GameShuHeThemeDialViewController.swift */,
 				C50E129E25BEB3B8008321FC /* BPYWebViewController.swift */,
 				C560179825C2629C004842C6 /* HelpViewController.swift */,
 			);
@@ -525,7 +525,7 @@
 				C5252088258C3F1500793392 /* UIColor+Create.swift in Sources */,
 				C52520D2258C825500793392 /* AuxiliaryModels.swift in Sources */,
 				C56017AA25C3A892004842C6 /* AudioUtil.swift in Sources */,
-				C59470CB25B52308009C1F35 /* Game2048ThemeSettingViewController.swift in Sources */,
+				C59470CB25B52308009C1F35 /* GameShuHeThemeSettingViewController.swift in Sources */,
 				C5252090258C3F1500793392 /* Defines.swift in Sources */,
 				C5252083258C3F1500793392 /* Date+Extension.swift in Sources */,
 				C52520A1258C3F1500793392 /* Defaults.swift in Sources */,
@@ -547,7 +547,7 @@
 				C56017A925C3A892004842C6 /* GameScene.swift in Sources */,
 				C57F72B825B1494A00FC0198 /* UserViewController.swift in Sources */,
 				C52520D3258C825500793392 /* GameModel.swift in Sources */,
-				C523503525B91EFA005B637B /* Game2048ThemeDialViewController.swift in Sources */,
+				C523503525B91EFA005B637B /* GameShuHeThemeDialViewController.swift in Sources */,
 				C5252016258C3EC200793392 /* XZNavigationController.swift in Sources */,
 				C560179625C25C99004842C6 /* WithoutAuthorizationView.swift in Sources */,
 				C59470BA25B5187D009C1F35 /* GameDecorateConfig.swift in Sources */,
