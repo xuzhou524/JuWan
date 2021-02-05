@@ -1,5 +1,5 @@
 //
-//  GameboardView.swift
+//  ShuHeGameboardView.swift
 //  JuWan
 //
 //  Created by fanzhe on 2020/12/18.
@@ -7,12 +7,12 @@
 
 import UIKit
 
-class GameboardView : UIView {
+class ShuHeGameboardView : UIView {
     var dimension: Int
     var tileWidth: CGFloat
     var tilePadding: CGFloat
     var cornerRadius: CGFloat
-    var tiles: Dictionary<NSIndexPath, TileView>
+    var tiles: Dictionary<NSIndexPath, TitlesView>
     
     let provider = AppearanceProvider()
     
@@ -84,7 +84,7 @@ class GameboardView : UIView {
         let x = tilePadding + CGFloat(col)*(tileWidth + tilePadding)
         let y = tilePadding + CGFloat(row)*(tileWidth + tilePadding)
         let r = (cornerRadius >= 2) ? cornerRadius - 2 : 0
-        let tile = TileView(position: CGPoint(x: x, y: y), width: tileWidth, value: value, radius: r, delegate: provider)
+        let tile = TitlesView(position: CGPoint(x: x, y: y), width: tileWidth, value: value, radius: r, delegate: provider)
         tile.layer.setAffineTransform(CGAffineTransform(scaleX: tilePopStartScale, y: tilePopStartScale))
         
         addSubview(tile)

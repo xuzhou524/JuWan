@@ -11,7 +11,7 @@ import GameplayKit
 
 class Play2048ViewController: UIViewController,GameModelProtocol {
     var model: GameModel?
-    var board: GameboardView?
+    var board: ShuHeGameboardView?
     
     let viewPadding: CGFloat = 10.0
     let verticalViewOffset: CGFloat = 0.0
@@ -125,7 +125,7 @@ class Play2048ViewController: UIViewController,GameModelProtocol {
         let padding: CGFloat = dimension > 5 ? thinPadding : thickPadding
         let v1 = boardWidth - padding*(CGFloat(dimension + 1))
         let width: CGFloat = CGFloat(floorf(CFloat(v1)))/CGFloat(dimension)
-        board = GameboardView(dimension: dimension,
+        board = ShuHeGameboardView(dimension: dimension,
                                       tileWidth: width,
                                       tilePadding: padding,
                                       cornerRadius: 6,

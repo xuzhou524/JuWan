@@ -1,5 +1,5 @@
 //
-//  TileView.swift
+//  TitlesView.swift
 //  JuWan
 //
 //  Created by fanzhe on 2020/12/18.
@@ -8,7 +8,7 @@
 import UIKit
 
 /// A view representing a single swift-2048 tile.
-class TileView : UIView {
+class TitlesView : UIView {
     var value : Int = 0 {
         didSet {
             backgroundColor = delegate.tileColor(value: value)

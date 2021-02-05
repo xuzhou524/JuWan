@@ -32,8 +32,8 @@
 		C52520CC258C7A0B00793392 /* HomeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520CB258C7A0B00793392 /* HomeCardView.swift */; };
 		C52520D2258C825500793392 /* AuxiliaryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520D0258C825500793392 /* AuxiliaryModels.swift */; };
 		C52520D3258C825500793392 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520D1258C825500793392 /* GameModel.swift */; };
-		C52520D9258C827400793392 /* GameboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520D6258C827300793392 /* GameboardView.swift */; };
-		C52520DA258C827400793392 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520D7258C827300793392 /* TileView.swift */; };
+		C52520D9258C827400793392 /* ShuHeGameboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520D6258C827300793392 /* ShuHeGameboardView.swift */; };
+		C52520DA258C827400793392 /* TitlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520D7258C827300793392 /* TitlesView.swift */; };
 		C52520DE258C829D00793392 /* AppearanceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520DD258C829D00793392 /* AppearanceProvider.swift */; };
 		C52520E4258C853B00793392 /* Play2048ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520E3258C853B00793392 /* Play2048ViewController.swift */; };
 		C525212C2592F63D00793392 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C525212B2592F63D00793392 /* GameKit.framework */; };
@@ -114,8 +114,8 @@
 		C52520CB258C7A0B00793392 /* HomeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardView.swift; sourceTree = "<group>"; };
 		C52520D0258C825500793392 /* AuxiliaryModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuxiliaryModels.swift; sourceTree = "<group>"; };
 		C52520D1258C825500793392 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
-		C52520D6258C827300793392 /* GameboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameboardView.swift; sourceTree = "<group>"; };
-		C52520D7258C827300793392 /* TileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
+		C52520D6258C827300793392 /* ShuHeGameboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShuHeGameboardView.swift; sourceTree = "<group>"; };
+		C52520D7258C827300793392 /* TitlesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitlesView.swift; sourceTree = "<group>"; };
 		C52520DD258C829D00793392 /* AppearanceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceProvider.swift; sourceTree = "<group>"; };
 		C52520E3258C853B00793392 /* Play2048ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Play2048ViewController.swift; sourceTree = "<group>"; };
 		C525212B2592F63D00793392 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
@@ -322,8 +322,8 @@
 				C59470C525B52228009C1F35 /* CDFlowLayout.swift */,
 				C59470C625B52229009C1F35 /* CDViewCell.swift */,
 				C52520DD258C829D00793392 /* AppearanceProvider.swift */,
-				C52520D6258C827300793392 /* GameboardView.swift */,
-				C52520D7258C827300793392 /* TileView.swift */,
+				C52520D6258C827300793392 /* ShuHeGameboardView.swift */,
+				C52520D7258C827300793392 /* TitlesView.swift */,
 			);
 			path = ShuHe;
 			sourceTree = "<group>";
@@ -539,7 +539,7 @@
 				C54A1D7E25C79841007A23A0 /* WatermelonViewController.swift in Sources */,
 				C52520A0258C3F1500793392 /* UIViewController+Extension.swift in Sources */,
 				C5252081258C3F1500793392 /* MBProgressHUD+ITTAdditions.m in Sources */,
-				C52520D9258C827400793392 /* GameboardView.swift in Sources */,
+				C52520D9258C827400793392 /* ShuHeGameboardView.swift in Sources */,
 				C5251FDD258C36AC00793392 /* AppDelegate.swift in Sources */,
 				C5BFF92A25AE8AF800C66424 /* RankListTableViewCell.swift in Sources */,
 				C59470C825B52229009C1F35 /* CDViewCell.swift in Sources */,
@@ -560,7 +560,7 @@
 				C5252013258C3E7E00793392 /* HomeViewController.swift in Sources */,
 				C5252087258C3F1500793392 /* UITableView+Extension.swift in Sources */,
 				C560179925C2629C004842C6 /* HelpViewController.swift in Sources */,
-				C52520DA258C827400793392 /* TileView.swift in Sources */,
+				C52520DA258C827400793392 /* TitlesView.swift in Sources */,
 				C57F72BB25B14AB700FC0198 /* LeftTitleTableViewCell.swift in Sources */,
 				C52520CC258C7A0B00793392 /* HomeCardView.swift in Sources */,
 			);
