@@ -1,8 +1,8 @@
 //
 //  AudioUtil.swift
-//  Mix Watermelon
+//  JuWan
 //
-//  Created by Steve Yu on 2021/1/27.
+//  Created by fanzhe on 2021/2/1.
 //
 
 import Foundation
