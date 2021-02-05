@@ -1,9 +1,8 @@
 //
 //  CDViewCell.swift
-//  Card_hjw
+//  JuWan
 //
-//  Created by hejianwu on 16/10/26.
-//  Copyright © 2016年 ShopNC. All rights reserved.
+//  Created by fanzhe on 2020/12/18.
 //
 
 import UIKit

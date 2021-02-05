@@ -1,15 +1,13 @@
 //
 //  CDFlowLayout.swift
-//  Card_hjw
+//  JuWan
 //
-//  Created by hejianwu on 16/10/26.
-//  Copyright © 2016年 ShopNC. All rights reserved.
+//  Created by fanzhe on 2020/12/18.
 //
 
 import UIKit
 
 class CDFlowLayout: UICollectionViewFlowLayout {
-
     
     override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
         var offsetAdjustment = CGFloat(MAXFLOAT)   //当前处理器能处理的最大浮点数
