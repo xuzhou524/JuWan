@@ -22,23 +22,23 @@ class AppearanceProvider: AppearanceProviderProtocol {
         case 1:
             switch value {
             case 2:
-                return UIColor(red: 238.0/255.0, green: 228.0/255.0, blue: 218.0/255.0, alpha: 1.0)
+                return UIColor(hexString: "caf0f8")!
             case 4:
-                return UIColor(red: 237.0/255.0, green: 224.0/255.0, blue: 200.0/255.0, alpha: 1.0)
+                return UIColor(hexString: "ade8f4")!
             case 8:
-                return UIColor(red: 242.0/255.0, green: 177.0/255.0, blue: 121.0/255.0, alpha: 1.0)
+                return UIColor(hexString: "90e0ef")!
             case 16:
-                return UIColor(red: 245.0/255.0, green: 149.0/255.0, blue: 99.0/255.0, alpha: 1.0)
+                return UIColor(hexString: "48cae4")!
             case 32:
-                return UIColor(red: 246.0/255.0, green: 124.0/255.0, blue: 95.0/255.0, alpha: 1.0)
+                return UIColor(hexString: "00b4d8")!
             case 64:
-                return UIColor(red: 246.0/255.0, green: 94.0/255.0, blue: 59.0/255.0, alpha: 1.0)
+                return UIColor(hexString: "0096c7")!
             case 128:
-                return UIColor(red: 247.0/255.0, green: 80.0/255.0, blue: 50.0/255.0, alpha: 1.0)
+                return UIColor(hexString: "0077b6")!
             case 256:
-                return UIColor(red: 247.0/255.0, green: 75.0/255.0, blue: 40.0/255.0, alpha: 1.0)
+                return UIColor(hexString: "023e8a")!
             case 512, 1024, 2048:
-                return UIColor(red: 237.0/255.0, green: 207.0/255.0, blue: 114.0/255.0, alpha: 1.0)
+                return UIColor(hexString: "03045e")!
             default:
                 return UIColor.white
             }
@@ -68,23 +68,23 @@ class AppearanceProvider: AppearanceProviderProtocol {
         case 3:
             switch value {
             case 2:
-                return UIColor(hexString: "caf0f8")!
+                return UIColor(red: 238.0/255.0, green: 228.0/255.0, blue: 218.0/255.0, alpha: 1.0)
             case 4:
-                return UIColor(hexString: "ade8f4")!
+                return UIColor(red: 237.0/255.0, green: 224.0/255.0, blue: 200.0/255.0, alpha: 1.0)
             case 8:
-                return UIColor(hexString: "90e0ef")!
+                return UIColor(red: 242.0/255.0, green: 177.0/255.0, blue: 121.0/255.0, alpha: 1.0)
             case 16:
-                return UIColor(hexString: "48cae4")!
+                return UIColor(red: 245.0/255.0, green: 149.0/255.0, blue: 99.0/255.0, alpha: 1.0)
             case 32:
-                return UIColor(hexString: "00b4d8")!
+                return UIColor(red: 246.0/255.0, green: 124.0/255.0, blue: 95.0/255.0, alpha: 1.0)
             case 64:
-                return UIColor(hexString: "0096c7")!
+                return UIColor(red: 246.0/255.0, green: 94.0/255.0, blue: 59.0/255.0, alpha: 1.0)
             case 128:
-                return UIColor(hexString: "0077b6")!
+                return UIColor(red: 247.0/255.0, green: 80.0/255.0, blue: 50.0/255.0, alpha: 1.0)
             case 256:
-                return UIColor(hexString: "023e8a")!
+                return UIColor(red: 247.0/255.0, green: 75.0/255.0, blue: 40.0/255.0, alpha: 1.0)
             case 512, 1024, 2048:
-                return UIColor(hexString: "03045e")!
+                return UIColor(red: 237.0/255.0, green: 207.0/255.0, blue: 114.0/255.0, alpha: 1.0)
             default:
                 return UIColor.white
             }
