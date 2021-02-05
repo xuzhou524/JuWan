@@ -147,7 +147,7 @@ extension GameShuHeThemeDialViewController : UICollectionViewDelegate , UICollec
             cell.goodsImg.image = UIImage(named: "theme_2048_1")
             cell.selectView.isHidden = GameDecorateConfig.shared.gameShuHeDialNum != 4
         }else if indexPath.row == 1{
-            cell.goodsImg.image = UIImage(named: "theme_2048D_6")
+            cell.goodsImg.image = UIImage(named: "theme_2048D_5")
             cell.selectView.isHidden = GameDecorateConfig.shared.gameShuHeDialNum != 5
         }else if indexPath.row == 2{
             cell.goodsImg.image = UIImage(named: "theme_2048D_6")
