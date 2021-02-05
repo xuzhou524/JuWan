@@ -140,8 +140,8 @@ class Play2048ViewController: UIViewController,GameModelProtocol {
         mobileAreaView.addSubview(board!)
         assert(model != nil)
         let m = model!
-        m.insertTileAtRandomLocation(value: 2)
-        m.insertTileAtRandomLocation(value: 2)
+        m.insertTileAtRandomLocation(value: 1)
+        m.insertTileAtRandomLocation(value: 1)
         
         self.view.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { (make) in
@@ -205,7 +205,7 @@ extension Play2048ViewController {
 //            return
 //        }
         let randomVal = Int(arc4random_uniform(10))
-        m.insertTileAtRandomLocation(value: randomVal == 1 ? 4 : 2)
+        m.insertTileAtRandomLocation(value: randomVal == 1 ? 2 : 1)
         if m.userHasLost() {
             let tip = LDTipAlertView.init(message: "你输了...", buttonTitles: ["我知道了"])
             tip?.show()
