@@ -15,5 +15,5 @@ class GameDecorateConfig: NSObject {
     var gameShuHeThemeType: Int = 1
 
     //表盘
-    var gameShuHeDialNum: Int = 4
+    var gameShuHeDialNum: Int = 5
 }
