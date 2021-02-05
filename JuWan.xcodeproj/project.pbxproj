@@ -34,7 +34,6 @@
 		C52520D3258C825500793392 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520D1258C825500793392 /* GameModel.swift */; };
 		C52520D9258C827400793392 /* GameboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520D6258C827300793392 /* GameboardView.swift */; };
 		C52520DA258C827400793392 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520D7258C827300793392 /* TileView.swift */; };
-		C52520DB258C827400793392 /* AccessoryViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520D8258C827400793392 /* AccessoryViews.swift */; };
 		C52520DE258C829D00793392 /* AppearanceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520DD258C829D00793392 /* AppearanceProvider.swift */; };
 		C52520E4258C853B00793392 /* Play2048ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520E3258C853B00793392 /* Play2048ViewController.swift */; };
 		C525212C2592F63D00793392 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C525212B2592F63D00793392 /* GameKit.framework */; };
@@ -117,7 +116,6 @@
 		C52520D1258C825500793392 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		C52520D6258C827300793392 /* GameboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameboardView.swift; sourceTree = "<group>"; };
 		C52520D7258C827300793392 /* TileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
-		C52520D8258C827400793392 /* AccessoryViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessoryViews.swift; sourceTree = "<group>"; };
 		C52520DD258C829D00793392 /* AppearanceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceProvider.swift; sourceTree = "<group>"; };
 		C52520E3258C853B00793392 /* Play2048ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Play2048ViewController.swift; sourceTree = "<group>"; };
 		C525212B2592F63D00793392 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
@@ -324,7 +322,6 @@
 				C59470C525B52228009C1F35 /* CDFlowLayout.swift */,
 				C59470C625B52229009C1F35 /* CDViewCell.swift */,
 				C52520DD258C829D00793392 /* AppearanceProvider.swift */,
-				C52520D8258C827400793392 /* AccessoryViews.swift */,
 				C52520D6258C827300793392 /* GameboardView.swift */,
 				C52520D7258C827300793392 /* TileView.swift */,
 			);
@@ -564,7 +561,6 @@
 				C5252087258C3F1500793392 /* UITableView+Extension.swift in Sources */,
 				C560179925C2629C004842C6 /* HelpViewController.swift in Sources */,
 				C52520DA258C827400793392 /* TileView.swift in Sources */,
-				C52520DB258C827400793392 /* AccessoryViews.swift in Sources */,
 				C57F72BB25B14AB700FC0198 /* LeftTitleTableViewCell.swift in Sources */,
 				C52520CC258C7A0B00793392 /* HomeCardView.swift in Sources */,
 			);
