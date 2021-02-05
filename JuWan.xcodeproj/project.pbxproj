@@ -259,7 +259,7 @@
 		C5252004258C3B6500793392 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C52520D5258C826300793392 /* 2048 */,
+				C52520D5258C826300793392 /* ShuHe */,
 				C52520CB258C7A0B00793392 /* HomeCardView.swift */,
 				C5BFF92925AE8AF800C66424 /* RankListTableViewCell.swift */,
 				C57F72BA25B14AB700FC0198 /* LeftTitleTableViewCell.swift */,
@@ -316,7 +316,7 @@
 			path = 2048;
 			sourceTree = "<group>";
 		};
-		C52520D5258C826300793392 /* 2048 */ = {
+		C52520D5258C826300793392 /* ShuHe */ = {
 			isa = PBXGroup;
 			children = (
 				C59470C525B52228009C1F35 /* CDFlowLayout.swift */,
@@ -325,7 +325,7 @@
 				C52520D6258C827300793392 /* GameboardView.swift */,
 				C52520D7258C827300793392 /* TileView.swift */,
 			);
-			path = 2048;
+			path = ShuHe;
 			sourceTree = "<group>";
 		};
 		C56017AF25C3A8EE004842C6 /* Sounds */ = {
