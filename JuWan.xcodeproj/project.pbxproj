@@ -10,13 +10,11 @@
 		87E624CE1A12435BF319238A /* libPods-JuWan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0FDB650050D0AD0ECC30E5 /* libPods-JuWan.a */; };
 		C50E129C25BEA642008321FC /* GameUserInfoConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50E129B25BEA642008321FC /* GameUserInfoConfig.swift */; };
 		C50E129F25BEB3B8008321FC /* BPYWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50E129E25BEB3B8008321FC /* BPYWebViewController.swift */; };
-		C523503525B91EFA005B637B /* GameShuHeThemeDialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C523503425B91EFA005B637B /* GameShuHeThemeDialViewController.swift */; };
 		C523504025B945D8005B637B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C523503F25B945D8005B637B /* StoreKit.framework */; };
 		C5251FDD258C36AC00793392 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5251FDC258C36AC00793392 /* AppDelegate.swift */; };
 		C5251FDF258C36AC00793392 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5251FDE258C36AC00793392 /* SceneDelegate.swift */; };
 		C5251FE6258C36B000793392 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5251FE5258C36B000793392 /* Assets.xcassets */; };
 		C5251FE9258C36B000793392 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5251FE7258C36B000793392 /* LaunchScreen.storyboard */; };
-		C5252013258C3E7E00793392 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5252012258C3E7E00793392 /* HomeViewController.swift */; };
 		C5252016258C3EC200793392 /* XZNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5252015258C3EC200793392 /* XZNavigationController.swift */; };
 		C525207D258C3F1500793392 /* LDTipAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5252026258C3F1000793392 /* LDTipAlertView.m */; };
 		C5252081258C3F1500793392 /* MBProgressHUD+ITTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C525202F258C3F1000793392 /* MBProgressHUD+ITTAdditions.m */; };
@@ -32,10 +30,6 @@
 		C52520CC258C7A0B00793392 /* HomeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520CB258C7A0B00793392 /* HomeCardView.swift */; };
 		C52520D2258C825500793392 /* AuxiliaryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520D0258C825500793392 /* AuxiliaryModels.swift */; };
 		C52520D3258C825500793392 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520D1258C825500793392 /* GameModel.swift */; };
-		C52520D9258C827400793392 /* ShuHeGameboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520D6258C827300793392 /* ShuHeGameboardView.swift */; };
-		C52520DA258C827400793392 /* TitlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520D7258C827300793392 /* TitlesView.swift */; };
-		C52520DE258C829D00793392 /* AppearanceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520DD258C829D00793392 /* AppearanceProvider.swift */; };
-		C52520E4258C853B00793392 /* Play2048ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520E3258C853B00793392 /* Play2048ViewController.swift */; };
 		C525212C2592F63D00793392 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C525212B2592F63D00793392 /* GameKit.framework */; };
 		C54A1D7A25C7913D007A23A0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A1D7925C7913D007A23A0 /* MainViewController.swift */; };
 		C54A1D7E25C79841007A23A0 /* WatermelonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A1D7D25C79841007A23A0 /* WatermelonViewController.swift */; };
@@ -75,9 +69,6 @@
 		C57F72B825B1494A00FC0198 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F72B725B1494A00FC0198 /* UserViewController.swift */; };
 		C57F72BB25B14AB700FC0198 /* LeftTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F72BA25B14AB700FC0198 /* LeftTitleTableViewCell.swift */; };
 		C59470BA25B5187D009C1F35 /* GameDecorateConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59470B925B5187D009C1F35 /* GameDecorateConfig.swift */; };
-		C59470C725B52229009C1F35 /* CDFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59470C525B52228009C1F35 /* CDFlowLayout.swift */; };
-		C59470C825B52229009C1F35 /* CDViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59470C625B52229009C1F35 /* CDViewCell.swift */; };
-		C59470CB25B52308009C1F35 /* GameShuHeThemeSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59470CA25B52308009C1F35 /* GameShuHeThemeSettingViewController.swift */; };
 		C5BFF92A25AE8AF800C66424 /* RankListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BFF92925AE8AF800C66424 /* RankListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,7 +78,6 @@
 		A8C27D339610B69BB212B42A /* Pods-JuWan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuWan.debug.xcconfig"; path = "Target Support Files/Pods-JuWan/Pods-JuWan.debug.xcconfig"; sourceTree = "<group>"; };
 		C50E129B25BEA642008321FC /* GameUserInfoConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameUserInfoConfig.swift; sourceTree = "<group>"; };
 		C50E129E25BEB3B8008321FC /* BPYWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPYWebViewController.swift; sourceTree = "<group>"; };
-		C523503425B91EFA005B637B /* GameShuHeThemeDialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameShuHeThemeDialViewController.swift; sourceTree = "<group>"; };
 		C523503F25B945D8005B637B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C5251FD9258C36AC00793392 /* JuWan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuWan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5251FDC258C36AC00793392 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,7 +85,6 @@
 		C5251FE5258C36B000793392 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5251FE8258C36B000793392 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5251FEA258C36B000793392 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C5252012258C3E7E00793392 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C5252015258C3EC200793392 /* XZNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XZNavigationController.swift; sourceTree = "<group>"; };
 		C5252018258C3F0F00793392 /* JuWan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JuWan-Bridging-Header.h"; sourceTree = "<group>"; };
 		C5252026258C3F1000793392 /* LDTipAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDTipAlertView.m; sourceTree = "<group>"; };
@@ -114,10 +103,6 @@
 		C52520CB258C7A0B00793392 /* HomeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardView.swift; sourceTree = "<group>"; };
 		C52520D0258C825500793392 /* AuxiliaryModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuxiliaryModels.swift; sourceTree = "<group>"; };
 		C52520D1258C825500793392 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
-		C52520D6258C827300793392 /* ShuHeGameboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShuHeGameboardView.swift; sourceTree = "<group>"; };
-		C52520D7258C827300793392 /* TitlesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitlesView.swift; sourceTree = "<group>"; };
-		C52520DD258C829D00793392 /* AppearanceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceProvider.swift; sourceTree = "<group>"; };
-		C52520E3258C853B00793392 /* Play2048ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Play2048ViewController.swift; sourceTree = "<group>"; };
 		C525212B2592F63D00793392 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		C54A1D7925C7913D007A23A0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C54A1D7D25C79841007A23A0 /* WatermelonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatermelonViewController.swift; sourceTree = "<group>"; };
@@ -157,9 +142,6 @@
 		C57F72B725B1494A00FC0198 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		C57F72BA25B14AB700FC0198 /* LeftTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTitleTableViewCell.swift; sourceTree = "<group>"; };
 		C59470B925B5187D009C1F35 /* GameDecorateConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDecorateConfig.swift; sourceTree = "<group>"; };
-		C59470C525B52228009C1F35 /* CDFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDFlowLayout.swift; sourceTree = "<group>"; };
-		C59470C625B52229009C1F35 /* CDViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDViewCell.swift; sourceTree = "<group>"; };
-		C59470CA25B52308009C1F35 /* GameShuHeThemeSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameShuHeThemeSettingViewController.swift; sourceTree = "<group>"; };
 		C5BFF92925AE8AF800C66424 /* RankListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -242,14 +224,10 @@
 				C56017A725C3A892004842C6 /* FruitTexture.swift */,
 				C56017A525C3A892004842C6 /* GameScene.swift */,
 				C54A1D7925C7913D007A23A0 /* MainViewController.swift */,
-				C5252012258C3E7E00793392 /* HomeViewController.swift */,
 				C54A1D7D25C79841007A23A0 /* WatermelonViewController.swift */,
 				C54A1D8125C79BA7007A23A0 /* PlayWatermelonViewController.swift */,
-				C52520E3258C853B00793392 /* Play2048ViewController.swift */,
 				C5252015258C3EC200793392 /* XZNavigationController.swift */,
 				C57F72B725B1494A00FC0198 /* UserViewController.swift */,
-				C59470CA25B52308009C1F35 /* GameShuHeThemeSettingViewController.swift */,
-				C523503425B91EFA005B637B /* GameShuHeThemeDialViewController.swift */,
 				C50E129E25BEB3B8008321FC /* BPYWebViewController.swift */,
 				C560179825C2629C004842C6 /* HelpViewController.swift */,
 			);
@@ -259,7 +237,6 @@
 		C5252004258C3B6500793392 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C52520D5258C826300793392 /* ShuHe */,
 				C52520CB258C7A0B00793392 /* HomeCardView.swift */,
 				C5BFF92925AE8AF800C66424 /* RankListTableViewCell.swift */,
 				C57F72BA25B14AB700FC0198 /* LeftTitleTableViewCell.swift */,
@@ -314,18 +291,6 @@
 				C52520D1258C825500793392 /* GameModel.swift */,
 			);
 			path = 2048;
-			sourceTree = "<group>";
-		};
-		C52520D5258C826300793392 /* ShuHe */ = {
-			isa = PBXGroup;
-			children = (
-				C59470C525B52228009C1F35 /* CDFlowLayout.swift */,
-				C59470C625B52229009C1F35 /* CDViewCell.swift */,
-				C52520DD258C829D00793392 /* AppearanceProvider.swift */,
-				C52520D6258C827300793392 /* ShuHeGameboardView.swift */,
-				C52520D7258C827300793392 /* TitlesView.swift */,
-			);
-			path = ShuHe;
 			sourceTree = "<group>";
 		};
 		C56017AF25C3A8EE004842C6 /* Sounds */ = {
@@ -521,11 +486,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C56017AB25C3A892004842C6 /* FruitTexture.swift in Sources */,
-				C52520DE258C829D00793392 /* AppearanceProvider.swift in Sources */,
 				C5252088258C3F1500793392 /* UIColor+Create.swift in Sources */,
 				C52520D2258C825500793392 /* AuxiliaryModels.swift in Sources */,
 				C56017AA25C3A892004842C6 /* AudioUtil.swift in Sources */,
-				C59470CB25B52308009C1F35 /* GameShuHeThemeSettingViewController.swift in Sources */,
 				C5252090258C3F1500793392 /* Defines.swift in Sources */,
 				C5252083258C3F1500793392 /* Date+Extension.swift in Sources */,
 				C52520A1258C3F1500793392 /* Defaults.swift in Sources */,
@@ -539,15 +502,11 @@
 				C54A1D7E25C79841007A23A0 /* WatermelonViewController.swift in Sources */,
 				C52520A0258C3F1500793392 /* UIViewController+Extension.swift in Sources */,
 				C5252081258C3F1500793392 /* MBProgressHUD+ITTAdditions.m in Sources */,
-				C52520D9258C827400793392 /* ShuHeGameboardView.swift in Sources */,
 				C5251FDD258C36AC00793392 /* AppDelegate.swift in Sources */,
 				C5BFF92A25AE8AF800C66424 /* RankListTableViewCell.swift in Sources */,
-				C59470C825B52229009C1F35 /* CDViewCell.swift in Sources */,
-				C59470C725B52229009C1F35 /* CDFlowLayout.swift in Sources */,
 				C56017A925C3A892004842C6 /* GameScene.swift in Sources */,
 				C57F72B825B1494A00FC0198 /* UserViewController.swift in Sources */,
 				C52520D3258C825500793392 /* GameModel.swift in Sources */,
-				C523503525B91EFA005B637B /* GameShuHeThemeDialViewController.swift in Sources */,
 				C5252016258C3EC200793392 /* XZNavigationController.swift in Sources */,
 				C560179625C25C99004842C6 /* WithoutAuthorizationView.swift in Sources */,
 				C59470BA25B5187D009C1F35 /* GameDecorateConfig.swift in Sources */,
@@ -556,11 +515,8 @@
 				C50E129C25BEA642008321FC /* GameUserInfoConfig.swift in Sources */,
 				C5251FDF258C36AC00793392 /* SceneDelegate.swift in Sources */,
 				C56017AC25C3A892004842C6 /* FruitSlot.swift in Sources */,
-				C52520E4258C853B00793392 /* Play2048ViewController.swift in Sources */,
-				C5252013258C3E7E00793392 /* HomeViewController.swift in Sources */,
 				C5252087258C3F1500793392 /* UITableView+Extension.swift in Sources */,
 				C560179925C2629C004842C6 /* HelpViewController.swift in Sources */,
-				C52520DA258C827400793392 /* TitlesView.swift in Sources */,
 				C57F72BB25B14AB700FC0198 /* LeftTitleTableViewCell.swift in Sources */,
 				C52520CC258C7A0B00793392 /* HomeCardView.swift in Sources */,
 			);

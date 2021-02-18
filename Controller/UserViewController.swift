@@ -40,7 +40,7 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 3
+            return 1
         }
         return 4
     }
@@ -62,8 +62,8 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = getCell(tableView, cell: LeftTitleTableViewCell.self, indexPath: indexPath)
-            cell.nodeNameLabel.text = ["选择主题色","选择表盘","分享聚玩"][indexPath.row]
-            let names = ["ic_theme","ic_themeDial","ic_share"]
+            cell.nodeNameLabel.text = ["分享聚玩"][indexPath.row]
+            let names = ["ic_share"]
             cell.nodeImageView.image = UIImage(named: names[indexPath.row])?.withRenderingMode(.alwaysTemplate)
             cell.isHiddenRightImage(hidden: false)
             cell.summeryLabel.isHidden = true
@@ -93,10 +93,6 @@ class UserViewController: UIViewController,UITableViewDataSource,UITableViewDele
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
             if indexPath.row == 0 {
-                self.navigationController?.pushViewController(GameShuHeThemeSettingViewController(), animated: true)
-            }else if indexPath.row == 1 {
-                self.navigationController?.pushViewController(GameShuHeThemeDialViewController(), animated: true)
-            }else if indexPath.row == 2 {
                 let activityController = UIActivityViewController(activityItems: [ "https://apps.apple.com/cn/app/id1546172171" + " (分享来自@聚玩) " ], applicationActivities: nil)
                 UIApplication.shared.windows.first?.rootViewController?.present(activityController, animated: true, completion: nil)
             }

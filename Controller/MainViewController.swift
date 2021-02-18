@@ -59,15 +59,6 @@ class MainViewController: UIViewController,GKGameCenterControllerDelegate {
         
         self.view.addSubview(viewWatermelon)
         
-        let viewShuHe = HomeCardView()
-        viewShuHe.layer.cornerRadius = 10
-        viewShuHe.layer.masksToBounds = true
-        viewShuHe.tipButton.addTarget(self, action: #selector(startGameButtonTapped), for: .touchUpInside)
-        viewShuHe.tipButton.setTitle("玩一下", for: .normal)
-        viewShuHe.frame = CGRect(x: 0, y: 230, width: kScreenWidth, height: 230)
-        
-        self.view.addSubview(viewShuHe)
-        
     }
     
     func sebWithoutAuthorizationViews() {
@@ -75,11 +66,6 @@ class MainViewController: UIViewController,GKGameCenterControllerDelegate {
         emptyView.snp.makeConstraints { (make) in
             make.top.left.right.bottom.equalTo(self.view)
         }
-    }
-    
-    @objc func startGameButtonTapped() {
-        let v = HomeViewController()
-        self.navigationController?.pushViewController(v, animated: true)
     }
     
     @objc func watermelonTapped() {
