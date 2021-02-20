@@ -11,7 +11,7 @@ class HomeCardView: UIView {
     
     let bgImageView:UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "2048bg")
+        imageView.image = UIImage(named: "shuhebg")
         imageView.layer.cornerRadius = 10
         imageView.layer.masksToBounds = true
         return imageView

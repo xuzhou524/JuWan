@@ -131,13 +131,13 @@ extension GameShuHeThemeDialViewController : UICollectionViewDelegate , UICollec
         cell.nameLabel.text = ["4 × 4","5 × 5","6 × 6"][indexPath.row]
         cell.priceLabel.text = ["无门槛","无门槛",isHaveBuy ? "已购买" : "CNY 1.00"][indexPath.row]
         if indexPath.row == 0 {
-            cell.goodsImg.image = UIImage(named: "theme_2048_1")
+            cell.goodsImg.image = UIImage(named: "theme_shuhe_1")
             cell.selectView.isHidden = GameDecorateConfig.shared.gameShuHeDialNum != 4
         }else if indexPath.row == 1{
-            cell.goodsImg.image = UIImage(named: "theme_2048D_5")
+            cell.goodsImg.image = UIImage(named: "theme_shuheD_5")
             cell.selectView.isHidden = GameDecorateConfig.shared.gameShuHeDialNum != 5
         }else if indexPath.row == 2{
-            cell.goodsImg.image = UIImage(named: "theme_2048D_6")
+            cell.goodsImg.image = UIImage(named: "theme_shuheD_6")
             cell.selectView.isHidden = GameDecorateConfig.shared.gameShuHeDialNum != 6
         }else{
             cell.selectView.isHidden = true

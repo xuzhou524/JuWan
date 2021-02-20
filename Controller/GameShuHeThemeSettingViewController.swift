@@ -78,7 +78,7 @@ extension GameShuHeThemeSettingViewController : UICollectionViewDelegate , UICol
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(CDViewCell.self), for: indexPath) as! CDViewCell
-        cell.goodsImg.image = UIImage(named: "theme_2048_\(indexPath.row + 1)")
+        cell.goodsImg.image = UIImage(named: "theme_shuhe_\(indexPath.row + 1)")
         cell.nameLabel.text = ["天空蓝","玫瑰粉","经典"][indexPath.row]
         cell.priceLabel.text = ["无门槛","最高分 1,536 以上","最高分达 3,072 以上"][indexPath.row]
         if indexPath.row + 1 == GameDecorateConfig.shared.gameShuHeThemeType {
