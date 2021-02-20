@@ -68,7 +68,7 @@ class HomeViewController: UIViewController,GKGameCenterControllerDelegate {
     }
     
     @objc func startGameButtonTapped() {
-        let v = Play2048ViewController(dimension: GameDecorateConfig.shared.gameShuHeDialNum, threshold: 4194304)
+        let v = PlayShuHeViewController(dimension: GameDecorateConfig.shared.gameShuHeDialNum, threshold: 4194304)
         self.navigationController?.pushViewController(v, animated: true)
     }
 

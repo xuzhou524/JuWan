@@ -1,9 +1,8 @@
 //
 //  GameModel.swift
-//  swift-2048
+//  JuWan
 //
-//  Created by Austin Zheng on 6/3/14.
-//  Copyright (c) 2014 Austin Zheng. Released under the terms of the MIT license.
+//  Created by fanzhe on 2020/12/18.
 //
 
 import UIKit
@@ -16,7 +15,6 @@ protocol GameModelProtocol : class {
     func insertTile(location: (Int, Int), value: Int)
 }
 
-/// A class representing the game state and game logic for swift-2048. It is owned by a NumberTileGame view controller.
 class GameModel : NSObject {
     let dimension : Int
     let threshold : Int

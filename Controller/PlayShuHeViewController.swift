@@ -1,5 +1,5 @@
 //
-//  Play2048ViewController.swift
+//  PlayShuHeViewController.swift
 //  JuWan
 //
 //  Created by fanzhe on 2020/12/18.
@@ -9,7 +9,7 @@ import UIKit
 import GameKit
 import GameplayKit
 
-class Play2048ViewController: UIViewController,GameModelProtocol {
+class PlayShuHeViewController: UIViewController,GameModelProtocol {
     var model: GameModel?
     var board: ShuHeGameboardView?
     
@@ -163,7 +163,7 @@ class Play2048ViewController: UIViewController,GameModelProtocol {
     }
 }
 
-extension Play2048ViewController {
+extension PlayShuHeViewController {
     func setupSwipeControls() {
         let upSwipe = UISwipeGestureRecognizer(target: self, action: #selector(upCommand(r:)))
         upSwipe.numberOfTouchesRequired = 1
@@ -281,7 +281,7 @@ extension Play2048ViewController {
     }
 }
 
-extension Play2048ViewController {
+extension PlayShuHeViewController {
     func saveHighScore(s:NSInteger){
         if GKLocalPlayer.local.isAuthenticated {
             let scoreReporter = GKScore(leaderboardIdentifier: "juWan_shuhe")

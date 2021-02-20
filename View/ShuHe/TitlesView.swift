@@ -7,7 +7,6 @@
 
 import UIKit
 
-/// A view representing a single swift-2048 tile.
 class TitlesView : UIView {
     var value : Int = 0 {
         didSet {

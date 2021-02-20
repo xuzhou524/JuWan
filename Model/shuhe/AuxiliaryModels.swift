@@ -1,9 +1,8 @@
 //
 //  AuxiliaryModels.swift
-//  swift-2048
+//  JuWan
 //
-//  Created by Austin Zheng on 6/5/14.
-//  Copyright (c) 2014 Austin Zheng. Released under the terms of the MIT license.
+//  Created by fanzhe on 2020/12/18.
 //
 
 import Foundation

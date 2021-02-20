@@ -80,7 +80,7 @@ extension GameShuHeThemeSettingViewController : UICollectionViewDelegate , UICol
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(CDViewCell.self), for: indexPath) as! CDViewCell
         cell.goodsImg.image = UIImage(named: "theme_2048_\(indexPath.row + 1)")
         cell.nameLabel.text = ["天空蓝","玫瑰粉","经典"][indexPath.row]
-        cell.priceLabel.text = ["无门槛","最高分 1,024 以上","最高分达 2,048 以上"][indexPath.row]
+        cell.priceLabel.text = ["无门槛","最高分 1,536 以上","最高分达 3,072 以上"][indexPath.row]
         if indexPath.row + 1 == GameDecorateConfig.shared.gameShuHeThemeType {
             cell.selectView.isHidden = false
         }else{
@@ -91,8 +91,8 @@ extension GameShuHeThemeSettingViewController : UICollectionViewDelegate , UICol
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        if (indexPath.row == 1 && GameUserInfoConfig.shared.gameShuHeHigheScore < 1024) ||
-            (indexPath.row == 2 && GameUserInfoConfig.shared.gameShuHeHigheScore < 2048) {
+        if (indexPath.row == 1 && GameUserInfoConfig.shared.gameShuHeHigheScore < 1536) ||
+            (indexPath.row == 2 && GameUserInfoConfig.shared.gameShuHeHigheScore < 3072) {
             let tip = LDTipAlertView.init(message: "您的最高分暂未达到当前门槛，快去努力吧!", buttonTitles: ["我知道了"])
             tip?.show()
         }else{

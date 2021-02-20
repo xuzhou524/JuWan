@@ -63,19 +63,6 @@ class GameShuHeThemeDialViewController: UIViewController {
 }
 
 extension GameShuHeThemeDialViewController{
-//    //获取商品信息
-//    func getList() {
-//        SwiftyStoreKit.retrieveProductsInfo(["juwan_2048_Dial_6"]) { result in
-//            if let product = result.retrievedProducts.first {
-//                let priceString = product.localizedPrice!
-//                print("Product: \(product.localizedDescription), price: \(priceString)")
-//            } else if let invalidProductId = result.invalidProductIDs.first {
-//                print("Invalid product identifier: \(invalidProductId)")
-//            } else {
-//                print("Error: \(result.error)")
-//            }
-//        }
-//    }
     
     func buyProduct() {
         SwiftyStoreKit.purchaseProduct("juwan_2048_Dial_6", quantity: 1, atomically: true) { result in
