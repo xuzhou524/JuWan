@@ -26,7 +26,7 @@ class Play2048ViewController: UIViewController,GameModelProtocol {
         let label = UILabel()
         label.font = blodFontWithSize(28)
         label.textColor = UIColor(named: "color_title_black")
-        label.text = "数和"
+        label.text = "数和游戏"
         return label
     }()
     
@@ -140,8 +140,8 @@ class Play2048ViewController: UIViewController,GameModelProtocol {
         mobileAreaView.addSubview(board!)
         assert(model != nil)
         let m = model!
-        m.insertTileAtRandomLocation(value: 1)
-        m.insertTileAtRandomLocation(value: 1)
+        m.insertTileAtRandomLocation(value: 3)
+        m.insertTileAtRandomLocation(value: 3)
         
         self.view.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { (make) in
@@ -205,7 +205,7 @@ extension Play2048ViewController {
 //            return
 //        }
         let randomVal = Int(arc4random_uniform(10))
-        m.insertTileAtRandomLocation(value: randomVal == 1 ? 2 : 1)
+        m.insertTileAtRandomLocation(value: randomVal == 3 ? 6 : 3)
         if m.userHasLost() {
             let tip = LDTipAlertView.init(message: "你输了...", buttonTitles: ["我知道了"])
             tip?.show()
