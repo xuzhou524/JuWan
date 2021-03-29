@@ -22,7 +22,7 @@ class PlayWatermelonViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(named: "color_theme")
         
-        let vc = UIHostingController(rootView: ContentView())
+        let vc = UIHostingController(rootView: WatermelonView())
         self.view.addSubview(vc.view)
         vc.view.snp.makeConstraints { (make) in
             make.top.left.right.bottom.equalToSuperview()

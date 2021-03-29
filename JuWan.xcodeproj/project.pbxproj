@@ -41,11 +41,9 @@
 		C554AC4125B13AF3000CB32B /* SwiftHEXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C554AC4025B13AF3000CB32B /* SwiftHEXColors.swift */; };
 		C560179625C25C99004842C6 /* WithoutAuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560179525C25C99004842C6 /* WithoutAuthorizationView.swift */; };
 		C560179925C2629C004842C6 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560179825C2629C004842C6 /* HelpViewController.swift */; };
-		C56017A325C3A86A004842C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56017A225C3A86A004842C6 /* ContentView.swift */; };
+		C56017A325C3A86A004842C6 /* WatermelonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56017A225C3A86A004842C6 /* WatermelonView.swift */; };
 		C56017A925C3A892004842C6 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56017A525C3A892004842C6 /* GameScene.swift */; };
-		C56017AA25C3A892004842C6 /* AudioUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56017A625C3A892004842C6 /* AudioUtil.swift */; };
-		C56017AB25C3A892004842C6 /* FruitTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56017A725C3A892004842C6 /* FruitTexture.swift */; };
-		C56017AC25C3A892004842C6 /* FruitSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56017A825C3A892004842C6 /* FruitSlot.swift */; };
+		C56017AB25C3A892004842C6 /* FruitItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56017A725C3A892004842C6 /* FruitItem.swift */; };
 		C56017B325C3A8EE004842C6 /* gameWin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C56017B025C3A8EE004842C6 /* gameWin.mp3 */; };
 		C56017B425C3A8EE004842C6 /* gameFalldown.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C56017B125C3A8EE004842C6 /* gameFalldown.mp3 */; };
 		C56017B525C3A8EE004842C6 /* gameBomb.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C56017B225C3A8EE004842C6 /* gameBomb.mp3 */; };
@@ -99,11 +97,9 @@
 		C554AC4025B13AF3000CB32B /* SwiftHEXColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHEXColors.swift; sourceTree = "<group>"; };
 		C560179525C25C99004842C6 /* WithoutAuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithoutAuthorizationView.swift; sourceTree = "<group>"; };
 		C560179825C2629C004842C6 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
-		C56017A225C3A86A004842C6 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C56017A225C3A86A004842C6 /* WatermelonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatermelonView.swift; sourceTree = "<group>"; };
 		C56017A525C3A892004842C6 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		C56017A625C3A892004842C6 /* AudioUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioUtil.swift; sourceTree = "<group>"; };
-		C56017A725C3A892004842C6 /* FruitTexture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitTexture.swift; sourceTree = "<group>"; };
-		C56017A825C3A892004842C6 /* FruitSlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitSlot.swift; sourceTree = "<group>"; };
+		C56017A725C3A892004842C6 /* FruitItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitItem.swift; sourceTree = "<group>"; };
 		C56017B025C3A8EE004842C6 /* gameWin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameWin.mp3; sourceTree = "<group>"; };
 		C56017B125C3A8EE004842C6 /* gameFalldown.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameFalldown.mp3; sourceTree = "<group>"; };
 		C56017B225C3A8EE004842C6 /* gameBomb.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameBomb.mp3; sourceTree = "<group>"; };
@@ -187,10 +183,8 @@
 		C5252003258C3B4500793392 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C56017A225C3A86A004842C6 /* ContentView.swift */,
-				C56017A625C3A892004842C6 /* AudioUtil.swift */,
-				C56017A825C3A892004842C6 /* FruitSlot.swift */,
-				C56017A725C3A892004842C6 /* FruitTexture.swift */,
+				C56017A225C3A86A004842C6 /* WatermelonView.swift */,
+				C56017A725C3A892004842C6 /* FruitItem.swift */,
 				C56017A525C3A892004842C6 /* GameScene.swift */,
 				C54A1D7925C7913D007A23A0 /* MainViewController.swift */,
 				C5252012258C3E7E00793392 /* HomeViewController.swift */,
@@ -403,10 +397,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C56017AB25C3A892004842C6 /* FruitTexture.swift in Sources */,
+				C56017AB25C3A892004842C6 /* FruitItem.swift in Sources */,
 				C52520DE258C829D00793392 /* AppearanceDial.swift in Sources */,
 				C5252088258C3F1500793392 /* UIColor+Create.swift in Sources */,
-				C56017AA25C3A892004842C6 /* AudioUtil.swift in Sources */,
 				C59470CB25B52308009C1F35 /* GameShuHeThemeSettingViewController.swift in Sources */,
 				C5252090258C3F1500793392 /* Defines.swift in Sources */,
 				C5252083258C3F1500793392 /* Date+Extension.swift in Sources */,
@@ -416,7 +409,7 @@
 				C54A1D7A25C7913D007A23A0 /* MainViewController.swift in Sources */,
 				C5252097258C3F1500793392 /* DatePicker.swift in Sources */,
 				C5252084258C3F1500793392 /* Client.swift in Sources */,
-				C56017A325C3A86A004842C6 /* ContentView.swift in Sources */,
+				C56017A325C3A86A004842C6 /* WatermelonView.swift in Sources */,
 				C5252082258C3F1500793392 /* HistTestSlop.swift in Sources */,
 				C54A1D7E25C79841007A23A0 /* WatermelonViewController.swift in Sources */,
 				C52520A0258C3F1500793392 /* UIViewController+Extension.swift in Sources */,
@@ -435,7 +428,6 @@
 				C54A1D8225C79BA7007A23A0 /* PlayWatermelonViewController.swift in Sources */,
 				C50E129C25BEA642008321FC /* GameUserInfoConfig.swift in Sources */,
 				C5251FDF258C36AC00793392 /* SceneDelegate.swift in Sources */,
-				C56017AC25C3A892004842C6 /* FruitSlot.swift in Sources */,
 				C52520E4258C853B00793392 /* PlayShuHeViewController.swift in Sources */,
 				C5252013258C3E7E00793392 /* HomeViewController.swift in Sources */,
 				C5252087258C3F1500793392 /* UITableView+Extension.swift in Sources */,

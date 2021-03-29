@@ -9,22 +9,53 @@ import SwiftUI
 import SpriteKit
 import AVFoundation
 
+class AudioGameUtil {
+    var resourceName: String
+    var playing = false
+    var player: AVAudioPlayer!
+    
+    init(resourceName: String) {
+        self.resourceName = resourceName
+    }
+    
+    func playAudio() {
+        if playing {
+            return
+        }
+        do {
+            guard let fileUrl = Bundle.main.url(forResource: resourceName, withExtension: "mp3", subdirectory: nil, localization: nil) else {
+                return
+            }
+            player = try AVAudioPlayer(contentsOf: fileUrl)
+            player?.prepareToPlay()
+            player?.play()
+            playing = true
+            
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { _ in
+                self.playing = false
+            }
+        } catch let err {
+            print(err.localizedDescription)
+        }
+    }
+}
+
 class GameScene: SKScene, SKPhysicsContactDelegate {
     var scoreNode: SKSpriteNode!
     var solid: SKSpriteNode!
     var ground: SKSpriteNode!
     var nowFruit: SKSpriteNode!
     var redLine: SKSpriteNode!
-    var fruitSlot: FruitSlot! = FruitSlot()
+    var watermelonElements: WatermelonElements! = WatermelonElements()
     var groundFruits: [SKSpriteNode] = []
     
     let slotPosition = CGPoint(x: screen.width / 2, y: screen.height - 100)
     
     let groundBitMask: UInt32 = 0xFFFFFFFF >> 1
     
-    let groundAudio = AudioUtil(resourceName: "gameFalldown")
-    let explodeAudio = AudioUtil(resourceName: "gameBomb")
-    let bonusAudio = AudioUtil(resourceName: "gameWin")
+    let groundAudio = AudioGameUtil(resourceName: "gameFalldown")
+    let explodeAudio = AudioGameUtil(resourceName: "gameBomb")
+    let bonusAudio = AudioGameUtil(resourceName: "gameWin")
     
     var canCollisonFruitWithFruit = true
     var canTouch = true
@@ -87,20 +118,17 @@ extension GameScene {
                         topFruit.run(.fadeOut(withDuration: 0.3))
                         topFruit.removeFromParent()
                         
-                        AudioUtil(resourceName: "bomb").playAudio()
+                        AudioGameUtil(resourceName: "bomb").playAudio()
                         
                     },
                     .wait(forDuration: 0.1),
                 ]), count: groundFruits.count),
                 .run {
-                    // load GameOver
                     self.loadGameover()
                 }
             ]))
         }
     }
-    
-    
     
     func checkFailed() -> Bool {
         for fruit in groundFruits {
@@ -118,7 +146,7 @@ extension GameScene {
         self.physicsWorld.contactDelegate = self
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
         backgroundColor = UIColor(#colorLiteral(red: 0.9999857545, green: 0.9065491557, blue: 0.6149721146, alpha: 1))
-            
+        
         initGame()
     }
     
@@ -173,10 +201,10 @@ extension GameScene {
         ground.position = CGPoint(x: 0, y: screen.height / 4)
         
         let groundPhysicsBody = SKPhysicsBody(edgeLoopFrom:
-            CGRect(x: 0,
-                   y: 0,
-                   width: ground.size.width,
-                   height: ground.size.height))
+                                                CGRect(x: 0,
+                                                       y: 0,
+                                                       width: ground.size.width,
+                                                       height: ground.size.height))
         ground.physicsBody = groundPhysicsBody
         ground.physicsBody?.categoryBitMask = groundBitMask
         ground.physicsBody?.contactTestBitMask = groundBitMask
@@ -202,7 +230,7 @@ extension GameScene {
     
     // load default in the sky
     func loadNewFruit() {
-        nowFruit = fruitSlot.randomFruit()
+        nowFruit = watermelonElements.randomFruit()
         nowFruit.position = slotPosition
         addChild(nowFruit)
     }
@@ -215,7 +243,7 @@ extension GameScene {
         fruit.setScale(0.4)
         if gravity {
             fruit.physicsBody = SKPhysicsBody(circleOfRadius: fruit.size.height / 2 + 1)
-            let bitMask = getFruitTextureByName(fruitName: fruit.name!).bitMask
+            let bitMask = getFruitItemByName(fruitName: fruit.name!).bitMask
             fruit.physicsBody?.categoryBitMask = bitMask
             fruit.physicsBody?.contactTestBitMask = bitMask
         }
@@ -237,7 +265,7 @@ extension GameScene {
         bonusNode.anchorPoint = CGPoint.zero
         bonusNode.position = CGPoint(x: screen.width / 2, y: screen.height / 2)
         
-        let watermelon = SKSpriteNode(imageNamed: FruitTexture.watermelon.imageName)
+        let watermelon = SKSpriteNode(imageNamed: FruitItem.watermelon.imageName)
         let backLight = SKSpriteNode(imageNamed: "light")
         watermelon.setScale(0.4)
         
@@ -313,16 +341,14 @@ extension GameScene {
             .moveTo(x: location.x, duration: 0.1),
             .wait(forDuration: 0.1),
             .run {
-                // contact
                 self.nowFruit.physicsBody = SKPhysicsBody(circleOfRadius: self.nowFruit.size.height / 2)
-                let bitMask = getFruitTextureByName(fruitName: self.nowFruit.name!).bitMask
+                let bitMask = getFruitItemByName(fruitName: self.nowFruit.name!).bitMask
                 self.nowFruit.physicsBody?.categoryBitMask = bitMask
                 self.nowFruit.physicsBody?.contactTestBitMask = bitMask
                 self.groundFruits.append(self.nowFruit)
             },
             .wait(forDuration: 1),
             .run {
-                // check redline
                 if !self.checkRedLine() && self.redLine != nil {
                     self.redLine.run(.fadeOut(withDuration: 0.2))
                     self.redLine.removeFromParent()
@@ -364,8 +390,8 @@ extension GameScene {
     
     func handleFruitWithGround(_ contact: SKPhysicsContact) {
         let collision: UInt32 = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
-        FruitTexture.allCases.forEach{ fruitTexture in
-            if collision == fruitTexture.bitMask | groundBitMask {
+        FruitItem.allCases.forEach{ fruitItem in
+            if collision == fruitItem.bitMask | groundBitMask {
                 // Play sound
                 groundAudio.playAudio()
             }
@@ -379,10 +405,10 @@ extension GameScene {
         }
         
         let collision: UInt32 = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
-        FruitTexture.allCases.forEach{ fruitTexture in
-            if collision == fruitTexture.bitMask | fruitTexture.bitMask {
+        FruitItem.allCases.forEach{ fruitItem in
+            if collision == fruitItem.bitMask | fruitItem.bitMask {
                 // calculate score
-                let score = fruitSlot.getMixScore(before: fruitTexture.imageName)
+                let score = watermelonElements.getMixScore(before: fruitItem.imageName)
                 
                 self.score += score
                 // fix repeat score bug
@@ -391,20 +417,17 @@ extension GameScene {
                     self.canCollisonFruitWithFruit = true
                 }
                 
-                if fruitTexture.bitMask == FruitTexture.watermelon.bitMask {
+                if fruitItem.bitMask == FruitItem.watermelon.bitMask {
                     return
                 }
                 
-                if fruitTexture.bitMask != FruitTexture.halfwatermelon.bitMask {
-                    // common
+                if fruitItem.bitMask != FruitItem.halfwatermelon.bitMask {
                     explodeAudio.playAudio()
                 } else {
-                    // bonus
                     bonusAudio.playAudio()
                     generateBonusAnimation()
                     self.score += 100
                 }
-                // show
                 contact.bodyA.node?.run(.sequence([
                     .fadeOut(withDuration: 0.1),
                     .removeFromParent()
@@ -413,7 +436,7 @@ extension GameScene {
                     .fadeOut(withDuration: 0.1),
                     .removeFromParent()
                 ]))
-                guard let fruitName = fruitSlot.mixFruit(before: fruitTexture.imageName) else { return }
+                guard let fruitName = watermelonElements.mixFruit(before: fruitItem.imageName) else { return }
                 generateNewFruit(fruitName: fruitName, position: contact.contactPoint)
             }
         }
@@ -424,9 +447,8 @@ extension GameScene {
     }
 }
 
-
 struct GameScene_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        WatermelonView()
     }
 }
