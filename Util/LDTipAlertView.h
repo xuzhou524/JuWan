@@ -1,9 +1,8 @@
 //
 //  LDTipAlertView.h
-//  LongDai
+//  JuWan
 //
-//  Created by xuzhou on 18/04/13.
-//  Copyright © 2018年 Gozap. All rights reserved.
+//  Created by gozap on 2021/3/29.
 //
 
 #import <UIKit/UIKit.h>

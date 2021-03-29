@@ -1,9 +1,8 @@
 //
 //  UIColor+Create.swift
-//  ChouTi
+//  JuWan
 //
-//  Created by huangfeng on 2017/6/29.
-//  Copyright © 2017年 com.longdai. All rights reserved.
+//  Created by gozap on 2021/3/29.
 //
 
 import UIKit

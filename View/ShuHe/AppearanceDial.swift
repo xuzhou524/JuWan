@@ -20,46 +20,46 @@ class AppearanceDial: AppearanceDialProtocol {
         case 1:
             switch value {
             case 3:
-                return UIColor(hexString: "caf0f8")!
+                return UIColor(hexString: "#caf0f8")
             case 6:
-                return UIColor(hexString: "ade8f4")!
+                return UIColor(hexString: "#ade8f4")
             case 12:
-                return UIColor(hexString: "90e0ef")!
+                return UIColor(hexString: "#90e0ef")
             case 24:
-                return UIColor(hexString: "48cae4")!
+                return UIColor(hexString: "#48cae4")
             case 48:
-                return UIColor(hexString: "00b4d8")!
+                return UIColor(hexString: "#00b4d8")
             case 96:
-                return UIColor(hexString: "0096c7")!
+                return UIColor(hexString: "#0096c7")
             case 192:
-                return UIColor(hexString: "0077b6")!
+                return UIColor(hexString: "#0077b6")
             case 384:
-                return UIColor(hexString: "023e8a")!
+                return UIColor(hexString: "#023e8a")
             case 768,1536, 3072, 6144,12288:
-                return UIColor(hexString: "03045e")!
+                return UIColor(hexString: "#03045e")
             default:
                 return UIColor.white
             }
         case 2:
             switch value {
             case 3:
-                return UIColor(hexString: "ffe0e9")!
+                return UIColor(hexString: "#ffe0e9")
             case 6:
-                return UIColor(hexString: "ffc2d4")!
+                return UIColor(hexString: "#ffc2d4")
             case 12:
-                return UIColor(hexString: "ff9ebb")!
+                return UIColor(hexString: "#ff9ebb")
             case 24:
-                return UIColor(hexString: "ff7aa2")!
+                return UIColor(hexString: "#ff7aa2")
             case 48:
-                return UIColor(hexString: "e05780")!
+                return UIColor(hexString: "#e05780")
             case 96:
-                return UIColor(hexString: "b9375e")!
+                return UIColor(hexString: "#b9375e")
             case 192:
-                return UIColor(hexString: "8a2846")!
+                return UIColor(hexString: "#8a2846")
             case 384:
-                return UIColor(hexString: "602437")!
+                return UIColor(hexString: "#602437")
             case 768,1536, 3072, 6144,12288:
-                return UIColor(hexString: "522e38")!
+                return UIColor(hexString: "#522e38")
             default:
                 return UIColor.white
             }

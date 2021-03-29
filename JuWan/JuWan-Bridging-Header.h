@@ -4,3 +4,4 @@
 
 #import "LDTipAlertView.h"
 #import "MBProgressHUD+ITTAdditions.h"
+#import "UIColor+HZXColor.h"

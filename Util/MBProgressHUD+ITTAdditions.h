@@ -1,8 +1,8 @@
 //
 //  MBProgressHUD+ITTAdditions.h
-//  WMCommons
+//  JuWan
 //
-//  Copyright (c) 2013年 wumii. All rights reserved.
+//  Created by gozap on 2021/3/29.
 //
 
 #import <MBProgressHUD/MBProgressHUD.h>

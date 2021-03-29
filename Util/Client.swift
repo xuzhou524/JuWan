@@ -1,122 +1,58 @@
 //
 //  Client.swift
-//  FanZhe
+//  JuWan
 //
-//  Created by gozap on 2020/10/17.
+//  Created by gozap on 2021/3/29.
 //
 
 import UIKit
 
-enum BPYSettingKey:String {
-    /// 存放accessToken
-    case accessToken = "account.accessToken"
-    /// 存放phone
-    case phone = "account.phone"
-}
-
-let Settings = BPYSettings.shared
-
-class BPYSettings{
-    static let shared = BPYSettings()
-    private init(){
-        
-    }
-    
-    subscript(key:String) -> String? {
-        get {
-            let storeKey = Key<String>(key)
-            return Defaults.shared.get(for: storeKey)
-        }
-        set {
-            let storeKey = Key<String>(key)
-            if let value = newValue {
-                Defaults.shared.set(value, for: storeKey)
-            }
-            else {
-                Defaults.shared.clear(storeKey)
-            }
-        }
-    }
-    
-    subscript(key:BPYSettingKey) -> String? {
-        get {
-            return self[key.rawValue]
-        }
-        set {
-            self[key.rawValue] = newValue
-        }
-    }
-    
-    subscript<T : Codable>(key:String) -> T? {
-        get {
-            let storeKey = Key<T>(key)
-            return Defaults.shared.get(for: storeKey)
-        }
-        set {
-            let storeKey = Key<T>(key)
-            if let value = newValue {
-                Defaults.shared.set(value, for: storeKey)
-            }
-            else {
-                Defaults.shared.clear(storeKey)
-            }
-        }
-    }
-    subscript<T : Codable>(key:BPYSettingKey) -> T? {
-        get {
-            return self[key.rawValue]
-        }
-        set {
-            self[key.rawValue] = newValue
+/// 将代码安全的运行在主线程
+func dispatch_sync_safely_main_queue(_ block: ()->()) {
+    if Thread.isMainThread {
+        block()
+    } else {
+        DispatchQueue.main.sync {
+            block()
         }
     }
 }
 
+func fontWithSize(_ size:CGFloat) -> UIFont{
+    return UIFont.systemFont(ofSize: size)
+}
+func blodFontWithSize(_ size:CGFloat) -> UIFont{
+    return UIFont.boldSystemFont(ofSize: size)
+}
+func lightFontWithSize(_ size:CGFloat) -> UIFont{
+    UIFont.systemFont(ofSize: size, weight: .thin)
+    return UIFont(name: "Helvetica-Light", size: size)!
+}
+func weightFontWithSize(_ size:CGFloat, weight:UIFont.Weight) -> UIFont{
+    return UIFont.systemFont(ofSize: size, weight: weight)
+}
+
+let kHalfPixel = 1 / UIScreen.main.scale
+
+//屏幕宽高
+let kScreenWidth  = UIScreen.main.bounds.size.width
+let kScreenHeight = UIScreen.main.bounds.size.height
+
+let kIsFullScreen = (UIApplication.shared.windows[0].safeAreaInsets.bottom > 0 ? true : false)
+
+class FZImageView: UIImageView {
+    var hitTestSlop:UIEdgeInsets = UIEdgeInsets.zero
+    
+    override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+        if hitTestSlop == UIEdgeInsets.zero {
+            return super.point(inside: point, with:event)
+        }
+        else{
+            return self.bounds.inset(by: hitTestSlop).contains(point)
+        }
+    }
+}
 
 class Client: NSObject {
 
-    static let shared = Client()
-    private override init() {
-        super.init()
-    }
-    
-    var mainWindow:UIWindow {
-        get {
-            let array = UIApplication.shared.connectedScenes
-            let windowScene = array.first
-            return (windowScene?.delegate as! SceneDelegate).window!
-        }
-    }
-    
-    var rootTabBarC:UITabBarController {
-        get {
-            let array = UIApplication.shared.connectedScenes
-            let windowScene = array.first
-            if let window = (windowScene?.delegate as! SceneDelegate).window {
-                return window.rootViewController as! UITabBarController
-            }else{
-                return UITabBarController()
-            }
-        }
-    }
-    
-    var currentNavigationController:XZNavigationController {
-        get {
-            let index = rootTabBarC.selectedIndex
-            return rootTabBarC.viewControllers?[index] as! XZNavigationController
-        }
-    }
-    
-    public func isiPhoneXMore() -> Bool {
-        return mainWindow.safeAreaInsets.bottom > CGFloat(0.00)
-    }
-    
-    //获取字符串的高度
-    func getTextHeigh(textStr:String, font : UIFont, width : CGFloat)  -> CGFloat{
-        let normalText:NSString = textStr as NSString
-        let size = CGSize(width: width, height:1000)
-        let dic = NSDictionary(object: font, forKey : kCTFontAttributeName as! NSCopying)
-        let stringSize = normalText.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: dic as? [NSAttributedString.Key:Any], context:nil).size
-        return stringSize.height
-    }
 }

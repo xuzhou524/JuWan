@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		53C116992611CC1800E04C05 /* WatermelonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C116982611CC1800E04C05 /* WatermelonModel.swift */; };
+		53F78B2B2611D4F5008A60BE /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F78B2A2611D4F5008A60BE /* Client.swift */; };
+		53F78B322611D5D4008A60BE /* UIColor+HZXColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F78B302611D5D4008A60BE /* UIColor+HZXColor.m */; };
 		87E624CE1A12435BF319238A /* libPods-JuWan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0FDB650050D0AD0ECC30E5 /* libPods-JuWan.a */; };
 		C50E129C25BEA642008321FC /* GameUserInfoConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50E129B25BEA642008321FC /* GameUserInfoConfig.swift */; };
 		C50E129F25BEB3B8008321FC /* BPYWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50E129E25BEB3B8008321FC /* BPYWebViewController.swift */; };
@@ -21,15 +23,9 @@
 		C5252016258C3EC200793392 /* XZNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5252015258C3EC200793392 /* XZNavigationController.swift */; };
 		C525207D258C3F1500793392 /* LDTipAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5252026258C3F1000793392 /* LDTipAlertView.m */; };
 		C5252081258C3F1500793392 /* MBProgressHUD+ITTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C525202F258C3F1000793392 /* MBProgressHUD+ITTAdditions.m */; };
-		C5252082258C3F1500793392 /* HistTestSlop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5252030258C3F1000793392 /* HistTestSlop.swift */; };
-		C5252083258C3F1500793392 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5252031258C3F1000793392 /* Date+Extension.swift */; };
-		C5252084258C3F1500793392 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5252032258C3F1100793392 /* Client.swift */; };
 		C5252087258C3F1500793392 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5252039258C3F1100793392 /* UITableView+Extension.swift */; };
 		C5252088258C3F1500793392 /* UIColor+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = C525203B258C3F1100793392 /* UIColor+Create.swift */; };
-		C5252090258C3F1500793392 /* Defines.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5252046258C3F1300793392 /* Defines.swift */; };
-		C5252097258C3F1500793392 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5252055258C3F1400793392 /* DatePicker.swift */; };
 		C52520A0258C3F1500793392 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5252061258C3F1500793392 /* UIViewController+Extension.swift */; };
-		C52520A1258C3F1500793392 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5252063258C3F1500793392 /* Defaults.swift */; };
 		C52520CC258C7A0B00793392 /* HomeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520CB258C7A0B00793392 /* HomeCardView.swift */; };
 		C52520D9258C827400793392 /* ShuHeGameboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520D6258C827300793392 /* ShuHeGameboardView.swift */; };
 		C52520DE258C829D00793392 /* AppearanceDial.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52520DD258C829D00793392 /* AppearanceDial.swift */; };
@@ -38,7 +34,6 @@
 		C54A1D7A25C7913D007A23A0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A1D7925C7913D007A23A0 /* MainViewController.swift */; };
 		C54A1D7E25C79841007A23A0 /* WatermelonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A1D7D25C79841007A23A0 /* WatermelonViewController.swift */; };
 		C54A1D8225C79BA7007A23A0 /* PlayWatermelonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54A1D8125C79BA7007A23A0 /* PlayWatermelonViewController.swift */; };
-		C554AC4125B13AF3000CB32B /* SwiftHEXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C554AC4025B13AF3000CB32B /* SwiftHEXColors.swift */; };
 		C560179625C25C99004842C6 /* WithoutAuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560179525C25C99004842C6 /* WithoutAuthorizationView.swift */; };
 		C560179925C2629C004842C6 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560179825C2629C004842C6 /* HelpViewController.swift */; };
 		C56017A325C3A86A004842C6 /* WatermelonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56017A225C3A86A004842C6 /* WatermelonView.swift */; };
@@ -57,6 +52,9 @@
 
 /* Begin PBXFileReference section */
 		53C116982611CC1800E04C05 /* WatermelonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatermelonModel.swift; sourceTree = "<group>"; };
+		53F78B2A2611D4F5008A60BE /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		53F78B302611D5D4008A60BE /* UIColor+HZXColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HZXColor.m"; sourceTree = "<group>"; };
+		53F78B312611D5D4008A60BE /* UIColor+HZXColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HZXColor.h"; sourceTree = "<group>"; };
 		7C1EC16AE261FC9A43693EFE /* Pods-JuWan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuWan.release.xcconfig"; path = "Target Support Files/Pods-JuWan/Pods-JuWan.release.xcconfig"; sourceTree = "<group>"; };
 		7E0FDB650050D0AD0ECC30E5 /* libPods-JuWan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JuWan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C27D339610B69BB212B42A /* Pods-JuWan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuWan.debug.xcconfig"; path = "Target Support Files/Pods-JuWan/Pods-JuWan.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,17 +73,11 @@
 		C5252018258C3F0F00793392 /* JuWan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JuWan-Bridging-Header.h"; sourceTree = "<group>"; };
 		C5252026258C3F1000793392 /* LDTipAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDTipAlertView.m; sourceTree = "<group>"; };
 		C525202F258C3F1000793392 /* MBProgressHUD+ITTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+ITTAdditions.m"; sourceTree = "<group>"; };
-		C5252030258C3F1000793392 /* HistTestSlop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistTestSlop.swift; sourceTree = "<group>"; };
-		C5252031258C3F1000793392 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
-		C5252032258C3F1100793392 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		C5252039258C3F1100793392 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		C525203B258C3F1100793392 /* UIColor+Create.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Create.swift"; sourceTree = "<group>"; };
-		C5252046258C3F1300793392 /* Defines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defines.swift; sourceTree = "<group>"; };
 		C5252047258C3F1300793392 /* LDTipAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDTipAlertView.h; sourceTree = "<group>"; };
-		C5252055258C3F1400793392 /* DatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		C5252061258C3F1500793392 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		C5252062258C3F1500793392 /* MBProgressHUD+ITTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+ITTAdditions.h"; sourceTree = "<group>"; };
-		C5252063258C3F1500793392 /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		C52520CB258C7A0B00793392 /* HomeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardView.swift; sourceTree = "<group>"; };
 		C52520D6258C827300793392 /* ShuHeGameboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShuHeGameboardView.swift; sourceTree = "<group>"; };
 		C52520DD258C829D00793392 /* AppearanceDial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceDial.swift; sourceTree = "<group>"; };
@@ -94,7 +86,6 @@
 		C54A1D7925C7913D007A23A0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C54A1D7D25C79841007A23A0 /* WatermelonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatermelonViewController.swift; sourceTree = "<group>"; };
 		C54A1D8125C79BA7007A23A0 /* PlayWatermelonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayWatermelonViewController.swift; sourceTree = "<group>"; };
-		C554AC4025B13AF3000CB32B /* SwiftHEXColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHEXColors.swift; sourceTree = "<group>"; };
 		C560179525C25C99004842C6 /* WithoutAuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithoutAuthorizationView.swift; sourceTree = "<group>"; };
 		C560179825C2629C004842C6 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		C56017A225C3A86A004842C6 /* WatermelonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatermelonView.swift; sourceTree = "<group>"; };
@@ -225,20 +216,15 @@
 			isa = PBXGroup;
 			children = (
 				C525203A258C3F1100793392 /* UIColor */,
-				C5252032258C3F1100793392 /* Client.swift */,
-				C5252031258C3F1000793392 /* Date+Extension.swift */,
-				C5252055258C3F1400793392 /* DatePicker.swift */,
-				C5252063258C3F1500793392 /* Defaults.swift */,
-				C5252046258C3F1300793392 /* Defines.swift */,
-				C5252030258C3F1000793392 /* HistTestSlop.swift */,
+				53F78B2A2611D4F5008A60BE /* Client.swift */,
+				C59470B925B5187D009C1F35 /* GameDecorateConfig.swift */,
+				C50E129B25BEA642008321FC /* GameUserInfoConfig.swift */,
+				C5252039258C3F1100793392 /* UITableView+Extension.swift */,
 				C5252047258C3F1300793392 /* LDTipAlertView.h */,
 				C5252026258C3F1000793392 /* LDTipAlertView.m */,
 				C5252062258C3F1500793392 /* MBProgressHUD+ITTAdditions.h */,
 				C525202F258C3F1000793392 /* MBProgressHUD+ITTAdditions.m */,
-				C5252039258C3F1100793392 /* UITableView+Extension.swift */,
 				C5252061258C3F1500793392 /* UIViewController+Extension.swift */,
-				C59470B925B5187D009C1F35 /* GameDecorateConfig.swift */,
-				C50E129B25BEA642008321FC /* GameUserInfoConfig.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -246,7 +232,8 @@
 		C525203A258C3F1100793392 /* UIColor */ = {
 			isa = PBXGroup;
 			children = (
-				C554AC4025B13AF3000CB32B /* SwiftHEXColors.swift */,
+				53F78B312611D5D4008A60BE /* UIColor+HZXColor.h */,
+				53F78B302611D5D4008A60BE /* UIColor+HZXColor.m */,
 				C525203B258C3F1100793392 /* UIColor+Create.swift */,
 			);
 			path = UIColor;
@@ -401,16 +388,11 @@
 				C52520DE258C829D00793392 /* AppearanceDial.swift in Sources */,
 				C5252088258C3F1500793392 /* UIColor+Create.swift in Sources */,
 				C59470CB25B52308009C1F35 /* GameShuHeThemeSettingViewController.swift in Sources */,
-				C5252090258C3F1500793392 /* Defines.swift in Sources */,
-				C5252083258C3F1500793392 /* Date+Extension.swift in Sources */,
-				C52520A1258C3F1500793392 /* Defaults.swift in Sources */,
 				C50E129F25BEB3B8008321FC /* BPYWebViewController.swift in Sources */,
-				C554AC4125B13AF3000CB32B /* SwiftHEXColors.swift in Sources */,
+				53F78B322611D5D4008A60BE /* UIColor+HZXColor.m in Sources */,
 				C54A1D7A25C7913D007A23A0 /* MainViewController.swift in Sources */,
-				C5252097258C3F1500793392 /* DatePicker.swift in Sources */,
-				C5252084258C3F1500793392 /* Client.swift in Sources */,
+				53F78B2B2611D4F5008A60BE /* Client.swift in Sources */,
 				C56017A325C3A86A004842C6 /* WatermelonView.swift in Sources */,
-				C5252082258C3F1500793392 /* HistTestSlop.swift in Sources */,
 				C54A1D7E25C79841007A23A0 /* WatermelonViewController.swift in Sources */,
 				C52520A0258C3F1500793392 /* UIViewController+Extension.swift in Sources */,
 				C5252081258C3F1500793392 /* MBProgressHUD+ITTAdditions.m in Sources */,
