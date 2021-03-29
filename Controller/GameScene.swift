@@ -22,9 +22,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     let groundBitMask: UInt32 = 0xFFFFFFFF >> 1
     
-    let groundAudio = AudioUtil(resourceName: "falldown")
-    let explodeAudio = AudioUtil(resourceName: "bomb")
-    let bonusAudio = AudioUtil(resourceName: "win")
+    let groundAudio = AudioUtil(resourceName: "gameFalldown")
+    let explodeAudio = AudioUtil(resourceName: "gameBomb")
+    let bonusAudio = AudioUtil(resourceName: "gameWin")
     
     var canCollisonFruitWithFruit = true
     var canTouch = true

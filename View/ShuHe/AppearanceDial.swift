@@ -1,5 +1,5 @@
 //
-//  AppearanceProvider.swift
+//  AppearanceDial.swift
 //  JuWan
 //
 //  Created by fanzhe on 2020/12/18.
@@ -7,15 +7,14 @@
 
 import UIKit
 
-protocol AppearanceProviderProtocol: class {
+protocol AppearanceDialProtocol: class {
     func tileColor(value: Int) -> UIColor
     func numberColor(value: Int) -> UIColor
     func fontForNumbers() -> UIFont
 }
 
-class AppearanceProvider: AppearanceProviderProtocol {
+class AppearanceDial: AppearanceDialProtocol {
     
-    // Provide a tile color for a given value
     func tileColor(value: Int) -> UIColor {
         switch GameDecorateConfig.shared.gameShuHeThemeType {
         case 1:
@@ -91,8 +90,14 @@ class AppearanceProvider: AppearanceProviderProtocol {
             return UIColor.white
         }
     }
+
+    func fontForNumbers() -> UIFont {
+        if let font = UIFont(name: "HelveticaNeue-Bold", size: 25) {
+            return font
+        }
+        return UIFont.systemFont(ofSize: 20)
+    }
     
-    // Provide a numeral color for a given value
     func numberColor(value: Int) -> UIColor {
         switch value {
         case 1,2, 4:
@@ -100,13 +105,5 @@ class AppearanceProvider: AppearanceProviderProtocol {
         default:
             return UIColor.white
         }
-    }
-    
-    // Provide the font to be used on the number tiles
-    func fontForNumbers() -> UIFont {
-        if let font = UIFont(name: "HelveticaNeue-Bold", size: 25) {
-            return font
-        }
-        return UIFont.systemFont(ofSize: 20)
     }
 }

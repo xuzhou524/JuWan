@@ -216,7 +216,7 @@ extension PlayShuHeViewController {
     @objc func upCommand(r: UIGestureRecognizer!) {
         assert(model != nil)
         let m = model!
-        m.queueMove(direction: MoveDirection.Up,
+        m.queueMove(direction: DirectionMove.Up,
                     completion: { (changed: Bool) -> () in
                         if changed {
                             self.followUp()
@@ -227,7 +227,7 @@ extension PlayShuHeViewController {
     @objc func downCommand(r: UIGestureRecognizer!) {
         assert(model != nil)
         let m = model!
-        m.queueMove(direction: MoveDirection.Down,
+        m.queueMove(direction: DirectionMove.Down,
                     completion: { (changed: Bool) -> () in
                         if changed {
                             self.followUp()
@@ -238,7 +238,7 @@ extension PlayShuHeViewController {
     @objc func leftCommand(r: UIGestureRecognizer!) {
         assert(model != nil)
         let m = model!
-        m.queueMove(direction: MoveDirection.Left,
+        m.queueMove(direction: DirectionMove.Left,
                     completion: { (changed: Bool) -> () in
                         if changed {
                             self.followUp()
@@ -249,7 +249,7 @@ extension PlayShuHeViewController {
     @objc func rightCommand(r: UIGestureRecognizer!) {
         assert(model != nil)
         let m = model!
-        m.queueMove(direction: MoveDirection.Right,
+        m.queueMove(direction: DirectionMove.Right,
                     completion: { (changed: Bool) -> () in
                         if changed {
                             self.followUp()

@@ -21,7 +21,7 @@ class GameShuHeThemeDialViewController: UIViewController {
         self.title = "选择表盘"
         self.view.backgroundColor = UIColor(named: "color_theme")
         
-        let layout = CDFlowLayout()
+        let layout = ShuHeFlowLayout()
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 20.0
         layout.sectionInset = UIEdgeInsets(top: 0, left: (kScreenWidth - 40) / 5 + 20, bottom: 0, right: (kScreenWidth - 40) / 5 + 20)
@@ -32,7 +32,7 @@ class GameShuHeThemeDialViewController: UIViewController {
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(CDViewCell.self, forCellWithReuseIdentifier: NSStringFromClass(CDViewCell.self))
+        collectionView.register(ShuHeViewCell.self, forCellWithReuseIdentifier: NSStringFromClass(ShuHeViewCell.self))
         collectionView.reloadData()
         self.view.addSubview(self.collectionView)
         
@@ -127,7 +127,7 @@ extension GameShuHeThemeDialViewController : UICollectionViewDelegate , UICollec
         return 3
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(CDViewCell.self), for: indexPath) as! CDViewCell
+        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(ShuHeViewCell.self), for: indexPath) as! ShuHeViewCell
         cell.nameLabel.text = ["4 × 4","5 × 5","6 × 6"][indexPath.row]
         cell.priceLabel.text = ["无门槛","无门槛",isHaveBuy ? "已购买" : "CNY 1.00"][indexPath.row]
         if indexPath.row == 0 {

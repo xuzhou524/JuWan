@@ -7,6 +7,40 @@
 
 import UIKit
 
+class TitlesView : UIView {
+    var value : Int = 0 {
+        didSet {
+            backgroundColor = delegate.tileColor(value: value)
+            numberLabel.textColor = delegate.numberColor(value: value)
+            numberLabel.text = "\(value)"
+        }
+    }
+    
+    unowned let delegate : AppearanceDialProtocol
+    let numberLabel : UILabel
+    
+    required init(coder: NSCoder) {
+        fatalError("NSCoding not supported")
+    }
+    
+    init(position: CGPoint, width: CGFloat, value: Int, radius: CGFloat, delegate d: AppearanceDialProtocol) {
+        delegate = d
+        numberLabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: width))
+        numberLabel.textAlignment = NSTextAlignment.center
+        numberLabel.minimumScaleFactor = 0.5
+        numberLabel.font = delegate.fontForNumbers()
+        super.init(frame: CGRect(x: position.x, y: position.y, width: width, height: width))
+        addSubview(numberLabel)
+        layer.cornerRadius = radius
+        
+        self.value = value
+        backgroundColor = delegate.tileColor(value: value)
+        numberLabel.textColor = delegate.numberColor(value: value)
+        numberLabel.text = "\(value)"
+    }
+}
+
+
 class ShuHeGameboardView : UIView {
     var dimension: Int
     var tileWidth: CGFloat
@@ -14,19 +48,22 @@ class ShuHeGameboardView : UIView {
     var cornerRadius: CGFloat
     var tiles: Dictionary<NSIndexPath, TitlesView>
     
-    let provider = AppearanceProvider()
-    
-    let tilePopStartScale: CGFloat = 0.1
-    let tilePopMaxScale: CGFloat = 1.1
-    let tilePopDelay: TimeInterval = 0.05
-    let tileExpandTime: TimeInterval = 0.18
-    let tileContractTime: TimeInterval = 0.08
+    let provider = AppearanceDial()
     
     let tileMergeStartScale: CGFloat = 1.0
     let tileMergeExpandTime: TimeInterval = 0.08
     let tileMergeContractTime: TimeInterval = 0.08
     
+    let tilePopStartScale: CGFloat = 0.1
+    let tileContractTime: TimeInterval = 0.08
+    let tilePopMaxScale: CGFloat = 1.1
+    let tilePopDelay: TimeInterval = 0.05
+    let tileExpandTime: TimeInterval = 0.18
     let perSquareSlideDuration: TimeInterval = 0.08
+    
+    required init(coder: NSCoder) {
+        fatalError("NSCoding not supported")
+    }
     
     init(dimension d: Int, tileWidth width: CGFloat, tilePadding padding: CGFloat, cornerRadius radius: CGFloat, backgroundColor: UIColor, foregroundColor: UIColor) {
         assert(d > 0)
@@ -41,10 +78,6 @@ class ShuHeGameboardView : UIView {
         setupBackground(backgroundColor: backgroundColor, tileColor: foregroundColor)
     }
     
-    required init(coder: NSCoder) {
-        fatalError("NSCoding not supported")
-    }
-    /// Reset the gameboard.
     func reset() {
         for (_, tile) in tiles {
             tile.removeFromSuperview()
@@ -52,7 +85,6 @@ class ShuHeGameboardView : UIView {
         tiles.removeAll(keepingCapacity: true)
     }
     
-    /// Return whether a given position is valid. Used for bounds checking.
     func positionIsValid(pos: (Int, Int)) -> Bool {
         let (x, y) = pos
         return (x >= 0 && x < dimension && y >= 0 && y < dimension)
@@ -77,7 +109,6 @@ class ShuHeGameboardView : UIView {
         }
     }
     
-    /// Update the gameboard by inserting a tile in a given location. The tile will be inserted with a 'pop' animation.
     func insertTile(pos: (Int, Int), value: Int) {
         assert(positionIsValid(pos: pos))
         let (row, col) = pos
@@ -91,7 +122,6 @@ class ShuHeGameboardView : UIView {
         bringSubviewToFront(tile)
         tiles[NSIndexPath(row: row, section: col)] = tile
         
-        // Add to board
         UIView.animate(withDuration: tileExpandTime, delay: tilePopDelay, options: UIView.AnimationOptions.transitionCurlDown,
                        animations: {
                         // Make the tile 'pop'
@@ -105,8 +135,6 @@ class ShuHeGameboardView : UIView {
                        })
     }
     
-    /// Update the gameboard by moving a single tile from one location to another. If the move is going to collapse two
-    /// tiles into a new tile, the tile will 'pop' after moving to its new location.
     func moveOneTile(from: (Int, Int), to: (Int, Int), value: Int) {
         assert(positionIsValid(pos: from) && positionIsValid(pos: to))
         let (fromRow, fromCol) = from
@@ -114,23 +142,19 @@ class ShuHeGameboardView : UIView {
         let fromKey = NSIndexPath(row: fromRow, section: fromCol)
         let toKey = NSIndexPath(row: toRow, section: toCol)
         
-        // Get the tiles
         guard let tile = tiles[fromKey] else {
             assert(false, "placeholder error")
             return
         }
         let endTile = tiles[toKey]
         
-        // Make the frame
         var finalFrame = tile.frame
         finalFrame.origin.x = tilePadding + CGFloat(toCol)*(tileWidth + tilePadding)
         finalFrame.origin.y = tilePadding + CGFloat(toRow)*(tileWidth + tilePadding)
         
-        // Update board state
         tiles.removeValue(forKey: fromKey)
         tiles[toKey] = tile
         
-        // Animate
         let shouldPop = endTile != nil
         UIView.animate(withDuration: perSquareSlideDuration,
                        delay: 0.0,
@@ -146,13 +170,11 @@ class ShuHeGameboardView : UIView {
                             return
                         }
                         tile.layer.setAffineTransform(CGAffineTransform(scaleX: self.tileMergeStartScale, y: self.tileMergeStartScale))
-                        // Pop tile
                         UIView.animate(withDuration: self.tileMergeExpandTime,
                                        animations: {
                                         tile.layer.setAffineTransform(CGAffineTransform(scaleX: self.tilePopMaxScale, y: self.tilePopMaxScale))
                                        },
                                        completion: { finished in
-                                        // Contract tile to original size
                                         UIView.animate(withDuration: self.tileMergeContractTime) {
                                             tile.layer.setAffineTransform(CGAffineTransform.identity)
                                         }
@@ -160,8 +182,6 @@ class ShuHeGameboardView : UIView {
                        })
     }
     
-    /// Update the gameboard by moving two tiles from their original locations to a common destination. This action always
-    /// represents tile collapse, and the combined tile 'pops' after both tiles move into position.
     func moveTwoTiles(from: ((Int, Int), (Int, Int)), to: (Int, Int), value: Int) {
         assert(positionIsValid(pos: from.0) && positionIsValid(pos: from.1) && positionIsValid(pos: to))
         let (fromRowA, fromColA) = from.0
@@ -180,13 +200,11 @@ class ShuHeGameboardView : UIView {
             return
         }
         
-        // Make the frame
         var finalFrame = tileA.frame
         finalFrame.origin.x = tilePadding + CGFloat(toCol)*(tileWidth + tilePadding)
         finalFrame.origin.y = tilePadding + CGFloat(toRow)*(tileWidth + tilePadding)
         
-        // Update the state
-        let oldTile = tiles[toKey]  // TODO: make sure this doesn't cause issues
+        let oldTile = tiles[toKey]
         oldTile?.removeFromSuperview()
         tiles.removeValue(forKey: fromKeyA)
         tiles.removeValue(forKey: fromKeyB)
@@ -196,7 +214,6 @@ class ShuHeGameboardView : UIView {
                        delay: 0.0,
                        options: UIView.AnimationOptions.beginFromCurrentState,
                        animations: {
-                        // Slide tiles
                         tileA.frame = finalFrame
                         tileB.frame = finalFrame
                        },
@@ -207,13 +224,11 @@ class ShuHeGameboardView : UIView {
                             return
                         }
                         tileA.layer.setAffineTransform(CGAffineTransform(scaleX: self.tileMergeStartScale, y: self.tileMergeStartScale))
-                        // Pop tile
                         UIView.animate(withDuration: self.tileMergeExpandTime,
                                        animations: {
                                         tileA.layer.setAffineTransform(CGAffineTransform(scaleX: self.tilePopMaxScale, y: self.tilePopMaxScale))
                                        },
                                        completion: { finished in
-                                        // Contract tile to original size
                                         UIView.animate(withDuration: self.tileMergeContractTime) {
                                             tileA.layer.setAffineTransform(CGAffineTransform.identity)
                                         }

@@ -31,7 +31,7 @@ class GameShuHeThemeSettingViewController: UIViewController {
         self.title = "选择主题"
         self.view.backgroundColor = UIColor(named: "color_theme")
         
-        let layout = CDFlowLayout()
+        let layout = ShuHeFlowLayout()
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 20.0
         layout.sectionInset = UIEdgeInsets(top: 0, left: (kScreenWidth - 40) / 5 + 20, bottom: 0, right: (kScreenWidth - 40) / 5 + 20)
@@ -42,7 +42,7 @@ class GameShuHeThemeSettingViewController: UIViewController {
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(CDViewCell.self, forCellWithReuseIdentifier: NSStringFromClass(CDViewCell.self))
+        collectionView.register(ShuHeViewCell.self, forCellWithReuseIdentifier: NSStringFromClass(ShuHeViewCell.self))
         collectionView.reloadData()
         self.view.addSubview(self.collectionView)
         
@@ -77,7 +77,7 @@ extension GameShuHeThemeSettingViewController : UICollectionViewDelegate , UICol
         return 3
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(CDViewCell.self), for: indexPath) as! CDViewCell
+        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(ShuHeViewCell.self), for: indexPath) as! ShuHeViewCell
         cell.goodsImg.image = UIImage(named: "theme_shuhe_\(indexPath.row + 1)")
         cell.nameLabel.text = ["天空蓝","玫瑰粉","经典"][indexPath.row]
         cell.priceLabel.text = ["无门槛","最高分 1,536 以上","最高分达 3,072 以上"][indexPath.row]
